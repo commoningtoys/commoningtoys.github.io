@@ -1,0 +1,69 @@
+img{
+    width:100%;
+}
+a{
+    cursor: pointer;
+}
+a:active{
+    border-bottom: solid 5px #f50;
+}
+a:visited{
+    font-style: italic;
+    font-weight: 900;
+    border-bottom: solid 5px #0cf;
+}
+a:hover{
+    font-style: italic;
+    font-weight: 900;
+}
+
+#container{
+    float: left;
+    border: solid 3px #f50;
+}
+.menu, .project, .sBlog, .moodBoard, .team{
+    display: block;
+    width: 25vw;
+    min-width: 250px;
+    overflow-y: scroll;
+    font-size: 100%;
+    font-family: sans-serif;
+    margin:3vw;
+    /* clear: both; */
+    float: left;
+    padding: 0.8em;
+}
+
+.menu{
+    /* position: fixed; */
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 5px #0cf;
+    max-width: 300px;
+    clear: left;
+    height: 350px;
+} 
+.project{
+    background-color: cyan;
+    height: 250px;
+
+} 
+.sBlog{
+    background-color: yellow;
+    height: auto;
+    max-height: 400px;
+} 
+.moodBoard{
+    background-color: coral;
+    height: 200px;
+}
+.team{
+    background-color: green;
+    height: 300px;
+}
+
+@media only screen and (max-width: 699px) {
+    .menu, .project, .sBlog, .moodBoard, .team{
+        float: none;
+        margin: 1vh auto;
+    }
+}
