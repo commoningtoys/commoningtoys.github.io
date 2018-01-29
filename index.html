@@ -255,8 +255,8 @@
 			e.target.style.width = '100%';
 			e.target.style.height = 'auto';
 			console.log(this.getBoundingClientRect());
-			let menuH = $("#myMenu").height();
-			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY - (menuH * 2); //this helps us to get the position of the div to scroll to
+			let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
+			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY - (menuH); //this helps us to get the position of the div to scroll to
 			window.scrollTo(0, y);
 			// goTo(0, y);
 		});

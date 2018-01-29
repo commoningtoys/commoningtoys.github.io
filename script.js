@@ -38,28 +38,28 @@ function reveal(className) {
         }
     }
 }
-/**
- * reveals elements based on tag name
- * @param {String} tagName - name of the tag to be searched
- */
-function revealTag(tagName) {
-    showAll();
-    for (let i = 0; i < myTags.length; i++) {
-        if (myTags[i].includes(tagName)) {
-            // myTags[i].visible = true;
-            let thisClass = document.getElementsByTagName(myTags[i]);
-            for (let j = 0; j < thisClass.length; j++) {
-                thisClass[j].style.display = 'block';
-            }
-        } else {
-            // myTags[i].visible = false;
-            let thisClass = document.getElementsByTagName(myTags[i]);
-            for (let j = 0; j < thisClass.length; j++) {
-                thisClass[j].style.display = 'none';
-            }
-        }
-    }
-}
+// /**
+//  * reveals elements based on tag name
+//  * @param {String} tagName - name of the tag to be searched
+//  */
+// function revealTag(tagName) {
+//     showAll();
+//     for (let i = 0; i < myTags.length; i++) {
+//         if (myTags[i].includes(tagName)) {
+//             // myTags[i].visible = true;
+//             let thisClass = document.getElementsByTagName(myTags[i]);
+//             for (let j = 0; j < thisClass.length; j++) {
+//                 thisClass[j].style.display = 'block';
+//             }
+//         } else {
+//             // myTags[i].visible = false;
+//             let thisClass = document.getElementsByTagName(myTags[i]);
+//             for (let j = 0; j < thisClass.length; j++) {
+//                 thisClass[j].style.display = 'none';
+//             }
+//         }
+//     }
+// }
 /**
  * function that shows all the posts of the wesite
  */
@@ -75,6 +75,7 @@ function showAll() {
  * this function initializes the width and heights of all the divs
  */
 function init() {
+    //set pixel ratio to 1 for all devices
     for (let i = 0; i < myClasses.length; i++) {
         let thisClass = document.getElementsByClassName(myClasses[i]);
         for (let j = 0; j < thisClass.length; j++) {
@@ -92,21 +93,21 @@ function init() {
 /**
  * stes the position of the divs
  */
-function setPositionDivs() {	
+function setPositionDivs() {
     let scale = window.devicePixelRatio;
     console.log(scale);
     /**
     * testing jQuery functions
     */
-   $("a").click(function (className) {
-       console.log(this.innerHTML);
-   });
-   let menuH = $("#myMenu").height();
-   console.log(menuH);
-   document.getElementById("myContainer").style.top = menuH * scale * 2/3 + 'px';
-   console.log('divs in position!')
-   // $("myContainer").css(top, menuH);
-   // console.log(menuH);
+    $("a").click(function (className) {
+        console.log(this.innerHTML);
+    });
+    //LETS get the height of the menu
+    let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
+    document.getElementById("myContainer").style.top = menuH + 'px';
+    console.log('divs in position!')
+    // $("myContainer").css(top, menuH);
+    // console.log(menuH);
     // console.log('le madonne!')
     // let menuHeight = document.getElementById('myMenu').style.height;
     // console.log(menuHeight);
@@ -152,7 +153,7 @@ function closeOpenMenu() {
 //     // e.target.style.width = '98%';
 //     // e.target.style.height = h + 'px';
 // });
-function enlarge(e){
+function enlarge(e) {
     console.log(e);
 }
 // /**
