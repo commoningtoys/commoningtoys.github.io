@@ -1,5 +1,5 @@
 let myClasses = ["team", "project", "sBlog", "moodBoard"];
-// let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
+let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
 /**
  * Object to store visibility and name of classes
  * @param {String} _name - name of the class
@@ -131,7 +131,7 @@ function Random(a, b) {
 /**
  * function to show hide the menu
  */
-let menuIsShow = true;
+let menuIsShow = false;
 function closeOpenMenu() {
     menuIsShow = !menuIsShow;//every click we change the status of the boolean
     let myTags = document.getElementsByTagName('a');
