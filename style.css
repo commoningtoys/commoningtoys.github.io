@@ -8,7 +8,7 @@ img{
     width:100%;
     height: auto;
 }
-menuelement, button{
+menuelement{
     font-family: inherit;
     font-size: inherit;
     padding: 0.9em;
@@ -28,9 +28,15 @@ menuelement:hover{
     font-weight: 900;
     border-bottom: solid 5px #f50;
 }
-
+button{
+    border: none;
+    padding: 0px;
+    background: white;
+    background-image: none;
+}
 button:hover{
-    border-bottom: solid 5px #f50;
+    /* border-bottom: solid 5px #f50; */
+    background-color: #0cf;
 }
 .container{
     top: 120px;
@@ -131,7 +137,11 @@ viktor{
     background-color: green;
     height: 300px;
 }
-
+img#menuIcon{
+    top: 10px;
+    width: 50%;
+    height: auto;
+}
 /* #openClose{
     display: none;
 } */

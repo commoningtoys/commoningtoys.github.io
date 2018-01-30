@@ -136,6 +136,13 @@ function Random(a, b) {
 /**
  * function to show hide the menu
  */
+let icon1 = 'img/icons/icon_01.png';
+let icon2 = 'img/icons/icon_02.png';
+
+    // icon1.setAttribute("width", "304");
+    // icon1.setAttribute("height", "228");
+    // icon1.setAttribute("alt", "The Pulpit Rock");
+    // document.body.appendChild(icon1);
 let menuIsShow = true;
 function closeOpenMenu() {
     menuIsShow = !menuIsShow;//every click we change the status of the boolean
@@ -146,7 +153,9 @@ function closeOpenMenu() {
     let myMenu = document.getElementById('myMenu');
     menuIsShow == false ? myMenu.style.width = menuHeight() + 'px' : myMenu.style.width = '100%';
     let button = document.getElementById('openClose');
-    menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
+    // menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
+
+    menuIsShow == true ? document.getElementById('menuIcon').src = icon1 : document.getElementById('menuIcon').src = icon2;
 }
 /**
  * event listener that checks the orientation of devices
