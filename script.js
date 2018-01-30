@@ -73,9 +73,9 @@ function showAll() {
 }
 /**
  * this function initializes the width and heights of all the divs
+ * and sets the footer at the bottom of the page
  */
 function init() {
-    //set pixel ratio to 1 for all devices
     for (let i = 0; i < myClasses.length; i++) {
         let thisClass = document.getElementsByClassName(myClasses[i]);
         for (let j = 0; j < thisClass.length; j++) {

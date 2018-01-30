@@ -7,6 +7,17 @@ img{
     position: relative;
     width:100%;
     height: auto;
+    float: right;
+    max-width: 650px;
+}
+a{
+    color: #f50;
+    text-decoration: none;
+}
+a:hover{
+    font-style: italic;
+    font-weight: 100;
+    border-bottom: solid 5px #0cf;
 }
 menuelement{
     font-family: inherit;
@@ -37,13 +48,6 @@ button{
 button:hover{
     /* border-bottom: solid 5px #f50; */
     background-color: #0cf;
-}
-.container{
-    top: 120px;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    z-index: 1;
 }
 /* Personal styles for team members */
 yano, micha, shintaro, selena, viktor, kayla{
@@ -110,7 +114,7 @@ viktor{
     background-color: #ffffff;
     /* border: solid 5px #0cf; */
     /* max-width: 200px; */
-    width: 100%;
+    width: auto;
     /* clear: left; */
     height: auto;
     overflow-y: initial;
@@ -136,6 +140,23 @@ viktor{
 .team{
     background-color: green;
     height: 300px;
+}
+.container{
+    top: 120px;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 1;
+}
+.footer{
+    position: fixed;
+    background-color: white;
+    bottom: 0px;
+    right: 0px;
+    line-height: 0.5em;
+    padding: 0px 1vw;
+    z-index: 999;
+    font-size: 1vh;
 }
 img#menuIcon{
     top: 10px;
