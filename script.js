@@ -81,13 +81,14 @@ function init() {
         for (let j = 0; j < thisClass.length; j++) {
             let randW = Random(20, 60);
             thisClass[j].style.width = Math.floor(randW) + '%';
-            let randH = thisClass[j].style.width;//Random();
-            // console.log(randH);
+            let randH = thisClass[j].style.width;
             thisClass[j].style.height = Math.floor(randH) + 'px';
-            // thisClass[j].style.margin = randM +'%';
 
         }
     }
+    //set the first div project to width 100%
+    //needs refactoring
+    document.getElementsByClassName('project')[0].style.width = '100%'
 }
 /**
  * stes the position of the divs below the menu bar
