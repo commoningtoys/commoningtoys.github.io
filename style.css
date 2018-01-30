@@ -34,44 +34,45 @@ a:hover{
     z-index: 1;
 }
 /* Personal styles for team members */
-.yano, .micha, .shintaro, .selena, .viktor, .kayla{
-    border: solid 3px #f00; 
+yano, micha, shintaro, selena, viktor, kayla{
+    /* border: solid 3px #f00;  */
     /* font-family: 'Source Code Pro', mono; */
+
 }
 
-.yano{
-    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+yano{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(0, 255, 30);
     border-bottom: solid 2px rgb(255, 153, 0);
     background-color: black;
 }
 
-.selena{
+selena{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f00;
     /* border-bottom: solid 2px #0cf; */
 }
 
-.micha{
+micha{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f50;
     border-bottom: solid 2px #0cf;
 }
 
-.shintaro{
+shintaro{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: rgb(255, 255, 255);
     border-bottom: solid 2px #0cf;
     background-color: black;
 }
 
-.kayla{
+kayla{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #f50;
     border-bottom: solid 2px #0cf;
 }
 
-.viktor{
+viktor{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f50;
     border-bottom: solid 2px rgb(43, 255, 0);
@@ -107,13 +108,13 @@ a:hover{
     z-index: 999;
 } 
 .project{
-    background-color: cyan;
+    /* background-color: cyan; */
     height: 250px;
 
 } 
 .sBlog{
     background-color: yellow;
-    height: auto;
+    min-height: 200px;
     /* max-height: 400px; */
 } 
 .moodBoard{

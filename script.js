@@ -83,7 +83,6 @@ function init() {
             thisClass[j].style.width = Math.floor(randW) + '%';
             let randH = thisClass[j].style.width;//Random();
             // console.log(randH);
-            let randM = Random(0.1, 2);
             thisClass[j].style.height = Math.floor(randH) + 'px';
             // thisClass[j].style.margin = randM +'%';
 
@@ -91,7 +90,7 @@ function init() {
     }
 }
 /**
- * stes the position of the divs
+ * stes the position of the divs below the menu bar
  */
 function setPositionDivs() {
     let scale = window.devicePixelRatio;
