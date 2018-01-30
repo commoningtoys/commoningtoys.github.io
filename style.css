@@ -78,7 +78,7 @@ viktor{
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
-.menu, .project, .sBlog, .moodBoard, .team{
+.project, .sBlog, .moodBoard, .team{
     display: block;
     width: 25vw;
     min-width: 250px;

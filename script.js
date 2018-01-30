@@ -102,8 +102,8 @@ function setPositionDivs() {
         console.log(this.innerHTML);
     });
     //LETS get the height of the menu
-    let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
-    document.getElementById("myContainer").style.top = menuH + 'px';
+    // let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
+    document.getElementById("myContainer").style.top = menuHeight() + 10 + 'px';
     console.log('divs in position!')
     // $("myContainer").css(top, menuH);
     // console.log(menuH);
@@ -111,6 +111,12 @@ function setPositionDivs() {
     // let menuHeight = document.getElementById('myMenu').style.height;
     // console.log(menuHeight);
     // document.getElementById('myContainer').style.top = menuHeight;
+}
+/**
+ * this function returns the height of the menu at any time
+ */
+function menuHeight(){
+    return document.getElementById('myMenu').getBoundingClientRect().height;
 }
 /**
  * this function returns a random number between two numbers
@@ -131,17 +137,15 @@ function Random(a, b) {
 /**
  * function to show hide the menu
  */
-let menuIsShow = false;
+let menuIsShow = true;
 function closeOpenMenu() {
     menuIsShow = !menuIsShow;//every click we change the status of the boolean
     let myTags = document.getElementsByTagName('a');
     for (let i = 0; i < myTags.length; i++) {
         menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'initial';
     }
-    let menuClass = document.getElementsByClassName('menu');
-    for (let i = 0; i < menuClass.length; i++) {
-        menuIsShow == false ? menuClass[i].style.width = 'auto' : menuClass[i].style.width = '100%';
-    }
+    let myMenu = document.getElementById('myMenu');
+    menuIsShow == false ? myMenu.style.width = menuHeight() + 'px' : myMenu.style.width = '100%';
     let button = document.getElementById('openClose');
     menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
 }
@@ -152,9 +156,6 @@ function closeOpenMenu() {
 //     // e.target.style.width = '98%';
 //     // e.target.style.height = h + 'px';
 // });
-function enlarge(e) {
-    console.log(e);
-}
 // /**
 //  * testing jQuery functions
 //  */

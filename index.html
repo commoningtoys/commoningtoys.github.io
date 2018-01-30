@@ -184,7 +184,7 @@
 
 	<script>
 		let previous = null, prevStyle;
-		$(".project, .sBlog, .moodBoard, .team").click(function (e) {
+		$(".project, .sBlog, .moodBoard, .team").click(function () {
 			let myDiv = this;
 			// if (e.target.tagName.includes('IMG')) return;//here we handle the the case we click on an image
 			if (previous == null) {
@@ -205,8 +205,8 @@
 			myDiv.style.height = 'auto';
 			console.log(this);
 			//here we get the height of the top menu (needs refactoring set it as gloal variable)
-			let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
-			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY - (menuH); //this helps us to get the position of the div to scroll to
+			// let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
+			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY - (menuHeight() + 1); //this helps us to get the position of the div to scroll to
 			window.scrollTo(0, y);
 			// goTo(0, y);
 		});
