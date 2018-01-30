@@ -8,22 +8,28 @@ img{
     width:100%;
     height: auto;
 }
-a{
+menuelement, button{
+    font-family: inherit;
+    font-size: inherit;
     padding: 0.9em;
     cursor: pointer;
     border: solid 5px #0cf;
 }
-a:active{
+menuelement:active{
     border-bottom: solid 5px #f50;
 }
-a:visited{
+menuelement:visited{
     font-style: italic;
     font-weight: 900;
     border-bottom: solid 5px #0cf;
 }
-a:hover{
+menuelement:hover{
     font-style: italic;
     font-weight: 900;
+    border-bottom: solid 5px #f50;
+}
+
+button:hover{
     border-bottom: solid 5px #f50;
 }
 .container{
@@ -126,16 +132,23 @@ viktor{
     height: 300px;
 }
 
-#openClose{
+/* #openClose{
     display: none;
-}
+} */
 
 @media only screen and (max-width: 699px) {
     .project, .sBlog, .moodBoard, .team{
         float: none;
         margin: 1vh auto;
     }
-   #openClose{
+   /* #openClose{
     display: initial;
-   } 
+   }  */
 }
+
+/* min-device-width */
+/* @media only screen and (min-devicde-width: 700px) {
+   .menu{
+    display: block;
+   } 
+} */

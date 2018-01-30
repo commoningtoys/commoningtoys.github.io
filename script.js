@@ -1,5 +1,5 @@
 let myClasses = ["team", "project", "sBlog", "moodBoard"];
-let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
+// let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
 /**
  * Object to store visibility and name of classes
  * @param {String} _name - name of the class
@@ -93,18 +93,16 @@ function init() {
  * stes the position of the divs below the menu bar
  */
 function setPositionDivs() {
-    let scale = window.devicePixelRatio;
-    console.log(scale);
+    // let scale = window.devicePixelRatio;
     /**
     * testing jQuery functions
     */
-    $("a").click(function (className) {
-        console.log(this.innerHTML);
-    });
+    // $("a").click(function (className) {
+    //     console.log(this.innerHTML);
+    // });
     //LETS get the height of the menu
     // let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
     document.getElementById("myContainer").style.top = menuHeight() + 10 + 'px';
-    console.log('divs in position!')
     // $("myContainer").css(top, menuH);
     // console.log(menuH);
     // console.log('le madonne!')
@@ -115,9 +113,10 @@ function setPositionDivs() {
 /**
  * this function returns the height of the menu at any time
  */
-function menuHeight(){
+function menuHeight() {
     return document.getElementById('myMenu').getBoundingClientRect().height;
 }
+
 /**
  * this function returns a random number between two numbers
  * @param {float} a 
@@ -140,7 +139,7 @@ function Random(a, b) {
 let menuIsShow = true;
 function closeOpenMenu() {
     menuIsShow = !menuIsShow;//every click we change the status of the boolean
-    let myTags = document.getElementsByTagName('a');
+    let myTags = document.getElementsByTagName('menuelement');
     for (let i = 0; i < myTags.length; i++) {
         menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'initial';
     }
@@ -149,7 +148,21 @@ function closeOpenMenu() {
     let button = document.getElementById('openClose');
     menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
 }
-
+/**
+ * event listener that checks the orientation of devices
+ */
+// window.addEventListener("orientationchange", function () {
+//     let deviceAngle = screen.orientation.angle;
+//     if (deviceAngle == 90 || deviceAngle == -90) {
+//         let myTags = document.getElementsByTagName('a');
+//         for (let i = 0; i < myTags.length; i++) {
+//             myTags[i].style.display = 'initial';
+//         }
+//         document.getElementById('openClose').innerHTML = 'Close Menu';
+//         document.getElementById('myMenu').style.width = 'auto';
+//     }
+//     // alert("the orientation of the device is now " + screen.orientation.angle);
+// });
 // $(".project").click(function(e){
 //     let h = window.innerHeight;
 //     console.log(e);

@@ -22,15 +22,15 @@
 <body onload="init()" onresize="setPositionDivs()">
 	<div id="myMenu" class="menu">
 		<!-- <ul> -->
-		<a onclick="reveal('team')" on-tap="reveal('team')">TEAM</a>
+		<menuelement onclick="reveal('team')">TEAM</menuelement>
 
-		<a onclick="reveal('project')">PROJECT</a>
+		<menuelement onclick="reveal('project')">PROJECT</menuelement>
 
-		<a onclick="reveal('sBlog')">SERIOUS BLOG</a>
+		<menuelement onclick="reveal('sBlog')">SERIOUS BLOG</menuelement>
 
-		<a onclick="reveal('moodBoard')">MOOD BOARD</a>
+		<menuelement onclick="reveal('moodBoard')">MOOD BOARD</menuelement>
 
-		<a onclick="showAll()">SHOW ALL!</a>
+		<menuelement onclick="showAll()">SHOW ALL!</menuelement>
 		<!-- <a onclick="reveal('yano')">Yann</a>
 		<a onclick="reveal('micha')">Michaela</a>
 		<a onclick="reveal('selena')">Selena</a>
@@ -184,6 +184,7 @@
 
 	<script>
 		let previous = null, prevStyle;
+		//needs refactoring
 		$(".project, .sBlog, .moodBoard, .team").click(function () {
 			let myDiv = this;
 			// if (e.target.tagName.includes('IMG')) return;//here we handle the the case we click on an image
