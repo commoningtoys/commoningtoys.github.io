@@ -1,3 +1,9 @@
+/* test */
+/* .word_split span:hover {
+    font-weight:bold;
+    font-size:30pt;
+} */
+/* end of test */
 body{
     padding: 0px;
     margin: 0px;
@@ -14,11 +20,11 @@ a{
     color: #f50;
     text-decoration: none;
 }
-a:hover{
+/* a:hover{
     font-style: italic;
     font-weight: 100;
     border-bottom: solid 5px #0cf;
-}
+} */
 menuelement{
     font-family: inherit;
     font-size: inherit;
@@ -154,32 +160,32 @@ viktor{
     bottom: 0px;
     right: 0px;
     line-height: 0.5em;
-    padding: 0px 1vw;
+    padding: 1vw;
     z-index: 999;
-    font-size: 1vh;
+    font-size: 3.5vh;
+    font-weight: 100;
+}
+#myFooter span:hover{
+    /* font-style: italic; */
+    font-weight: 900;
+    color: #0cf;
+    font-size: 5vh;
+    -ms-transform: rotate(70deg); /* IE 9 */
+    -webkit-transform: rotate(70deg); /* Safari 3-8 */
+    transform: rotate(70deg);
 }
 img#menuIcon{
+    float: none;
     top: 10px;
-    width: 50%;
+    /* width: 17%; */
     height: auto;
+    max-height: 40px;
+    max-width: 40px;
 }
-/* #openClose{
-    display: none;
-} */
 
 @media only screen and (max-width: 699px) {
     .project, .sBlog, .moodBoard, .team{
         float: none;
         margin: 1vh auto;
     }
-   /* #openClose{
-    display: initial;
-   }  */
 }
-
-/* min-device-width */
-/* @media only screen and (min-devicde-width: 700px) {
-   .menu{
-    display: block;
-   } 
-} */

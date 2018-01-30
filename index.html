@@ -13,6 +13,7 @@
 	<script src="libraries/p5.dom.js"></script>
 	<script src="libraries/p5.sound.js"></script>
 	<script src="libraries/jquery-3.3.1.min.js"></script>
+	<script src="libraries/jquery.lettering-0.6.1.min.js"></script>
 	<script src="sketch.js"></script>
 	<script src="script.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:600,900" rel="stylesheet">
@@ -41,19 +42,33 @@
 		<a onclick="reveal('shintaro')">Shintaro</a>
 		<a onclick="reveal('viktor')">Viktor</a>
 		<a onclick="reveal('kayla')">Kayla</a> -->
-		<button id="openClose" onclick="closeOpenMenu()"><img src="img/icons/icon_01.png" id="menuIcon"></button>
+		<!-- <button id="openClose" > -->
+		<img src="img/icons/icon_01.png" id="menuIcon" onclick="closeOpenMenu()">
+		<!-- </button> -->
 		<!-- </ul> -->
 	</div>
 	<div id="myContainer" class="container">
 		<script>setPositionDivs()</script>
+		<!-- <p class="word_split">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris suscipit interdum fermentum. 
+			Aenean fermentum imperdiet augue, et venenatis lectus semper vel. 
+			Phasellus faucibus nulla in quam egestas eleifend. 
+			Cras tristique augue eget libero tristique condimentum. 
+			Mauris eget diam eget risus feugiat rutrum. Duis placerat lorem quis augue semper porttitor. 
+			Nullam iaculis dui feugiat erat condimentum rutrum. Sed at accumsan diam. 
+			Maecenas ut urna id velit posuere auctor in vel dui. Aenean consectetur dui in leo faucibus sed feugiat dui blandit.
+		</p>
+		<script>
+			$(".word_split").lettering('words');
+		</script> -->
 		<div class="project">
 			<yano>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Vulputate dignissim suspendisse in est. Habitant morbi tristique
-			senectus et. Tempor orci eu lobortis elementum nibh tellus molestie. Porttitor leo a diam sollicitudin tempor id. Turpis
-			egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Libero volutpat sed cras ornare arcu dui. Fermentum
-			posuere urna nec tincidunt praesent. Varius sit amet mattis vulputate enim nulla. Maecenas volutpat blandit aliquam etiam
-			erat velit scelerisque. Nunc congue nisi vitae suscipit tellus mauris a diam.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Vulputate dignissim suspendisse in est. Habitant morbi tristique
+				senectus et. Tempor orci eu lobortis elementum nibh tellus molestie. Porttitor leo a diam sollicitudin tempor id. Turpis
+				egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Libero volutpat sed cras ornare arcu dui. Fermentum
+				posuere urna nec tincidunt praesent. Varius sit amet mattis vulputate enim nulla. Maecenas volutpat blandit aliquam etiam
+				erat velit scelerisque. Nunc congue nisi vitae suscipit tellus mauris a diam.
 			</yano>
 		</div>
 		<div class="sBlog">
@@ -169,12 +184,8 @@
 			erat velit scelerisque. Nunc congue nisi vitae suscipit tellus mauris a diam.
 		</div>
 		<div class="team">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-			Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Vulputate dignissim suspendisse in est. Habitant morbi tristique
-			senectus et. Tempor orci eu lobortis elementum nibh tellus molestie. Porttitor leo a diam sollicitudin tempor id. Turpis
-			egestas pretium aenean pharetra magna ac placerat vestibulum lectus. Libero volutpat sed cras ornare arcu dui. Fermentum
-			posuere urna nec tincidunt praesent. Varius sit amet mattis vulputate enim nulla. Maecenas volutpat blandit aliquam etiam
-			erat velit scelerisque. Nunc congue nisi vitae suscipit tellus mauris a diam.
+			<h1>Dr. Viktor Bedö</h1>				
+				Since summer 2010 Viktor Bedö is part of the teaching team of the School of Design Thinking at the Hasso-Plattner-Institute. Viktor is member of Invisible Playground, a Berlin based Street- and Urban-Games collective creating playful experiences in various cities in Germany and world wide. Viktor earned a PhD degree with his thesis "Interactive Urban Maps as Instruments of Thinking" in a double doctoral scheme including the Doctor School for Philosophy, University of Pécs and the Institute for Philosophy at the Humboldt University of Berlin.His is interested in community driven urban mapping, embodied urban knowledge, visual thinking, urban games, design thinking and contemporary dance.
 		</div>
 		<div class="project">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -185,16 +196,16 @@
 			erat velit scelerisque. Nunc congue nisi vitae suscipit tellus mauris a diam.
 		</div>
 	</div>
-	<div id="myFooter" class="footer">
-		<h1>
-			<a href="index.html">THINKING TOYS (OR GAMES) FOR COMMONING</a>
-		</h1>
-		<br>
+	<div class="footer">
+		<a href="index.html" id="myFooter">THINKING TOYS (OR GAMES) FOR COMMONING</a>
 	</div>
-
+	<br><br><br><br><br><br><br>
 	<script>
+		/**
+		* this function enlarges the divs by clicking on them
+		*/
 		let previous = null, prevStyle;
-		//needs refactoring
+		// needs refactoring
 		$(".project, .sBlog, .moodBoard, .team").click(function () {
 			let myDiv = this;
 			// if (e.target.tagName.includes('IMG')) return;//here we handle the the case we click on an image
@@ -221,6 +232,7 @@
 			window.scrollTo(0, y);
 			// goTo(0, y);
 		});
+		$("#myFooter").lettering();
 	</script>
 </body>
 

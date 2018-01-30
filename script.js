@@ -93,22 +93,7 @@ function init() {
  * stes the position of the divs below the menu bar
  */
 function setPositionDivs() {
-    // let scale = window.devicePixelRatio;
-    /**
-    * testing jQuery functions
-    */
-    // $("a").click(function (className) {
-    //     console.log(this.innerHTML);
-    // });
-    //LETS get the height of the menu
-    // let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
     document.getElementById("myContainer").style.top = menuHeight() + 10 + 'px';
-    // $("myContainer").css(top, menuH);
-    // console.log(menuH);
-    // console.log('le madonne!')
-    // let menuHeight = document.getElementById('myMenu').style.height;
-    // console.log(menuHeight);
-    // document.getElementById('myContainer').style.top = menuHeight;
 }
 /**
  * this function returns the height of the menu at any time
@@ -151,7 +136,7 @@ function closeOpenMenu() {
         menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'initial';
     }
     let myMenu = document.getElementById('myMenu');
-    menuIsShow == false ? myMenu.style.width = menuHeight() + 'px' : myMenu.style.width = '100%';
+    menuIsShow == false ? myMenu.style.width = menuHeight() + 'px' : myMenu.style.width = 'auto';
     let button = document.getElementById('openClose');
     // menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
 
