@@ -181,20 +181,25 @@ viktor{
 }
 #footer1, #footer2{
     max-width: 45vw;
+    min-width: 44vw;
     min-height: 125px;
     height: auto;
     display: inline-table;
     margin: auto;
+    padding-left: 10px;
+    border-left: solid 5px #f50;
 }
 #footer1 span:hover{
     font-weight: 900;
     color: #0cf;
-    font-size: 2vh
+    border-bottom: solid 2px #f50;
+    /* font-size: 2vh */
 }
 #footer2 span:hover{
     font-weight: 900;
     color: #0cf;
-    font-size: 2vh;
+    border-bottom: solid 2px #f50;
+    /* font-size: 2vh; */
 }
 #myFooter span:hover{
     /* font-style: italic; */
