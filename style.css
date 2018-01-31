@@ -110,9 +110,10 @@ viktor{
     margin: 0.5vw;
     /* clear: both; */
     /* padding: 3vw; */
-    float: left;
+    float: right;
     padding: 0.8em;
     /* top: 100px; */
+    border: solid 5px #0cf;
 }
 
 .menu{
@@ -128,6 +129,7 @@ viktor{
     display: block;
     margin: 0px;
     z-index: 999;
+    padding-left: 1vw;
 } 
 .project{
     /* background-color: cyan; */
@@ -135,23 +137,26 @@ viktor{
 
 } 
 .sBlog{
-    background-color: yellow;
+    /* background-color: yellow; */
     min-height: 200px;
     /* max-height: 400px; */
 } 
 .moodBoard{
-    background-color: coral;
+    /* background-color: coral; */
     height: 200px;
 }
 .team{
-    background-color: green;
+    /* background-color: green; */
     height: 300px;
 }
 .foot{
     height: 5vh;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0);
+    /* background-color: rgba(255, 255, 255, 0.488); */
     overflow-y: initial;
+    /* background-color: #f50; */
+    height: auto;
+    font-size: 1.5vh;
 }
 .container{
     top: 120px;
@@ -161,10 +166,11 @@ viktor{
     position: relative;
     z-index: 1;
     display: block;
+    padding-left: 4vw;
 }
 .footer{
     position: fixed;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.392);
     bottom: 0px;
     right: 0px;
     /* line-height: 0.5em; */
@@ -173,15 +179,30 @@ viktor{
     font-size: 3.5vh;
     font-weight: 100;
 }
+#footer1, #footer2{
+    max-width: 45vw;
+    min-height: 125px;
+    height: auto;
+    display: inline-table;
+    margin: auto;
+}
+#footer1 span:hover{
+    font-weight: 900;
+    color: #0cf;
+    font-size: 2vh
+}
+#footer2 span:hover{
+    font-weight: 900;
+    color: #0cf;
+    font-size: 2vh;
+}
 #myFooter span:hover{
     /* font-style: italic; */
     font-weight: 900;
     color: #0cf;
     font-size: 5vh;
-    -ms-transform: rotate(70deg); /* IE 9 */
-    -webkit-transform: rotate(70deg); /* Safari 3-8 */
-    transform: rotate(70deg);
 }
+
 img#menuIcon{
     float: none;
     top: 10px;
@@ -192,8 +213,12 @@ img#menuIcon{
 }
 
 @media only screen and (max-width: 699px) {
-    .project, .sBlog, .moodBoard, .team{
+    .project, .sBlog, .moodBoard, .team, .foot{
         float: none;
         margin: 1vh auto;
+    }
+    .container{
+        padding: 0px;
+        width: 100%;
     }
 }
