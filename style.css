@@ -1,13 +1,13 @@
 /* custom scrollbars */
 ::-webkit-scrollbar-track
 {
-/* 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); */
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); */
 	background-color: #fff;
 }
 
 ::-webkit-scrollbar
 {
-	width: 10px;
+	width: 8px;
 	background-color: #F5F5F5;
 }
 
@@ -17,11 +17,14 @@
 	/* border: 2px solid #555555; */
 }
 
-
 body{
+    /* background-color: chartreuse; */
+    position: relative;
     padding: 0px;
     margin: 0px;
     font-family: 'Source Code Pro', mono;
+    padding-bottom: 6rem;
+    /* height: 100%; */
 }
 img{
     position: relative;
@@ -29,16 +32,20 @@ img{
     height: auto;
     float: right;
     max-width: 650px;
+    border: solid 3px #f50;
 }
 a{
     color: #f50;
     text-decoration: none;
 }
-/* a:hover{
-    font-style: italic;
+a:hover{
+    /* font-style: italic; */
     font-weight: 100;
-    border-bottom: solid 5px #0cf;
-} */
+    /* border-bottom: solid 5px #0cf; */
+}
+letterLink{
+    color: #f50;
+}
 menuelement{
     font-family: inherit;
     font-size: inherit;
@@ -71,6 +78,7 @@ button:hover{
 }
 /* Personal styles for team members */
 yano, micha, shintaro, selena, viktor, kayla{
+    line-height: 25pt;
     /* border: solid 3px #f00;  */
     /* font-family: 'Source Code Pro', mono; */
 
@@ -114,7 +122,11 @@ viktor{
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
-.project, .sBlog, .moodBoard, .team, .foot{
+.project, 
+.sBlog, 
+.moodBoard, 
+.team, 
+.foot{
     display: block;
     width: 25vw;
     min-width: 250px;
@@ -128,8 +140,19 @@ viktor{
     padding: 0.8em;
     /* top: 100px; */
     border: solid 5px #0cf;
+    -webkit-transition: -webkit-transform 2s; /* Safari */
+    -ms-transition: -ms-transform 2s; /* mozilla */
+    transition: transform 2s;
 }
-
+.project:hover, 
+.sBlog:hover, 
+.moodBoard:hover, 
+.team:hover, 
+.foot:hover{
+    -webkit-transform: rotate(36deg); /* Safari */
+    -ms-transform: rotate(36deg);
+    transform: rotate(36deg);
+}
 .menu{
     position: fixed;
     background-color: #ffffff;
@@ -163,20 +186,18 @@ viktor{
     /* background-color: green; */
     height: 300px;
 }
-.foot{
-    height: 5vh;
-    width: 100%;
-    /* background-color: rgba(255, 255, 255, 0.488); */
-    overflow-y: initial;
-    /* background-color: #f50; */
-    height: auto;
-    font-size: 1.5vh;
+.team a:hover{
+    font-weight: bolder;
+    color: #0cf;
+    border-bottom: solid 2px #f50;
+    background-color: white;
+    letter-spacing: 3px;
 }
 .container{
     top: 120px;
     width: 95%;
     margin: auto;
-    height: auto;
+    min-height: 100%;
     position: relative;
     z-index: 1;
     display: block;
@@ -193,9 +214,26 @@ viktor{
     font-size: 3.5vh;
     font-weight: 100;
 }
+.foot{
+    /* position: absolute; */
+    /* bottom: 0px; */
+    height: auto;
+    width: 100%;
+    /* background-color: rgba(255, 255, 255, 0.488); */
+    overflow-y: initial;
+    /* background-color: #f50; */
+    /* height: auto; */
+    font-size: 1.5vh;
+    /* position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem; */
+}
 #footer1, #footer2{
     max-width: 45vw;
     min-width: 44vw;
+    /* height: 125px; */
     min-height: 125px;
     height: auto;
     display: inline-table;

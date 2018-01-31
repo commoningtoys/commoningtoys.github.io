@@ -88,7 +88,9 @@ function init() {
     }
     //set the first div project to width 100%
     //needs refactoring
-    document.getElementsByClassName('project')[0].style.width = '100%'
+    let mainPage = document.getElementsByClassName('project')[0];
+    mainPage.style.width = '100%';
+    mainPage.style.height = 'auto';
 }
 /**
  * stes the position of the divs below the menu bar
