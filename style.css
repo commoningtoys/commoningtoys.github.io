@@ -1,9 +1,23 @@
-/* test */
-/* .word_split span:hover {
-    font-weight:bold;
-    font-size:30pt;
-} */
-/* end of test */
+/* custom scrollbars */
+::-webkit-scrollbar-track
+{
+/* 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); */
+	background-color: #fff;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #f50;
+	/* border: 2px solid #555555; */
+}
+
+
 body{
     padding: 0px;
     margin: 0px;
