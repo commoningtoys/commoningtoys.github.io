@@ -10,17 +10,15 @@ class Agent {
             this.target = createVector(),
             this.vel = createVector(),
             this.acc = createVector(),
-            this.r = 32, this.speed = 5, this.force = 0.3;
+            this.r = 32, this.speed = 15, this.force = 0.3;
             this.chr = _chr;
     }
     /**
      * show the agent as circle with a directional nose
      */
     show() {
-        textSize(32);
-        strokeWeight(0.5);
-        line(this.pos.x, this.pos.y, this.target.x, this.target.y);
-        fill(0);
+        textSize(this.r);
+        fill('#FF5500');
         noStroke();
         //stroke(0, 255, 0);
         //float theta = this.vel.heading();

@@ -16,7 +16,11 @@
 	background-color: #f50;
 	/* border: 2px solid #555555; */
 }
-
+canvas{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
 body{
     /* background-color: chartreuse; */
     position: relative;
@@ -147,8 +151,7 @@ viktor{
 .project:hover, 
 .sBlog:hover, 
 .moodBoard:hover, 
-.team:hover, 
-.foot:hover{
+.team:hover{
     -webkit-transform: rotate(36deg); /* Safari */
     -ms-transform: rotate(36deg);
     transform: rotate(36deg);
