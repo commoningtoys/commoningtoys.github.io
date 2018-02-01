@@ -10,7 +10,7 @@ class Agent {
             this.target = createVector(),
             this.vel = createVector(),
             this.acc = createVector(),
-            this.r = 32, this.speed = 15, this.force = 0.3;
+            this.r = 32, this.speed = 7.5, this.force = 0.3;
             this.chr = _chr;
     }
     /**
@@ -26,7 +26,7 @@ class Agent {
         translate(this.pos.x, this.pos.y);
         //rotate(theta + PI/2);
         //line(0, 0, 0, -this.r * 2);
-        text(this.chr, 0, 0);
+        text(this.chr, -this.r/4, this.r/4);
         // ellipse(0, 0, this.r, this.r);
         pop();
     }
