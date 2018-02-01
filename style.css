@@ -13,7 +13,7 @@
 
 ::-webkit-scrollbar-thumb
 {
-	background-color: #f00;
+	background-color: #f50;
 	/* border: 2px solid #555555; */
 }
 canvas{
@@ -29,8 +29,6 @@ body{
     font-family: 'Source Code Pro', mono;
     padding-bottom: 6rem;
     /* height: 100%; */
-    z-index: -2;
-    /* background-color: orange; */
 }
 img{
     position: relative;
@@ -38,40 +36,39 @@ img{
     height: auto;
     float: right;
     max-width: 650px;
-    border: solid 3px #f00;
+    border: solid 3px #f50;
 }
 a{
-    color: #f00;
+    color: #f50;
     text-decoration: none;
 }
 a:hover{
     /* font-style: italic; */
     font-weight: 100;
-    /* border-bottom: solid 5px #00f; */
+    /* border-bottom: solid 5px #0cf; */
 }
 letterLink{
-    color: #f00;
+    color: #f50;
 }
 menuelement{
     font-family: inherit;
     font-size: inherit;
     padding: 0.9em;
     cursor: pointer;
-    outline: solid 5px #f00;
-    border: solid 5px #fa0;
+    border: solid 5px #0cf;
 }
 menuelement:active{
-    border-bottom: solid 5px #f00;
+    border-bottom: solid 5px #f50;
 }
 menuelement:visited{
     font-style: italic;
     font-weight: 900;
-    border-bottom: solid 5px #00f;
+    border-bottom: solid 5px #0cf;
 }
 menuelement:hover{
     font-style: italic;
     font-weight: 900;
-    border-bottom: solid 5px #f00;
+    border-bottom: solid 5px #f50;
 }
 button{
     border: none;
@@ -80,8 +77,8 @@ button{
     background-image: none;
 }
 button:hover{
-    /* border-bottom: solid 5px #f00; */
-    background-color: #00f;
+    /* border-bottom: solid 5px #f50; */
+    background-color: #0cf;
 }
 /* Personal styles for team members */
 yano, micha, shintaro, selena, viktor, kayla{
@@ -101,31 +98,31 @@ yano{
 selena{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f00;
-    /* border-bottom: solid 2px #00f; */
+    /* border-bottom: solid 2px #0cf; */
 }
 
 micha{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
-    color: #f00;
-    border-bottom: solid 2px #00f;
+    color: #f50;
+    border-bottom: solid 2px #0cf;
 }
 
 shintaro{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: rgb(255, 255, 255);
-    border-bottom: solid 2px #00f;
+    border-bottom: solid 2px #0cf;
     background-color: black;
 }
 
 kayla{
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #f00;
-    border-bottom: solid 2px #00f;
+    color: #f50;
+    border-bottom: solid 2px #0cf;
 }
 
 viktor{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
-    color: #f00;
+    color: #f50;
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
@@ -146,9 +143,7 @@ viktor{
     float: right;
     padding: 0.8em;
     /* top: 100px; */
-
-    outline: solid 5px #f00;
-    border: solid 5px #fa0;
+    border: solid 5px #0cf;
     -webkit-transition: -webkit-transform 2s; /* Safari */
     -ms-transition: -ms-transform 2s; /* mozilla */
     transition: transform 2s;
@@ -157,14 +152,14 @@ viktor{
 .sBlog:hover, 
 .moodBoard:hover, 
 .team:hover{
-    -webkit-transform: rotate(6deg); /* Safari */
-    -ms-transform: rotate(6deg);
-    transform: rotate(6deg);
+    -webkit-transform: rotate(36deg); /* Safari */
+    -ms-transform: rotate(36deg);
+    transform: rotate(36deg);
 }
 .menu{
     position: fixed;
     background-color: #ffffff;
-    /* border: solid 5px #00f; */
+    /* border: solid 5px #0cf; */
     /* max-width: 200px; */
     width: auto;
     /* clear: left; */
@@ -175,8 +170,7 @@ viktor{
     margin: 0px;
     z-index: 999;
     padding-left: 1vw;
-}
-/* remove this! if not used */
+} 
 .project{
     /* background-color: cyan; */
     height: 250px;
@@ -197,8 +191,8 @@ viktor{
 }
 .team a:hover{
     font-weight: bolder;
-    color: #00f;
-    border-bottom: solid 2px #f00;
+    color: #0cf;
+    border-bottom: solid 2px #f50;
     background-color: white;
     letter-spacing: 3px;
 }
@@ -230,7 +224,7 @@ viktor{
     width: 100%;
     /* background-color: rgba(255, 255, 255, 0.488); */
     overflow-y: initial;
-    /* background-color: #f00; */
+    /* background-color: #f50; */
     /* height: auto; */
     font-size: 1.5vh;
     /* position: absolute;
@@ -248,24 +242,24 @@ viktor{
     display: inline-table;
     margin: auto;
     padding-left: 10px;
-    border-left: solid 5px #f00;
+    border-left: solid 5px #f50;
 }
 #footer1 span:hover{
     font-weight: 900;
-    color: #00f;
-    border-bottom: solid 2px #f00;
+    color: #0cf;
+    border-bottom: solid 2px #f50;
     /* font-size: 2vh */
 }
 #footer2 span:hover{
     font-weight: 900;
-    color: #00f;
-    border-bottom: solid 2px #f00;
+    color: #0cf;
+    border-bottom: solid 2px #f50;
     /* font-size: 2vh; */
 }
 #myFooter span:hover{
     /* font-style: italic; */
     font-weight: 900;
-    color: #00f;
+    color: #0cf;
     font-size: 5vh;
 }
 
