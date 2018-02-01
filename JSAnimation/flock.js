@@ -1,4 +1,4 @@
-let txt = 'THINKINGTOYS(ORGAMES)FOR COMMONING';
+let txt = 'THINKING TOYS (OR GAMES) FOR COMMONING';
 class Flock {
 
     constructor() {
