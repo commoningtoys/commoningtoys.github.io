@@ -33,11 +33,11 @@ class Flock {
             else {
                 // console.log(sentenceTargets[i])
                 this.agents[i].settarget(sentenceTargets[i]);
-                if (this.agents[i].targetReached()) counter++;
-                if (counter >= txt.length) {
-                    isFormingSentence = false;
-                    counter = 0;
-                }
+                // if (this.agents[i].targetReached()) counter++;
+                // if (counter >= txt.length) {
+                //     isFormingSentence = false;
+                //     counter = 0;
+                // }
             }
             this.agents[i].applyBehaviors(this.agents);
             this.agents[i].update();
@@ -63,5 +63,13 @@ class Flock {
             sentenceTargets.push(createVector(posX, y));
             // this.agents[i].settarget(target);
         }
+    }
+    /**
+     * sets the boolean of isFormingSentence
+     * useful to end the animation of the letters
+     * @param {boolean} val - true or false
+     */
+    setFormingSentence(val){
+        isFormingSentence = val;
     }
 }

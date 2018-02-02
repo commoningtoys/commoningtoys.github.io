@@ -25,10 +25,12 @@ function draw() {
 	background(255);
 	flock.update();
 	flock.show();
+	if(mouseIsPressed)flock.formSentence(mouseX, mouseY);
+	else flock.setFormingSentence(false);
 }
-function mouseClicked(){
-	flock.formSentence(mouseX, mouseY);
-}
+// function mouseClicked(){
+// 	flock.formSentence(mouseX, mouseY);
+// }
 /**
  * DEPRECATED
  * this function returns the height of a page,
