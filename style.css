@@ -152,9 +152,9 @@ viktor{
 .sBlog:hover, 
 .moodBoard:hover, 
 .team:hover{
-    -webkit-transform: rotate(36deg); /* Safari */
-    -ms-transform: rotate(36deg);
-    transform: rotate(36deg);
+    -webkit-transform: rotate(6deg); /* Safari */
+    -ms-transform: rotate(6deg);
+    transform: rotate(6deg);
 }
 .menu{
     position: fixed;

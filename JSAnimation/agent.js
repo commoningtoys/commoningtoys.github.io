@@ -31,16 +31,9 @@ class Agent {
         pop();
     }
     /**
-     * update the agent this.pos using vector math
-     * given a this.target the agent tries to reach it
-     *
-     * when the agent reaches the bar drinks
-     * and than looks around to see if there are friends nearby
-     * in this case we use the function dist to check the distance
-     * and we compare it with the compatibility of the agent
+     * update the agent position according to vector math
      */
     update() {
-        // edges();
         // Update this.velocity
         this.vel.add(this.acc);
         // Limit this.speed
@@ -55,21 +48,18 @@ class Agent {
      */
     settarget(p) {
         this.target = p;
+        // this.target.add(p);
+    }
+    /**
+     * returns the radius of the agent
+     */
+    getRadius(){
+        return this.r;
     }
     //returns if the agent has reached his this.target
     targetReached() {
-        let d = PVector.dist(this.pos, this.target);
-        return (d < 10);
-    }
-    edges() {    //off-screen wrap around  
-        if (this.pos.x < 0) this.vel.mult(-1);
-        if (this.pos.x > width) this.vel.mult(-1);
-        if (this.pos.y < 0) this.vel.mult(-1);
-        if (this.pos.y > height) this.vel.mult(-1);
-        //if (this.pos.x < 0) this.pos.x = width;
-        //if (this.pos.x > width) this.pos.x = 0;
-        //if (this.pos.y < 0) this.pos.y = height;
-        //if (this.pos.y > height) this.pos.y = 0;
+        let d = p5.Vector.dist(this.pos, this.target);
+        return (d < 1);
     }
     // applyForce(force) {
     //     // We could add mass here if we want A = F / M
@@ -95,7 +85,7 @@ class Agent {
 // Separation
 // Method checks for nearby Agents and steers away
 function separate(Agents, agent, r) {
-    let desiredseparation = r * 1.2;
+    let desiredseparation = r * 0.7;
     let sum = createVector();
     let count = 0;
     // For every boid in the system, check if it's too close

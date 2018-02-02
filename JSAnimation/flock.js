@@ -1,4 +1,8 @@
 let txt = 'THINKING TOYS (OR GAMES) FOR COMMONING';
+let isFormingSentence = false;
+let sentenceTargets = [];
+
+let counter = 0;
 class Flock {
 
     constructor() {
@@ -25,9 +29,39 @@ class Flock {
     update() {
         this.mouse = createVector(mouseX, mouseY);
         for (let i = 0; i < this.agents.length; i++) {
-            this.agents[i].settarget(this.mouse);
+            if (!isFormingSentence) this.agents[i].settarget(this.mouse);
+            else {
+                // console.log(sentenceTargets[i])
+                this.agents[i].settarget(sentenceTargets[i]);
+                if (this.agents[i].targetReached()) counter++;
+                if (counter >= txt.length) {
+                    isFormingSentence = false;
+                    counter = 0;
+                }
+            }
             this.agents[i].applyBehaviors(this.agents);
             this.agents[i].update();
+        }
+    }
+    /**
+     * 
+     * @param {float} x 
+     * @param {float} y 
+     */
+    formSentence(x, y) {
+        // console.log('im working')
+        sentenceTargets = [];
+        isFormingSentence = true;
+        let kerning = 0;
+        let letterSpace = this.agents[0].getRadius()/2 + kerning;
+        let sentenceWidth = letterSpace * txt.length;
+        console.log(this.agents[0].getRadius());
+        for (let i = 0; i < txt.length; i++) {
+            let leftStart = x - (sentenceWidth / 2);//starting point of the formed sentence
+            let posX = leftStart + (i * letterSpace);
+            // let y = mouseY;
+            sentenceTargets.push(createVector(posX, y));
+            // this.agents[i].settarget(target);
         }
     }
 }

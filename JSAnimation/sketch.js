@@ -26,6 +26,9 @@ function draw() {
 	flock.update();
 	flock.show();
 }
+function mouseClicked(){
+	flock.formSentence(mouseX, mouseY);
+}
 /**
  * DEPRECATED
  * this function returns the height of a page,
