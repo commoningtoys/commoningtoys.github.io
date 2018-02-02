@@ -44,9 +44,9 @@ class Flock {
         }
     }
     /**
-     * 
-     * @param {float} x 
-     * @param {float} y 
+     * this function adds target vector to an array
+     * @param {float} x - position of mouseX
+     * @param {float} y - position of mouse Y
      */
     formSentence(x, y) {
         // console.log('im working')
