@@ -9,6 +9,7 @@ myName{
     css
     style
     implementations
+    (please use comic sans!)
     */
 }
 ```
@@ -20,3 +21,10 @@ in the HTML
     </myName>
 </div>
 ```
+This ensure our very own fight against corporativst design.
+3. This approach is a teaching approach, to add a contribution you need to learn the basics of HTML and CSS. Hopefully creative minds will use it to empower they very own practice, creating interesting new visuals.
+4. This approach aims to criticiye the standardized beauty of the WP, CarcoCollective, Format etc. way of designing web pages.
+5. Web design its simple!
+    * DIY website are cool
+    * prebuilt website aren't
+    * responsive design is awful, you can still force viewer to watch your website on a desktop
