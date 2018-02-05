@@ -264,34 +264,7 @@
 		*/
 		let previous = null, prevStyle;
 		// needs refactoring
-		// $(".project, .sBlog, .moodBoard, .team").click(function () {
-		// 	let myDiv = this;
-		// 	// if (e.target.tagName.includes('IMG')) return;//here we handle the the case we click on an image
-		// 	if (previous == null) {
-		// 		//needs refactoring!!!!!!!
-		// 	} else {
-		// 		//reset the previous clicked div to its initial state
-		// 		previous.style.height = prevH;
-		// 		previous.style.width = prevW;
-		// 		previous.style.overflowY = 'scroll';
-		// 	}
-		// 	//let's save the div so we can reset it later
-		// 	previous = this;
-		// 	prevH = this.style.height;
-		// 	prevW = this.style.width;
-		// 	//here we enlarge the div
-		// 	myDiv.style.overflowY = 'hidden';
-		// 	myDiv.style.width = '100%';
-		// 	myDiv.style.height = 'auto';
-		// 	console.log(this);
-		// 	//here we get the height of the top menu (needs refactoring set it as gloal variable)
-		// 	// let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
-		// 	let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY - (menuHeight() + 1); //this helps us to get the position of the div to scroll to
-		// 	window.scrollTo(0, y);
-		// 	// goTo(0, y);
-		// });
-
-		$(document).on('click touchstart', ".project, .sBlog, .moodBoard, .team",function () {
+		$(".project, .sBlog, .moodBoard, .team").click(function () {
 			let myDiv = this;
 			// if (e.target.tagName.includes('IMG')) return;//here we handle the the case we click on an image
 			if (previous == null) {
