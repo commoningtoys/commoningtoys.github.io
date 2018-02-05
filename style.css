@@ -277,6 +277,15 @@ img#menuIcon{
         float: none;
         margin: 1vh auto;
     }
+
+    .project:hover, 
+    .sBlog:hover, 
+    .moodBoard:hover, 
+    .team:hover{
+    -webkit-transform: none; /* Safari */
+    -ms-transform: none;
+    transform: none;
+}
     .container{
         padding: 0px;
         width: 100%;
