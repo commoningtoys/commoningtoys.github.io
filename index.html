@@ -22,7 +22,6 @@
 </head>
 
 <body onload="init()" onresize="setPositionDivs()">
-	<a href="https://commoningtoys.github.io/commoningWebsite/">LINK</a>
 	<div id="myMenu" class="menu">
 		<menuelement id="menuteam">TEAM</menuelement>
 		<menuelement id="menuproject">PROJECT</menuelement>
@@ -279,7 +278,7 @@
 		$(document).on('click touchstart', '#menuIcon', function () {
 			closeOpenMenu();
 		});
-		//here for the <a> tag
+		//here for the <a> tag	
 		$(document).on('click touchstart', 'a', function(){
 			window.open(this.href, '_self');
 		});
