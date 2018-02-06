@@ -20,6 +20,7 @@ for (let i = 0; i < myClasses.length; i++) {
  * @param {String} className - the class that needs to be set to 'display: none;' 
  */
 function reveal(className) {
+    window.scrollTo(0, 0);
     // showAll();
     console.log('imWOrking');
     for (let i = 0; i < ClassObjects.length; i++) {
@@ -91,18 +92,28 @@ function init() {
     let mainPage = document.getElementsByClassName('project')[0];
     mainPage.style.width = '100%';
     mainPage.style.height = 'auto';
+    if(screen.width > 699)setNumberOfColumns(mainPage, '2');
 }
 /**
  * stes the position of the divs below the menu bar
  */
-function setPositionDivs() {
-    document.getElementById("myContainer").style.top = menuHeight() + 10 + 'px';
+function setPositionContainer() {
+    let container = document.getElementById("myContainer");
+    let w = menuBounds().width;
+    console.log(screen.width);
+    // console.log(w);
+    // container.style.left = w + 'px';
+    if(screen.width > 699)container.style.maxWidth = window.innerWidth - w + 'px';
+    // console.log(window.innerWidth - w);
+    // container.style.top = menuBounds().height + 10 + 'px';
+    // let foot = document.getElementById('myFoot');
+    // if(foot != undefined)foot.style.width = window.innerWidth;
 }
 /**
- * this function returns the height of the menu at any time
+ * this function returns the bounds of the menu at any time
  */
-function menuHeight() {
-    return document.getElementById('myMenu').getBoundingClientRect().height;
+function menuBounds() {
+    return document.getElementById('myMenu').getBoundingClientRect();
 }
 
 /**
@@ -134,7 +145,7 @@ function closeOpenMenu() {
         menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'initial';
     }
     let myMenu = document.getElementById('myMenu');
-    menuIsShow == false ? myMenu.style.width = menuHeight() + 'px' : myMenu.style.width = 'auto';
+    // menuIsShow == false ? myMenu.style.width = 'auto' : myMenu.style.width = 'auto';
     let button = document.getElementById('openClose');
     // menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
 
@@ -149,7 +160,7 @@ function setNumberOfColumns(el, num){
     el.style.columnCount = num;
     el.style.MozColumnCount = num;
     el.style.WebkitColumnCount = num;
-    console.log(el);
-    console.log(el.style);
+    // console.log(el);
+    // console.log(el.style);
     // console.log(el.style.MozColumnCount);
 }

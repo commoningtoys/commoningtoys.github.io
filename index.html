@@ -21,17 +21,17 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body onload="init()" onresize="setPositionDivs()">
+<body onload="init()" onresize="setPositionContainer()">
 	<div id="myMenu" class="menu">
-		<menuelement id="menuteam">TEAM</menuelement>
-		<menuelement id="menuproject">PROJECT</menuelement>
-		<menuelement id="menusBlog">SERIOUS BLOG</menuelement>
-		<menuelement id="menumoodBoard">MOOD BOARD</menuelement>
+		<img src="img/icons/icon_01.png" id="menuIcon"> <br>
+		<menuelement id="menuteam">TEAM</menuelement> <br>
+		<menuelement id="menuproject">PROJECT</menuelement> <br>
+		<menuelement id="menusBlog">SERIOUS BLOG</menuelement> <br>
+		<menuelement id="menumoodBoard">MOOD BOARD</menuelement> <br>
 		<menuelement id="menushowAll">SHOW ALL!</menuelement>
-		<img src="img/icons/icon_01.png" id="menuIcon">
 	</div>
 	<div id="myContainer" class="container">
-		<script>setPositionDivs()</script>
+		<script>setPositionContainer()</script>
 		<div class="project" style="width:100%;">
 			<shintaro>
 				<h1 style="background-color:black;">The Project</h1>
@@ -212,7 +212,7 @@
 			erat velit scelerisque. Nunc congue nisi vitae suscipit tellus mauris a diam.
 		</div>
 
-		<div class="foot">
+		<div class="foot" id="myFoot">
 			<div id="footer1">
 				<a href="http://p3.snf.ch/project-175913" id="link1">Swiss National Science Fundation</a> (SNSF No. 175913), runtime 01/2018 – 12/2021
 			</div>
@@ -224,6 +224,7 @@
 
 		</div>
 	</div>
+	<!-- <script>document.getElementById('myFoot').style.width = window.innerWidth;</script> -->
 	<div class="footer">
 		<a href="index.html" id="myFooter">THINKING TOYS (OR GAMES) FOR COMMONING</a>
 	</div>
@@ -258,7 +259,7 @@
 			// console.log(this);
 			//here we get the height of the top menu (needs refactoring set it as gloal variable)
 			// let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
-			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY - (menuHeight() + 1); //this helps us to get the position of the div to scroll to
+			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY; //this helps us to get the position of the div to scroll to
 			window.scrollTo(0, y);
 			// goTo(0, y);
 		});

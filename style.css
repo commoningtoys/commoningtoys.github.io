@@ -168,7 +168,7 @@ viktor{
 }
 .menu{
     position: fixed;
-    background-color: #d52020fb;
+    background-color: #ffffff00;
     /* border: solid 5px #0cf; */
     /* max-width: 200px; */
     width: auto;
@@ -180,8 +180,8 @@ viktor{
     margin: 0px;
     z-index: 999;
     padding-left: 1vw;
-    min-width: 180px;
-    width: 20vw;
+    /* min-width: 180px;
+    width: 20vw; */
 } 
 .project{
     /* background-color: cyan; */
@@ -210,11 +210,12 @@ viktor{
 }
 .container{
     /* left: 200px; */
-    top: 120px;
-    width: 95vw;
-    margin: auto;
+    /* top: 120px; */
+    right: 0px;
+    width: 78vw;
+    /* margin: auto; */
     min-height: 100%;
-    position: relative;
+    position: absolute;
     z-index: 1;
     display: block;
     padding-left: 4vw;
@@ -247,8 +248,8 @@ viktor{
     padding: 1rem; */
 }
 #footer1, #footer2{
-    max-width: 45vw;
-    min-width: 44vw;
+    max-width: 35vw;
+    min-width: 34vw;
     /* height: 125px; */
     min-height: 125px;
     height: auto;
@@ -300,6 +301,8 @@ img#menuIcon{
     transform: none;
 }
     .container{
+        margin: auto;
+        display: block;
         padding: 0px;
         width: 100%;
     }
