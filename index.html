@@ -5,14 +5,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width">
-	<!-- , initial-scale=1.0" -->
 	<title>Commoning</title>
 
+	<script src="libraries/jquery-3.3.1.min.js"></script>
+	<script src="libraries/jquery.lettering-0.6.1.min.js"></script>
 	<script src="libraries/p5.js"></script>
 	<script src="libraries/p5.dom.js"></script>
 	<script src="libraries/p5.sound.js"></script>
-	<script src="libraries/jquery-3.3.1.min.js"></script>
-	<script src="libraries/jquery.lettering-0.6.1.min.js"></script>
 	<script src="sketch.js"></script>
 	<script src="script.js"></script>
 	<script src="JSAnimation/sketch.js"></script>
@@ -23,46 +22,17 @@
 </head>
 
 <body onload="init()" onresize="setPositionDivs()">
+	<a href="https://commoningtoys.github.io/commoningWebsite/">LINK</a>
 	<div id="myMenu" class="menu">
-		<!-- <ul> -->
-		<!-- <h2>
-			<a href="index.html">THINKING TOYS (OR GAMES) FOR COMMONING</a>
-		</h2>
-		<br> -->
 		<menuelement id="menuteam">TEAM</menuelement>
-
 		<menuelement id="menuproject">PROJECT</menuelement>
-
 		<menuelement id="menusBlog">SERIOUS BLOG</menuelement>
-
 		<menuelement id="menumoodBoard">MOOD BOARD</menuelement>
-
 		<menuelement id="menushowAll">SHOW ALL!</menuelement>
-		<!-- <a onclick="reveal('yano')">Yann</a>
-		<a onclick="reveal('micha')">Michaela</a>
-		<a onclick="reveal('selena')">Selena</a>
-		<a onclick="reveal('shintaro')">Shintaro</a>
-		<a onclick="reveal('viktor')">Viktor</a>
-		<a onclick="reveal('kayla')">Kayla</a> -->
-		<!-- <button id="openClose" > -->
 		<img src="img/icons/icon_01.png" id="menuIcon">
-		<!-- </button> -->
-		<!-- </ul> -->
 	</div>
 	<div id="myContainer" class="container">
 		<script>setPositionDivs()</script>
-		<!-- <p class="word_split">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris suscipit interdum fermentum. 
-			Aenean fermentum imperdiet augue, et venenatis lectus semper vel. 
-			Phasellus faucibus nulla in quam egestas eleifend. 
-			Cras tristique augue eget libero tristique condimentum. 
-			Mauris eget diam eget risus feugiat rutrum. Duis placerat lorem quis augue semper porttitor. 
-			Nullam iaculis dui feugiat erat condimentum rutrum. Sed at accumsan diam. 
-			Maecenas ut urna id velit posuere auctor in vel dui. Aenean consectetur dui in leo faucibus sed feugiat dui blandit.
-		</p>
-		<script>
-			$(".word_split").lettering('words');
-		</script> -->
 		<div class="project" style="width:100%;">
 			<shintaro>
 				<h1 style="background-color:black;">The Project</h1>
@@ -308,6 +278,9 @@
 		});
 		$(document).on('click touchstart', '#menuIcon', function () {
 			closeOpenMenu();
+		});
+		$(document).on('click touchstart', 'a', function(){
+			window.open(this.href, '_self');
 		});
 	</script>
 </body>

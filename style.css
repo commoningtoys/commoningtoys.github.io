@@ -38,6 +38,7 @@ img{
     max-width: 650px;
     border: solid 3px #f50;
 }
+
 a{
     color: #f50;
     text-decoration: none;
@@ -46,7 +47,8 @@ a:hover{
     /* font-style: italic; */
     font-weight: 100;
     /* border-bottom: solid 5px #0cf; */
-}
+} 
+
 letterLink{
     color: #f50;
 }
