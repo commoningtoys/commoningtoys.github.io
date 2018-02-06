@@ -126,11 +126,6 @@ function Random(a, b) {
  */
 let icon1 = 'img/icons/icon_01.png';
 let icon2 = 'img/icons/icon_02.png';
-
-    // icon1.setAttribute("width", "304");
-    // icon1.setAttribute("height", "228");
-    // icon1.setAttribute("alt", "The Pulpit Rock");
-    // document.body.appendChild(icon1);
 let menuIsShow = true;
 function closeOpenMenu() {
     menuIsShow = !menuIsShow;//every click we change the status of the boolean
@@ -146,29 +141,15 @@ function closeOpenMenu() {
     menuIsShow == true ? document.getElementById('menuIcon').src = icon1 : document.getElementById('menuIcon').src = icon2;
 }
 /**
- * event listener that checks the orientation of devices
+ * this function sets the number of columns of a div
+ * @param {HTML Dom element} el 
+ * @param {String} num - number of columns to be set
  */
-// window.addEventListener("orientationchange", function () {
-//     let deviceAngle = screen.orientation.angle;
-//     if (deviceAngle == 90 || deviceAngle == -90) {
-//         let myTags = document.getElementsByTagName('a');
-//         for (let i = 0; i < myTags.length; i++) {
-//             myTags[i].style.display = 'initial';
-//         }
-//         document.getElementById('openClose').innerHTML = 'Close Menu';
-//         document.getElementById('myMenu').style.width = 'auto';
-//     }
-//     // alert("the orientation of the device is now " + screen.orientation.angle);
-// });
-// $(".project").click(function(e){
-//     let h = window.innerHeight;
-//     console.log(e);
-//     // e.target.style.width = '98%';
-//     // e.target.style.height = h + 'px';
-// });
-// /**
-//  * testing jQuery functions
-//  */
-// $( "a" ).click(function () {
-//     console.log("jQuery");
-// });
+function setNumberOfColumns(el, num){
+    el.style.columnCount = num;
+    el.style.MozColumnCount = num;
+    el.style.WebkitColumnCount = num;
+    console.log(el);
+    console.log(el.style);
+    // console.log(el.style.MozColumnCount);
+}

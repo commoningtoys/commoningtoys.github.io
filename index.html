@@ -231,7 +231,7 @@
 		/**
 		* this function enlarges the divs by clicking on them
 		*/
-		let previous = null, prevStyle;
+		let previous = null, prevH, prevW, prev;
 		// needs refactoring
 		$(".project, .sBlog, .moodBoard, .team").click(function () {
 			let myDiv = this;
@@ -240,6 +240,7 @@
 				//needs refactoring!!!!!!!
 			} else {
 				//reset the previous clicked div to its initial state
+				setNumberOfColumns(previous, 'initial');
 				previous.style.height = prevH;
 				previous.style.width = prevW;
 				previous.style.overflowY = 'scroll';
@@ -252,7 +253,9 @@
 			myDiv.style.overflowY = 'hidden';
 			myDiv.style.width = '100%';
 			myDiv.style.height = 'auto';
-			console.log(this);
+			//here we set the number of columns
+			setNumberOfColumns(myDiv, '2');
+			// console.log(this);
 			//here we get the height of the top menu (needs refactoring set it as gloal variable)
 			// let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
 			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY - (menuHeight() + 1); //this helps us to get the position of the div to scroll to

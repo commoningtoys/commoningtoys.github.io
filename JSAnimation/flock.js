@@ -55,7 +55,6 @@ class Flock {
         let kerning = 0;
         let letterSpace = this.agents[0].getRadius()/2 + kerning;
         let sentenceWidth = letterSpace * txt.length;
-        console.log(this.agents[0].getRadius());
         for (let i = 0; i < txt.length; i++) {
             let leftStart = x - (sentenceWidth / 2);//starting point of the formed sentence
             let posX = leftStart + (i * letterSpace);

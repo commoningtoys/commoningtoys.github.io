@@ -53,6 +53,7 @@ letterLink{
     color: #f50;
 }
 menuelement{
+    background-color: #fff;
     font-family: inherit;
     font-size: inherit;
     padding: 0.9em;
@@ -149,18 +150,25 @@ viktor{
     -webkit-transition: -webkit-transform 2s; /* Safari */
     -ms-transition: -ms-transform 2s; /* mozilla */
     transition: transform 2s;
+    /* -webkit-column-count: 2; Chrome, Safari, Opera */
+    /* -moz-column-count: 2; Firefox */
+    /* column-count: 2; */
 }
 .project:hover, 
-.sBlog:hover, 
+.sBlog:hover{
+    -webkit-transform: rotate(-2deg); /* Safari */
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
 .moodBoard:hover, 
 .team:hover{
-    -webkit-transform: rotate(6deg); /* Safari */
-    -ms-transform: rotate(6deg);
-    transform: rotate(6deg);
+    -webkit-transform: rotate(2deg); /* Safari */
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
 }
 .menu{
     position: fixed;
-    background-color: #ffffff;
+    background-color: #d52020fb;
     /* border: solid 5px #0cf; */
     /* max-width: 200px; */
     width: auto;
@@ -172,6 +180,8 @@ viktor{
     margin: 0px;
     z-index: 999;
     padding-left: 1vw;
+    min-width: 180px;
+    width: 20vw;
 } 
 .project{
     /* background-color: cyan; */
@@ -199,8 +209,9 @@ viktor{
     letter-spacing: 3px;
 }
 .container{
+    /* left: 200px; */
     top: 120px;
-    width: 95%;
+    width: 95vw;
     margin: auto;
     min-height: 100%;
     position: relative;
