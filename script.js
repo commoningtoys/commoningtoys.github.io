@@ -108,9 +108,17 @@ function setPositionContainer() {
     // let w = menuBounds().width;
     // console.log(w);
     // container.style.left = w + 'px';
-    let h = BoundsById('menuIcon');
-    console.log(h.height);
-    if(screen.width < 699)container.style.top = h.height+ 'px';
+    let menu = BoundsById('menuIcon');
+    let headerDiv  = BoundsById('myHeader');
+    // console.log(h.height);
+    if(screen.width < 699){
+        let w = screen.width - menu.width;
+        let headerImg = document.getElementById('myHeader');
+        headerImg.style.width = w + 'px';
+        headerImg.style.left = menu.width + 'px';
+        // headerDiv.width = w;
+        // container.style.top = menu.height+ 'px';
+    }
     // console.log(window.innerWidth - w);
     // container.style.top = menuBounds().height + 10 + 'px';
     // let foot = document.getElementById('myFoot');
