@@ -105,10 +105,12 @@ function init() {
  */
 function setPositionContainer() {
     let container = document.getElementById("myContainer");
-    let w = menuBounds().width;
+    // let w = menuBounds().width;
     // console.log(w);
     // container.style.left = w + 'px';
-    // if(screen.width > 699)container.style.maxWidth = window.innerWidth - w + 'px';
+    let h = BoundsById('menuIcon');
+    console.log(h.height);
+    if(screen.width < 699)container.style.top = h.height+ 'px';
     // console.log(window.innerWidth - w);
     // container.style.top = menuBounds().height + 10 + 'px';
     // let foot = document.getElementById('myFoot');
@@ -117,8 +119,8 @@ function setPositionContainer() {
 /**
  * this function returns the bounds of the menu at any time
  */
-function menuBounds() {
-    return document.getElementById('myMenu').getBoundingClientRect();
+function BoundsById(id) {
+    return document.getElementById(id).getBoundingClientRect();
 }
 
 /**
