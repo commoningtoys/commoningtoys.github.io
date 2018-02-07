@@ -279,7 +279,13 @@ viktor{
     color: #0cf;
     /* font-size: 5vh; */
 }
-
+img#header{
+    border: none;
+    float:none;
+    display: block;
+    margin: auto;
+    /* background-color: #f00; */
+}
 img#menuIcon{
     float: none;
     top: 10px;

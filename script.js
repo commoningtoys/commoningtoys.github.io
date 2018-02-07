@@ -144,6 +144,9 @@ function Random(a, b) {
 let icon1 = 'img/icons/icon_01.png';
 let icon2 = 'img/icons/icon_02.png';
 let menuIsShow = true;
+// let menuIsShow;
+// if(screen.width > 699)menuIsShow = true;
+// else menuIsShow = false;
 function closeOpenMenu() {
     menuIsShow = !menuIsShow;//every click we change the status of the boolean
     let myTags = document.getElementsByTagName('menuelement');
