@@ -27,8 +27,8 @@ body{
     padding: 0px;
     margin: 0px;
     font-family: 'Source Code Pro', mono;
-    padding-bottom: 6rem;
-    /* height: 100%; */
+    padding-bottom: 0rem;
+    height: 100vh;
 }
 img{
     position: relative;
@@ -209,13 +209,13 @@ viktor{
     letter-spacing: 3px;
 }
 .container{
-    /* left: 200px; */
+        /* left: 200px; */
     /* top: 120px; */
     right: 0px;
-    width: 78vw;
-    /* margin: auto; */
+    /* width: 78vw; */
+    margin: auto auto auto 200px;
     min-height: 100%;
-    position: absolute;
+    position: relative;
     z-index: 1;
     display: block;
     padding-left: 4vw;
@@ -232,10 +232,10 @@ viktor{
     font-weight: 100;
 }
 .foot{
-    /* position: absolute; */
-    /* bottom: 0px; */
+    position: relative;
+    bottom: 0px;
     height: auto;
-    width: 100%;
+    width: 95vw;
     /* background-color: rgba(255, 255, 255, 0.488); */
     overflow-y: initial;
     /* background-color: #f50; */
@@ -248,8 +248,8 @@ viktor{
     padding: 1rem; */
 }
 #footer1, #footer2{
-    max-width: 35vw;
-    min-width: 34vw;
+    max-width: 45vw;
+    min-width: 44vw;
     /* height: 125px; */
     min-height: 125px;
     height: auto;

@@ -23,11 +23,16 @@
 
 <body onload="init()" onresize="setPositionContainer()">
 	<div id="myMenu" class="menu">
-		<img src="img/icons/icon_01.png" id="menuIcon"> <br>
-		<menuelement id="menuteam">TEAM</menuelement> <br>
-		<menuelement id="menuproject">PROJECT</menuelement> <br>
-		<menuelement id="menusBlog">SERIOUS BLOG</menuelement> <br>
-		<menuelement id="menumoodBoard">MOOD BOARD</menuelement> <br>
+		<img src="img/icons/icon_01.png" id="menuIcon">
+		<br>
+		<menuelement id="menuteam">TEAM</menuelement>
+		<br>
+		<menuelement id="menuproject">PROJECT</menuelement>
+		<br>
+		<menuelement id="menusBlog">SERIOUS BLOG</menuelement>
+		<br>
+		<menuelement id="menumoodBoard">MOOD BOARD</menuelement>
+		<br>
 		<menuelement id="menushowAll">SHOW ALL!</menuelement>
 	</div>
 	<div id="myContainer" class="container">
@@ -212,17 +217,18 @@
 			erat velit scelerisque. Nunc congue nisi vitae suscipit tellus mauris a diam.
 		</div>
 
-		<div class="foot" id="myFoot">
-			<div id="footer1">
-				<a href="http://p3.snf.ch/project-175913" id="link1">Swiss National Science Fundation</a> (SNSF No. 175913), runtime 01/2018 – 12/2021
-			</div>
-			<div id="footer2">
-				Hosted by the Institute of
-				<a href="https://www.ixdm.ch/" id="link2">Experimental Design and Media Cultures and the Critical Media Lab Basel</a> at FHNW Academy of Art and Design in Basel,
-				Switzerland
-			</div>
 
+	</div>
+	<div class="foot" id="myFoot">
+		<div id="footer1">
+			<a href="http://p3.snf.ch/project-175913" id="link1">Swiss National Science Fundation</a> (SNSF No. 175913), runtime 01/2018 – 12/2021
 		</div>
+		<div id="footer2">
+			Hosted by the Institute of
+			<a href="https://www.ixdm.ch/" id="link2">Experimental Design and Media Cultures and the Critical Media Lab Basel</a> at FHNW Academy of Art and Design in Basel,
+			Switzerland
+		</div>
+
 	</div>
 	<!-- <script>document.getElementById('myFoot').style.width = window.innerWidth;</script> -->
 	<div class="footer">
@@ -283,7 +289,7 @@
 			closeOpenMenu();
 		});
 		//here for the <a> tag	
-		$(document).on('click touchstart', 'a', function(){
+		$(document).on('click touchstart', 'a', function () {
 			window.open(this.href, '_self');
 		});
 	</script>
