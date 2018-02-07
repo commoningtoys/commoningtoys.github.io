@@ -56,9 +56,10 @@ menuelement{
     background-color: #fff;
     font-family: inherit;
     font-size: inherit;
-    padding: 0.9em;
+    padding: 0.3em;
     cursor: pointer;
     border: solid 5px #0cf;
+    margin: 0.4em 0px;
 }
 menuelement:active{
     border-bottom: solid 5px #f50;
@@ -175,11 +176,12 @@ viktor{
     /* clear: left; */
     height: auto;
     overflow-y: initial;
-    line-height: 450%;
-    display: block;
+    /* line-height: 450%; */
+    display: grid;
     margin: 0px;
     z-index: 999;
     padding-left: 1vw;
+    padding-top: 1vw;
     /* min-width: 180px;
     width: 20vw; */
 } 
@@ -280,15 +282,18 @@ viktor{
     /* font-size: 5vh; */
 }
 img#header{
+    /* position: fixed; */
+    /* top: 0px; */
+    left: 0px;
     border: none;
     float:none;
-    display: block;
-    margin: auto;
+    /* display: block;
+    margin: auto; */
     /* background-color: #f00; */
 }
 img#menuIcon{
     float: none;
-    top: 10px;
+    /* top: 10px; */
     /* width: 17%; */
     height: auto;
     max-height: 40px;
@@ -300,7 +305,18 @@ img#menuIcon{
         float: none;
         margin: 1vh auto;
     }
-
+    /* .menu{
+        right: 0px;
+        padding-right: 1vw;
+        text-align: right;
+        top: 0px;
+    } */
+    img#header{
+        left: 45px;
+    }
+    #myHeader{
+        min-height: 45px;
+    }
     .project:hover, 
     .sBlog:hover, 
     .moodBoard:hover, 

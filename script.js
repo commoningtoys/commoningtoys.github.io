@@ -95,10 +95,9 @@ function init() {
     //set the first div project to width 100%
     //needs refactoring
     let mainPage = document.getElementById('mainPage');
-    mainPage.style.width = '100%';
+    mainPage.style.width = 'auto';
     mainPage.style.height = 'auto';
-    console.log([screen.width, pix]);
-    if(screen.width > 699)setNumberOfColumns(mainPage, '2');
+    if (screen.width > 699) setNumberOfColumns(mainPage, '2');
     else setNumberOfColumns(mainPage, 'initial');
 }
 /**
@@ -109,7 +108,7 @@ function setPositionContainer() {
     let w = menuBounds().width;
     // console.log(w);
     // container.style.left = w + 'px';
-    if(screen.width > 699)container.style.maxWidth = window.innerWidth - w + 'px';
+    // if(screen.width > 699)container.style.maxWidth = window.innerWidth - w + 'px';
     // console.log(window.innerWidth - w);
     // container.style.top = menuBounds().height + 10 + 'px';
     // let foot = document.getElementById('myFoot');
@@ -143,15 +142,25 @@ function Random(a, b) {
  */
 let icon1 = 'img/icons/icon_01.png';
 let icon2 = 'img/icons/icon_02.png';
+// let menuIsShow = true;
 let menuIsShow = true;
-// let menuIsShow;
-// if(screen.width > 699)menuIsShow = true;
-// else menuIsShow = false;
 function closeOpenMenu() {
     menuIsShow = !menuIsShow;//every click we change the status of the boolean
     let myTags = document.getElementsByTagName('menuelement');
+    let displayOption;
+    // let menu = document.getElementById('myMenu');
+    // if (getOrientation() == 90 || getOrientation() == -90) {
+    //     console.log(getOrientation());
+    //     menu.style.display = 'inline';
+    //     setNumberOfColumns(menu, '2');
+    //     // menu.style.lineHeight = '450px';
+    // } else {
+    //     menu.style.display = 'initial';
+    //     setNumberOfColumns(menu, 'initial');
+    //     // menu.style.lineHeight = 'initial';
+    // }
     for (let i = 0; i < myTags.length; i++) {
-        menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'initial';
+        menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'inherit';
     }
     let myMenu = document.getElementById('myMenu');
     // menuIsShow == false ? myMenu.style.width = 'auto' : myMenu.style.width = 'auto';
@@ -161,15 +170,18 @@ function closeOpenMenu() {
     menuIsShow == true ? document.getElementById('menuIcon').src = icon1 : document.getElementById('menuIcon').src = icon2;
 }
 /**
+ * this function returns the device orientation in angles
+ */
+function getOrientation() {
+    return window.screen.orientation.angle;
+}
+/**
  * this function sets the number of columns of a div
  * @param {HTML Dom element} el 
  * @param {String} num - number of columns to be set
  */
-function setNumberOfColumns(el, num){
+function setNumberOfColumns(el, num) {
     el.style.columnCount = num;
     el.style.MozColumnCount = num;
     el.style.WebkitColumnCount = num;
-    // console.log(el);
-    // console.log(el.style);
-    // console.log(el.style.MozColumnCount);
 }

@@ -22,20 +22,17 @@
 </head>
 
 <body onload="init()" onresize="setPositionContainer()">
-	<div >
-		<img src="img/HGKLogo.png" alt="" id="header">
-	</div>
 	<div id="myMenu" class="menu">
 		<img src="img/icons/icon_01.png" id="menuIcon">
-		<br>
+		<!-- <br> -->
 		<menuelement id="menuteam">TEAM</menuelement>
-		<br>
+		<!-- <br> -->
 		<menuelement id="menuproject">PROJECT</menuelement>
-		<br>
+		<!-- <br> -->
 		<menuelement id="menusBlog">SERIOUS BLOG</menuelement>
-		<br>
+		<!-- <br> -->
 		<menuelement id="menumoodBoard">MOOD BOARD</menuelement>
-		<br>
+		<!-- <br> -->
 		<menuelement id="menushowAll">SHOW ALL!</menuelement>
 	</div>
 	<div class="title">
@@ -43,6 +40,9 @@
 		</div>
 	<div id="myContainer" class="container">
 		<script>setPositionContainer()</script>
+		<div id="myHeader">
+			<a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk"><img src="img/HGKLogo.png" alt="" id="header"></a>
+		</div>
 		<div class="project" id="mainPage" style="width:100%;">
 			<shintaro>
 				<h1 style="background-color:black;">The Project</h1>
@@ -237,6 +237,8 @@
 	</div>
 	
 	<script>
+		//closes the menu on small devices
+		if(screen.width < 699)closeOpenMenu();
 		/**
 		* this function enlarges the divs by clicking on them
 		*/
