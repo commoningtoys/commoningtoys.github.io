@@ -10,7 +10,7 @@ class Agent {
             this.target = createVector(),
             this.vel = createVector(),
             this.acc = createVector(),
-            this.r = 32, this.speed = 7.5, this.force = 0.3;
+            this.r = 24, this.speed = 7.5, this.force = 0.3;
             this.chr = _chr;
     }
     /**

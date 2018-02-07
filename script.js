@@ -1,3 +1,8 @@
+/*************************************
+ * constant of pixel ratio of device *
+ *************************************/
+const pix = window.devicePixelRatio;
+/***********************************/
 let myClasses = ["team", "project", "sBlog", "moodBoard"];
 // let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
 /**
@@ -89,10 +94,12 @@ function init() {
     }
     //set the first div project to width 100%
     //needs refactoring
-    let mainPage = document.getElementsByClassName('project')[0];
+    let mainPage = document.getElementById('mainPage');
     mainPage.style.width = '100%';
     mainPage.style.height = 'auto';
+    console.log([screen.width, pix]);
     if(screen.width > 699)setNumberOfColumns(mainPage, '2');
+    else setNumberOfColumns(mainPage, 'initial');
 }
 /**
  * stes the position of the divs below the menu bar
@@ -100,7 +107,6 @@ function init() {
 function setPositionContainer() {
     let container = document.getElementById("myContainer");
     let w = menuBounds().width;
-    console.log(screen.width);
     // console.log(w);
     // container.style.left = w + 'px';
     if(screen.width > 699)container.style.maxWidth = window.innerWidth - w + 'px';

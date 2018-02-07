@@ -132,8 +132,8 @@ viktor{
 .project, 
 .sBlog, 
 .moodBoard, 
-.team, 
-.foot{
+.team,
+.footer{
     display: block;
     width: 25vw;
     min-width: 250px;
@@ -220,18 +220,20 @@ viktor{
     display: block;
     padding-left: 4vw;
 }
-.footer{
+.title{
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.392);
-    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    bottom: 176px;
     right: 0px;
     /* line-height: 0.5em; */
     padding: 1vw;
-    z-index: 999;
-    font-size: 3.5vh;
+    z-index: 0;
+    font-size: 8.5vh;
     font-weight: 100;
+    transform: rotate(30deg);
+    
 }
-.foot{
+.footer{
     position: relative;
     bottom: 0px;
     height: auto;
@@ -270,11 +272,12 @@ viktor{
     border-bottom: solid 2px #f50;
     /* font-size: 2vh; */
 }
-#myFooter span:hover{
+
+#myTitle span:hover{
     /* font-style: italic; */
     font-weight: 900;
     color: #0cf;
-    font-size: 5vh;
+    /* font-size: 5vh; */
 }
 
 img#menuIcon{
