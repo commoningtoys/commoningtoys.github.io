@@ -7,9 +7,7 @@ let swaptext = ['T', 'O', 'Y', 'S', ' '];
 let charIndex = 0, displayText = '', indexArray = [];
 let Alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 	'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
-	'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ',
-	'#', '£', '@', '!', '^', '%', '∞', '$', '§',
-	'+', '*', '©'];
+	'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' '];
 let indexes = makeIndexes(Alphabet);
 function preload() {
 	mono = loadFont('font/SourceCodePro-Black.otf');
@@ -39,7 +37,7 @@ function draw() {
 	else flock.setFormingSentence(false);
 	//here we change the text
 	textSize(40);
-	if (frameCount % 5 == 0) {
+	if (frameCount % 4 == 0) {
 		if (swaptext[charIndex] != destinationText[charIndex]) {
 			let randIndex;
 			randIndex = floor(random(indexes.length));

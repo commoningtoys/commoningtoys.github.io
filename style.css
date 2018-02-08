@@ -229,14 +229,14 @@ viktor{
     position: fixed;
     /* bottom: 176px; */
     /* right: 0px; */
-    top:20vw;
+    top:10%;
     left: 20vh;
     /* line-height: 0.5em; */
     /* padding: 1vw; */
     z-index: 0;
     font-size: 8.5vw;
     font-weight: bolder;
-    /* transform: rotate(30deg); */
+    transform: rotate(30deg);
     
 }
 .footer{
