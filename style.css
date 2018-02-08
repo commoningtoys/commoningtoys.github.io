@@ -279,18 +279,7 @@ viktor{
     border-bottom: solid 2px #f50;
     /* font-size: 2vh; */
 }
-/* #title1,
-#title3{
-    -webkit-transform: rotate(20deg); /* Safari */
-    -ms-transform: rotate(20deg);
-    transform: rotate(20deg);
-}
 
-#title2{
-    -webkit-transform: rotate(-20deg); /* Safari */
-    -ms-transform: rotate(-20deg);
-    transform: rotate(-20deg);
-} */
 #myTitle span:hover{
     /* font-style: italic; */
     font-weight: 900;

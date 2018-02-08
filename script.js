@@ -105,24 +105,22 @@ function init() {
  */
 function setPositionContainer() {
     let container = document.getElementById("myContainer");
-    // let w = menuBounds().width;
-    // console.log(w);
-    // container.style.left = w + 'px';
+    //here we set the header image near the menu button when on device
     let menu = BoundsById('menuIcon');
     let headerDiv  = BoundsById('myHeader');
-    // console.log(h.height);
+
     if(screen.width < 699){
         let w = screen.width - menu.width;
         let headerImg = document.getElementById('myHeader');
         headerImg.style.width = w + 'px';
         headerImg.style.left = menu.width + 'px';
-        // headerDiv.width = w;
-        // container.style.top = menu.height+ 'px';
     }
-    // console.log(window.innerWidth - w);
-    // container.style.top = menuBounds().height + 10 + 'px';
-    // let foot = document.getElementById('myFoot');
-    // if(foot != undefined)foot.style.width = window.innerWidth;
+
+    //here we set the title always in the middle of the page
+    let titleBounds = BoundsById('myTitle');
+    let titleW = titleBounds.width;
+    let x = (window.innerWidth / 2) - (titleW / 2) ;
+    document.getElementById('myTitle').style.left = x + 'px';
 }
 /**
  * this function returns the bounds of the menu at any time
