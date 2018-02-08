@@ -223,7 +223,7 @@ viktor{
     padding-left: 4vw;
 }
 .title{
-    line-height: 0vh;
+    /* line-height: 0vh; */
     text-align: center;
     color: #f50;
     position: fixed;
@@ -234,7 +234,7 @@ viktor{
     /* line-height: 0.5em; */
     /* padding: 1vw; */
     z-index: 0;
-    font-size: 8.5vh;
+    font-size: 8.5vw;
     font-weight: bolder;
     /* transform: rotate(30deg); */
     
