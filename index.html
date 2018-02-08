@@ -35,12 +35,18 @@
 		<!-- <br> -->
 		<menuelement id="menushowAll">SHOW ALL!</menuelement>
 	</div>
-	<div class="title">
-			<a href="index.html" id="myTitle">THINKING TOYS (OR GAMES) FOR COMMONING</a>
-		</div>
+	<!-- <div class="title" id="myTitle">
+		THINKING
+		<br>
+		TOYS
+		<br>
+		FOR COMMONING
+	</div> -->
 	<div id="myContainer" class="container">
 		<div id="myHeader">
-			<a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk"><img src="img/HGKLogo.png" alt="" id="header"></a>
+			<a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk">
+				<img src="img/HGKLogo.png" alt="" id="header">
+			</a>
 		</div>
 		<script>setPositionContainer()</script>
 		<div class="project" id="mainPage" style="width:100%;">
@@ -235,12 +241,20 @@
 			Switzerland
 		</div>
 	</div>
-	
+
 	<script>
 		//closes the menu on small devices
-		if(screen.width < 699)closeOpenMenu();
+		if (screen.width < 699) closeOpenMenu();
+		// for(let i = 0; i < myClasses.length; i++){
+		// 	let thisClass = document.getElementsByClassName(myClasses[i]);
+		// 	console.log(thisClass);
+		// 	for(let j = 0; j < thisClass.length; j++){
+		// 		let rot = Random(-3, 3);
+		// 		setRotation(thisClass[j], rot);
+		// 	}
+		// }
 		/**
-		* this function enlarges the divs by clicking on them
+		 * this function enlarges the divs by clicking on them
 		*/
 		let previous = null, prevH, prevW, prev;
 		// needs refactoring
@@ -275,7 +289,7 @@
 		});
 
 		//lettering functions
-		$("#myTitle").lettering();
+		// $("#myTitle").lettering();
 		$("#link1, #link2").lettering('words');
 		/**
 		 * here we handle the mouse and click events

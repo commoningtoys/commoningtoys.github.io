@@ -232,7 +232,7 @@ viktor{
     z-index: 0;
     font-size: 8.5vh;
     font-weight: 100;
-    transform: rotate(30deg);
+    /* transform: rotate(30deg); */
     
 }
 .footer{
@@ -311,10 +311,6 @@ img#menuIcon{
         text-align: right;
         top: 0px;
     } */
-    img#header{
-        /* left: 45px; */
-
-    }
     #myHeader{
         min-height: 45px;
         position: relative;

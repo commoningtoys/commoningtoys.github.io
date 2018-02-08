@@ -1,4 +1,4 @@
-let txt = 'THINKING TOYS (OR GAMES) FOR COMMONING';
+let txt = 'THINKING \n TOYS \n (OR GAMES) \n FOR COMMONING';
 let isFormingSentence = false;
 let sentenceTargets = [];
 

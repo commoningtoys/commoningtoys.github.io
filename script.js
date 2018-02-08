@@ -195,3 +195,13 @@ function setNumberOfColumns(el, num) {
     el.style.MozColumnCount = num;
     el.style.WebkitColumnCount = num;
 }
+/**
+ * function to set the rotation of divs     
+ * @param {HTMLElement} el - the element to be rotated
+ * @param {float} deg - degree of rotation
+ */
+function setRotation(el, deg){
+    el.style.transform = 'rotate(' + deg + 'deg)';
+    el.style.WebkitTransform = 'rotate(' + deg + 'deg)';
+    el.style.MozTransform = 'rotate(' + deg + 'deg)';    
+}

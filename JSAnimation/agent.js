@@ -26,7 +26,7 @@ class Agent {
         translate(this.pos.x, this.pos.y);
         //rotate(theta + PI/2);
         //line(0, 0, 0, -this.r * 2);
-        text(this.chr, -this.r/4, this.r/4);
+        text(this.chr, -this.r / 4, this.r / 4);
         // ellipse(0, 0, this.r, this.r);
         pop();
     }
@@ -53,7 +53,7 @@ class Agent {
     /**
      * returns the radius of the agent
      */
-    getRadius(){
+    getRadius() {
         return this.r;
     }
     //returns if the agent has reached his this.target
