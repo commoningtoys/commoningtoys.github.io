@@ -223,15 +223,19 @@ viktor{
     padding-left: 4vw;
 }
 .title{
+    line-height: 0vh;
+    text-align: center;
+    color: #f50;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0);
-    bottom: 176px;
-    right: 0px;
+    /* bottom: 176px; */
+    /* right: 0px; */
+    top:20vw;
+    left: 20vh;
     /* line-height: 0.5em; */
-    padding: 1vw;
+    /* padding: 1vw; */
     z-index: 0;
     font-size: 8.5vh;
-    font-weight: 100;
+    font-weight: bolder;
     /* transform: rotate(30deg); */
     
 }
@@ -251,7 +255,8 @@ viktor{
     left: 0;
     padding: 1rem; */
 }
-#footer1, #footer2{
+#footer1, 
+#footer2{
     max-width: 45vw;
     min-width: 44vw;
     /* height: 125px; */
@@ -274,7 +279,18 @@ viktor{
     border-bottom: solid 2px #f50;
     /* font-size: 2vh; */
 }
+/* #title1,
+#title3{
+    -webkit-transform: rotate(20deg); /* Safari */
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+}
 
+#title2{
+    -webkit-transform: rotate(-20deg); /* Safari */
+    -ms-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+} */
 #myTitle span:hover{
     /* font-style: italic; */
     font-weight: 900;

@@ -57,7 +57,7 @@ function draw() {
 		}
 	}
 	displayText = swaptext.join('');
-	document.getElementById('changing').innerHTML = displayText;
+	document.getElementById('title2').innerHTML = displayText;
 	// text('THINKING \n' + displayText + '\nFOR COMMONING', 300, 300);
 }
 /**
