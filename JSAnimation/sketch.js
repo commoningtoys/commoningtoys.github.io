@@ -1,7 +1,16 @@
 p5.disableFriendlyErrors = true; //this should improve performance
 let flock;
 let mono;
-let toys = 'TOYS ', games = 'GAMES', swap = '', changingWord = toys, changeWord = false;
+let originText = ['T', 'O', 'Y', 'S', ' '];
+let destinationText = ['G', 'A', 'M', 'E', 'S'];
+let swaptext = ['T', 'O', 'Y', 'S', ' '];
+let charIndex = 0, displayText = '', indexArray = [];
+let Alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+	'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+	'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' ',
+	'#', '£', '@', '!', '^', '%', '∞', '$', '§',
+	'+', '*', '©'];
+let indexes = makeIndexes(Alphabet);
 function preload() {
 	mono = loadFont('font/SourceCodePro-Black.otf');
 }
@@ -28,34 +37,51 @@ function draw() {
 	flock.show();
 	if (mouseIsPressed) flock.formSentence(mouseX, mouseY);
 	else flock.setFormingSentence(false);
+	//here we change the text
 	textSize(40);
-	///needs refactoring
-	// if (swappingIndexes.length < 5) {
-	// 	swappingIndex = floor(random(toys.length));
-	// 	if (swappingIndexes.length == 0) swappingIndexes.push(swappingIndex);
-	// 	else {
-	// 		for (let i = 0; i < swappingIndexes.length; i++) {
-	// 			if(swappingIndex != swappingIndexes[i])swappingIndexes.push(swappingIndex);
-	// 		}
-	// 	}
-	// } else {
-	// 	swappingIndexes = [];
-	// }
-
-	// console.table(swappingIndexes);
-	if(frameCount % 50 == 0)changeWord = !changeWord;
-	changingWord = changeWord == true ? toys : games;
-	fill('#00CCFF');
-	text('THINKING \n' + changingWord + '\nFOR COMMONING', 300, 300);
+	if (frameCount % 5 == 0) {
+		if (swaptext[charIndex] != destinationText[charIndex]) {
+			let randIndex;
+			randIndex = floor(random(indexes.length));
+			let index = indexes[randIndex];
+			indexes.splice(randIndex, 1);//remove that index
+			swaptext[charIndex] = Alphabet[index];
+		} else {
+			charIndex++;
+			indexes = makeIndexes(Alphabet);
+			// indexArray = [];
+		}
+		if (charIndex >= destinationText.length) {
+			charIndex = 0;
+			swapText(originText, destinationText);
+		}
+	}
+	displayText = swaptext.join('');
+	document.getElementById('changing').innerHTML = displayText;
+	// text('THINKING \n' + displayText + '\nFOR COMMONING', 300, 300);
 }
-// function mouseClicked(){
-// 	flock.formSentence(mouseX, mouseY);
-// }
 /**
- * DEPRECATED
- * this function returns the height of a page,
- * including the part to be scrolled
+ * 
+ * @param {array} arr 
+ * @returns {array}
  */
-function h() {
-	return document.documentElement.scrollHeight;
+function makeIndexes(arr){
+	let resultArray = [];
+	for(let i = 0; i < arr.length; i++){
+		resultArray[i] = i;
+	}
+	return resultArray;
+}
+
+/**
+ * function that swaps to char arrays
+ * @param {char} arr1 - array of chars to be swapped
+ * @param {char} arr2 - array of chars to be swapped
+ */
+function swapText(arr1, arr2) {
+	let swap = [];
+	// console.log([arr1, arr2]);
+	for (let i = 0; i < arr1.length; i++)swap[i] = arr1[i];
+	for (let i = 0; i < arr1.length; i++)arr1[i] = arr2[i];
+	for (let i = 0; i < arr1.length; i++)arr2[i] = swap[i];
 }
