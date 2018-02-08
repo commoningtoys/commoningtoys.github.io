@@ -244,11 +244,13 @@ viktor{
     bottom: 0px;
     height: auto;
     width: 95vw;
+    margin: auto;
     /* background-color: rgba(255, 255, 255, 0.488); */
     overflow-y: initial;
     /* background-color: #f50; */
     /* height: auto; */
     font-size: 1.5vh;
+    border: none;
     /* position: absolute;
     right: 0;
     bottom: 0;
@@ -260,7 +262,7 @@ viktor{
     max-width: 45vw;
     min-width: 44vw;
     /* height: 125px; */
-    min-height: 125px;
+    /* min-height: 125px; */
     height: auto;
     display: inline-table;
     margin: auto;
@@ -309,6 +311,11 @@ img#menuIcon{
     .project, .sBlog, .moodBoard, .team, .foot{
         float: none;
         margin: 1vh auto;
+    }
+    #footer1,
+    #footer2{
+        max-width: 42vw;
+        min-width: 41vw
     }
     /* .menu{
         right: 0px;
