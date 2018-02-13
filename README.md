@@ -1,7 +1,6 @@
 Note on the [website](https://commoningtoys.github.io/commoningWebsite/)
 1. this is a commonist website. It means that everyone can contribute to it. The source will open. The contribution will e revised to avoid the damaging contribution.
-2. each contributor has to define it's own contribution style by adding it to the css.
-For example in the stylesheet.css
+2. each contributor has to define it's own _contribution style_ by adding it to the [css](https://github.com/commoningtoys/commoningWebsite/blob/master/style.css).
 ```
 myName{
     /*
@@ -13,15 +12,22 @@ myName{
     */
 }
 ```
-in the HTML
+3. The contribution to website have to be done in the [index.html](https://github.com/commoningtoys/commoningWebsite/blob/master/index.html)
+Each contribution should look like this:
 ```
-<div class="(seriuos blog, team, mood board or project)">
+<div class="(sBlog, team, moodBoard, project or german)">
     <myName>
         My very own wonderful and meaningful contribution
     </myName>
 </div>
 ```
-
+* The `class="(sBlog, team, moodBoard, project or german)"` this defines the kind of entry for the website.
+> sBlog --> is the serious blog similar to the our general channel of our slack
+> team --> are the descriptions of the team members
+> moodBoard --> is similar to the random channel of the slack
+> project --> are all the entries strictly related to the project
+> german --> are all the contributions in that are in german, even if they fit in other categories
+* 
 ### Comprehensive CSS reference can be found [here](https://www.w3schools.com/cssref/default.asp) and for HTML can be found [here](https://www.w3schools.com/tags/default.asp) 
 This ensure our very own fight against corporativst design.
 1. This approach is a teaching approach, to add a contribution you need to learn the basics of HTML and CSS. Hopefully creative minds will use it to empower they very own practice, creating interesting new visuals.
