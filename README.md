@@ -21,9 +21,10 @@ in the HTML
     </myName>
 </div>
 ```
+##Comprehensive CSS reference can be found [here](https://www.w3schools.com/cssref/default.asp) and for HTML can be found [here](https://www.w3schools.com/tags/default.asp) 
 This ensure our very own fight against corporativst design.
 1. This approach is a teaching approach, to add a contribution you need to learn the basics of HTML and CSS. Hopefully creative minds will use it to empower they very own practice, creating interesting new visuals.
-2. This approach aims to criticiye the standardized beauty of the WP, CarcoCollective, Format etc. way of designing web pages.
+2. This approach aims to criticize the standardized beauty of the WP, CargoCollective, Format etc. way of designing web pages.
 3. Web design its simple!
     * DIY website are cool
     * prebuilt website aren't
