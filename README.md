@@ -23,15 +23,15 @@ Each contribution should look like this:
 </div>
 ```
 * The `class="(sBlog, team, moodBoard, project or german)"` defines the kind of entry for the website.
-> sBlog --> is the serious blog similar to the our general channel of our slack
+>> sBlog --> is the serious blog similar to the our general channel of our slack
 
-> team --> are the descriptions of the team members
+>> team --> are the descriptions of the team members
 
-> moodBoard --> is similar to the random channel of the slack
+>> moodBoard --> is similar to the random channel of the slack
 
-> project --> are all the entries strictly related to the project
+>> project --> are all the entries strictly related to the project
 
-> german --> are all the contributions in that are in german, even if they fit in other categories
+>> german --> are all the contributions in that are in german, even if they fit in other categories
 * The tag `<myName>` defines the personal contributing style and ends with a `</myName>`
 * Images have to be defined with the `<img>` tag [(a comprehensive description of the tag can be found here)](https://www.w3schools.com/tags/tag_img.asp).
 
