@@ -1,5 +1,5 @@
 Note on the [website](https://commoningtoys.github.io/commoningWebsite/)
-1. this is a commonist website. It means that everyone can contribute to it. The source will open. The contribution will e revised to avoid the damaging contribution.
+1. this is a commonist website. It means that everyone can contribute to it. The source will open. The contribution will be revised to avoid the damaging contribution.
 2. each contributor has to define it's own _contribution style_ by adding it to the [css](https://github.com/commoningtoys/commoningWebsite/blob/master/style.css).
 ```
 myName{
