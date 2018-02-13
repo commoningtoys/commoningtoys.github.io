@@ -21,6 +21,7 @@ in the HTML
     </myName>
 </div>
 ```
+
 ##Comprehensive CSS reference can be found [here](https://www.w3schools.com/cssref/default.asp) and for HTML can be found [here](https://www.w3schools.com/tags/default.asp) 
 This ensure our very own fight against corporativst design.
 1. This approach is a teaching approach, to add a contribution you need to learn the basics of HTML and CSS. Hopefully creative minds will use it to empower they very own practice, creating interesting new visuals.
@@ -29,3 +30,7 @@ This ensure our very own fight against corporativst design.
     * DIY website are cool
     * prebuilt website aren't
     * responsive design is awful, you can still force viewer to watch your website on a desktop
+
+#TO DO:
+##1. add explanation for adding images to blog
+##2. add german button to website
