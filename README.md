@@ -23,13 +23,13 @@ Each contribution should look like this:
 </div>
 ```
 * The `class="(sBlog, team, moodBoard, project or german)"` defines the kind of entry for the website.
->> sBlog --> is the serious blog similar to the our general channel of our slack
+> sBlog --> is the serious blog similar to the our general channel of our slack
 
->> team --> are the descriptions of the team members
+> team --> are the descriptions of the team members
 
->> moodBoard --> is similar to the random channel of the slack
+> moodBoard --> is similar to the random channel of the slack
 
->> project --> are all the entries strictly related to the project
+> project --> are all the entries strictly related to the project
 
 >> german --> are all the contributions in that are in german, even if they fit in other categories
 * The tag `<myName>` defines the personal contributing style and ends with a `</myName>`
@@ -39,6 +39,7 @@ There are two ways to do it:
 > `<img src="https//www.someFancyWebsiteForImage.com/NameOfYourImage.jpg">` it is possible to define the source a.k.a. `src` with a hyperlink to an existing image. DIFFICULTY: VERY LOW
 
 > `<img src="img/NameOfYourImage.jpg">` it is also possible to have your own image uploaded to this [folder](https://github.com/commoningtoys/commoningWebsite/tree/master/img) and to define the source as `img/TheNameOfYourImage.jpg`. DIFFICULTY: MEDIUM
+4. Once you're done you click at the bottom of the page Commit changes, and you're done!
 ### Comprehensive CSS reference can be found [here](https://www.w3schools.com/cssref/default.asp) and for HTML can be found [here](https://www.w3schools.com/tags/default.asp) 
 This ensure our very own fight against corporativst design.
 1. This approach is a teaching approach, to add a contribution you need to learn the basics of HTML and CSS. Hopefully creative minds will use it to empower they very own practice, creating interesting new visuals.
