@@ -1,5 +1,5 @@
 
-# This is a commonist [website](https://commoningtoys.github.io/commoningWebsite/). It means that everyone can contribute to it. The source will open. The contributions will be revised to avoid damaging the webpage.
+# This is a commonist [website](http://commoning.rocks). It means that everyone can contribute to it. The source will open. The contributions will be revised to avoid damaging the webpage.
 ## How to contribute to the website
 1. Each contributor has to define it's own _contribution style_ by adding it to the [css](https://github.com/commoningtoys/commoningWebsite/blob/master/style.css).
 ```
@@ -56,6 +56,7 @@ Fight against corporativist design!
     * DIY website are cool
     * prebuilt website aren't
     * responsive design is awful, and you can force viewers to watch your website on a desktop!
+4. The website is open source so feel free to download yourself a copy of the repository and make it as your own webspage
 ***********************
 ## TO DO:
 ### 1. add explanation for adding images to blog
