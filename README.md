@@ -52,10 +52,10 @@ For the first timers using HTML there is the possibility to test the blog/websit
 Fight against corporativist design!
 1. This approach is a teaching approach, to add a contribution you need to learn the basics of HTML and CSS. Hopefully creative minds will use it to empower they very own practice, creating interesting new visuals.
 2. This approach aims to criticize the standardized beauty of the WP, CargoCollective, Format etc. way of designing web pages.
-3. Web design its simple!
+3. Web design is simple!
     * DIY website are cool
     * prebuilt website aren't
-    * responsive design is awful, you can still force viewer to watch your website on a desktop
+    * responsive design is awful, and you can force viewers to watch your website on a desktop!
 ***********************
 ## TO DO:
 ### 1. add explanation for adding images to blog
