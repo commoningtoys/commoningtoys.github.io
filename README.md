@@ -43,6 +43,9 @@ Each contribution should look like this:
     * `<img src="img/NameOfYourImage.jpg">` it is also possible to have your own image uploaded to this [folder](https://github.com/commoningtoys/commoningWebsite/tree/master/img) and to define the source as `img/TheNameOfYourImage.jpg`. DIFFICULTY: MEDIUM
 4. Once you're done you click at the bottom of the page **Commit changes**, and you're done!
 *********************
+## TESTING TESTING TESTING
+For the first timers using HTML there is the possibility to test the blog/website entries [here](https://jsfiddle.net/yyyyaaaannnnoooo/x1k4sxpt/18/)
+*********************
 ### Comprehensive CSS reference can be found [here](https://www.w3schools.com/cssref/default.asp) and for HTML can be found [here](https://www.w3schools.com/tags/default.asp) 
 *********************
 # WEBSITE MANIFESTO
