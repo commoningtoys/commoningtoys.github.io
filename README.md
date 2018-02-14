@@ -1,5 +1,5 @@
 
-# This is a commonist [website](https://commoningtoys.github.io/commoningWebsite/). It means that everyone can contribute to it. The source will open. The contribution will be revised to avoid damaging contribution.
+# This is a commonist [website](https://commoningtoys.github.io/commoningWebsite/). It means that everyone can contribute to it. The source will open. The contributions will be revised to avoid damaging the webpage.
 ## How to contribute to the website
 1. Each contributor has to define it's own _contribution style_ by adding it to the [css](https://github.com/commoningtoys/commoningWebsite/blob/master/style.css).
 ```
