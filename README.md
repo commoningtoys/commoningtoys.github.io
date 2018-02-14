@@ -49,7 +49,7 @@ For the first timers using HTML there is the possibility to test the blog/websit
 ### Comprehensive CSS reference can be found [here](https://www.w3schools.com/cssref/default.asp) and for HTML can be found [here](https://www.w3schools.com/tags/default.asp) 
 *********************
 # WEBSITE MANIFESTO
-This to ensure our very own fight against corporativst design.
+Fight against corporativist design!
 1. This approach is a teaching approach, to add a contribution you need to learn the basics of HTML and CSS. Hopefully creative minds will use it to empower they very own practice, creating interesting new visuals.
 2. This approach aims to criticize the standardized beauty of the WP, CargoCollective, Format etc. way of designing web pages.
 3. Web design its simple!
