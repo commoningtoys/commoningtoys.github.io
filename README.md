@@ -56,7 +56,7 @@ Fight against corporativist design!
     * DIY website are cool
     * prebuilt website aren't
     * responsive design is awful, and you can force viewers to watch your website on a desktop!
-4. The website is open source so feel free to download yourself a copy of the repository and make it as your own webspage
+4. The website is open source so feel free to download yourself a copy of the repository and make it as your own webpage
 ***********************
 ## TO DO:
 ### 1. add explanation for adding images to blog
