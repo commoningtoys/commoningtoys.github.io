@@ -3,7 +3,7 @@
  *************************************/
 const pix = window.devicePixelRatio;
 /***********************************/
-let myClasses = ["team", "project", "sBlog", "moodBoard"];
+let myClasses = ["team", "project", "process", "inspiration", "german", "output"];
 // let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
 /**
  * Object to store visibility and name of classes

@@ -203,16 +203,24 @@ viktor{
 
 } 
 .process{
-    /* background-color: yellow; */
+    background-color: yellow;
     height: 200px;
     /* max-height: 400px; */
 } 
 .inspiration{
-    /* background-color: coral; */
+    background-color: coral;
     height: 200px;
 }
 .team{
     /* background-color: green; */
+    height: 300px;
+}
+.output{
+    background-color: cyan;
+    height: 300px;
+}
+.german{
+    background-color: blue;
     height: 300px;
 }
 

@@ -40,7 +40,8 @@
 		<menuelement id="menushowAll">SHOW ALL!</menuelement>
 	</div>
 	<div class="title" id="myTitle">
-		<p id="title2">THINKING TOYS<br>FOR COMMONING</p>
+		<p id="title2">THINKING TOYS
+			<br>FOR COMMONING</p>
 	</div>
 	<div id="myContainer" class="container">
 		<div id="myHeader">
@@ -99,13 +100,12 @@
 			██╔══╝  ██╔══██╗██║   ██║██║╚██╔╝██║    ██╔══██║██╔══╝  ██╔══██╗██╔══╝                         
 			██║     ██║  ██║╚██████╔╝██║ ╚═╝ ██║    ██║  ██║███████╗██║  ██║███████╗                       
 			╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝ -->
-		<div class="process">
-  <micha>
-    My meaningful contribution
-    jhfjhkjhkajfhkjahfkja
-    <img src="https://i.ytimg.com/vi/dGFSjKuJfrI/maxresdefault.jpg">
-  </micha>
-</div>
+		<!-- <div class="process">
+			<micha>
+				My meaningful contribution jhfjhkjhkajfhkjahfkja
+				<img src="https://i.ytimg.com/vi/dGFSjKuJfrI/maxresdefault.jpg">
+			</micha>
+		</div> -->
 		<div class="process">
 			<img src="img/img_01.jpg"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 			Erat imperdiet sed euismod nisi porta lorem mollis aliquam. Vulputate dignissim suspendisse in est. Habitant morbi tristique
@@ -250,7 +250,7 @@
 				of Thinking" in a double doctoral scheme including the Doctor School for Philosophy, University of Pécs and the Institute
 				for Philosophy at the Humboldt University of Berlin.His is interested in community driven urban mapping, embodied urban
 				knowledge, visual thinking, urban games, design thinking and contemporary dance.
-				<img src="img/ViktorProfilbild.jpg">
+				<!-- <img src="img/ViktorProfilbild.jpg"> -->
 			</viktor>
 		</div>
 		<div class="german">
@@ -291,7 +291,7 @@
 		*/
 		let previous = null, prevH, prevW, prev;
 		// needs refactoring
-		$(".project, .process, .inspiration, .team").click(function () {
+		$(".project, .process, .inspiration, .team, .output, .german").click(function () {
 			let myDiv = this;
 			// if (e.target.tagName.includes('IMG')) return;//here we handle the the case we click on an image
 			if (previous == null) {
