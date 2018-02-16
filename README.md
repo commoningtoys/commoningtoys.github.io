@@ -32,7 +32,7 @@ Each contribution should look like this:
 
     * project --> are all the entries strictly related to the project
 
-    * output --> output of experimations
+    * output --> output of experimentations
 
     * german --> are all the contributions in that are in german, even if they fit in other categories
 
