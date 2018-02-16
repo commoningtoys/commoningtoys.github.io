@@ -16,11 +16,13 @@
 	background-color: #f50;
 	/* border: 2px solid #555555; */
 }
+
 canvas{
     position: fixed;
     top: 0px;
     left: 0px;
 }
+
 body{
     /* background-color: chartreuse; */
     position: relative;
@@ -30,6 +32,7 @@ body{
     padding-bottom: 0rem;
     height: 100vh;
 }
+
 img{
     position: relative;
     width:100%;
@@ -43,6 +46,7 @@ a{
     color: #f50;
     text-decoration: none;
 }
+
 a:hover{
     /* font-style: italic; */
     font-weight: 100;
@@ -52,6 +56,7 @@ a:hover{
 letterLink{
     color: #f50;
 }
+
 menuelement{
     background-color: #fff;
     font-family: inherit;
@@ -61,6 +66,7 @@ menuelement{
     border: solid 5px #0cf;
     margin: 0.4em 0px;
 }
+
 menuelement:active{
     border-bottom: solid 5px #f50;
 }
@@ -130,9 +136,11 @@ viktor{
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
+.output,
+.german,
 .project, 
-.sBlog, 
-.moodBoard, 
+.process, 
+.inspiration, 
 .team,
 .footer{
     display: block;
@@ -155,13 +163,17 @@ viktor{
     /* -moz-column-count: 2; Firefox */
     /* column-count: 2; */
 }
+
+.german:hover,
 .project:hover, 
-.sBlog:hover{
+.process:hover{
     -webkit-transform: rotate(-2deg); /* Safari */
     -ms-transform: rotate(-2deg);
     transform: rotate(-2deg);
 }
-.moodBoard:hover, 
+
+.process:hover,
+.inspiration:hover, 
 .team:hover{
     -webkit-transform: rotate(2deg); /* Safari */
     -ms-transform: rotate(2deg);
@@ -190,12 +202,12 @@ viktor{
     height: 250px;
 
 } 
-.sBlog{
+.process{
     /* background-color: yellow; */
-    min-height: 200px;
+    height: 200px;
     /* max-height: 400px; */
 } 
-.moodBoard{
+.inspiration{
     /* background-color: coral; */
     height: 200px;
 }
@@ -203,6 +215,12 @@ viktor{
     /* background-color: green; */
     height: 300px;
 }
+
+.output a:hover,
+.german a:hover,
+.project a:hover,
+.process a:hover, 
+.inspiration a:hover, 
 .team a:hover{
     font-weight: bolder;
     color: #0cf;

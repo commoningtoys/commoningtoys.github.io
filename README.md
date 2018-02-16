@@ -2,35 +2,37 @@
 # This is a commonist [website](http://commoning.rocks). It means that everyone can contribute to it. The source will open. The contributions will be revised to avoid damaging the webpage.
 ## How to contribute to the website
 1. Each contributor has to define it's own _contribution style_ by adding it to the [css](https://github.com/commoningtoys/commoningWebsite/blob/master/style.css).
-```
-myName{
-    /*
-    various
-    css
-    style
-    implementations
-    (please use comic sans!)
-    */
-}
-```
+    ```
+    myName{
+        /*
+        various
+        css
+        style
+        implementations
+        (please use comic sans!)
+        */
+    }
+    ```
 2. The contribution to website have to be done in the [index.html](https://github.com/commoningtoys/commoningWebsite/blob/master/index.html)
 Each contribution should look like this:
-```
-<div class="(sBlog, team, moodBoard, project or german)">
-    <myName>
-        My very own wonderful and meaningful contribution
-        <img src="img/NameOfYourImage.jpg">
-    </myName>
-</div>
-```
-* The `class="(sBlog, team, moodBoard, project or german)"` defines the kind of entry for the website.
-    * sBlog --> is the serious blog similar to the our general channel of our slack
+    ```
+    <div class="(process, team, inspiration, output, project or german)">
+        <myName>
+            My very own wonderful and meaningful contribution
+            <img src="img/NameOfYourImage.jpg">
+        </myName>
+    </div>
+    ```
+* The `class="(process, team, inspiration, output, project or german)"` defines the kind of entry for the website.
+    * process --> is the serious blog similar to the our general channel of our slack
 
     * team --> are the descriptions of the team members
 
-    * moodBoard --> is similar to the random channel of the slack
+    * inspiration --> is similar to the random channel of the slack
 
     * project --> are all the entries strictly related to the project
+
+    * output --> output of experimations
 
     * german --> are all the contributions in that are in german, even if they fit in other categories
 
