@@ -24,15 +24,15 @@ Each contribution should look like this:
     </div>
     ```
 * The `class="(process, team, inspiration, output, project or german)"` defines the kind of entry for the website.
-    * process --> is the serious blog similar to the our general channel of our slack
+    * process --> is the serious blog showing major milestones and other steps of our research process
 
     * team --> are the descriptions of the team members
 
     * inspiration --> is similar to the random channel of the slack
 
-    * project --> are all the entries strictly related to the project
+    * project --> is a short description of the project
 
-    * output --> output of experimentations
+    * output --> outputs (publications, events, talks, software etc.)
 
     * german --> are all the contributions in that are in german, even if they fit in other categories
 
