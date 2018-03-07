@@ -23,21 +23,22 @@
 
 <body onload="init()" onresize="setPositionContainer()">
 	<div id="myMenu" class="menu">
-		<img src="img/icons/icon_01.png" id="menuIcon">
+		<img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
 		<!-- <br> -->
-		<menuelement id="menuteam">TEAM</menuelement>
+		<!-- ["team", "project", "process", "inspiration", "german", "output"]; -->
+		<menuelement onclick="reveal('team')" id="menuteam">TEAM</menuelement>
 		<!-- <br> -->
-		<menuelement id="menuproject">PROJECT</menuelement>
+		<menuelement  onclick="reveal('project')" id="menuproject">PROJECT</menuelement>
 		<!-- <br> -->
-		<menuelement id="menuprocess">PROCESS</menuelement>
+		<menuelement onclick="reveal('process')" id="menuprocess">PROCESS</menuelement>
 		<!-- <br> -->
-		<menuelement id="menuoutput">OUTPUT</menuelement>
+		<menuelement onclick="reveal('output')" id="menuoutput">OUTPUT</menuelement>
 		<!-- <br> -->
-		<menuelement id="menuinspiration">INSPIRATION</menuelement>
+		<menuelement onclick="reveal('inspiration')" id="menuinspiration">INSPIRATION</menuelement>
 		<!-- <br> -->
-		<menuelement id="menugerman">DEUTSCH</menuelement>
+		<menuelement onclick="reveal('german')" id="menugerman">DEUTSCH</menuelement>
 		<!-- <br> -->
-		<menuelement id="menushowAll">SHOW ALL!</menuelement>
+		<menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
 	</div>
 	<div class="title" id="myTitle">
 		<p id="title2">THINKING TOYS
@@ -46,7 +47,7 @@
 	<div id="myContainer" class="container">
 		<div id="myHeader">
 			<a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk" target="_blank">
-				<img src="img/HGKLogo.png" alt="" id="header">
+				<img src="img/HGKLogo.png" id="header">
 			</a>
 		</div>
 		<script>setPositionContainer()</script>
@@ -126,7 +127,7 @@
 				Michaela Büsse is a curator, editor and a junior researcher in our team as well as a PhD candidate at the European Centre
 				for Art, Design and Media based Research (ECAM) in Basel.
 				<br>
-				<a href="http://metamodern.ch/" target="_blank">WebSite</a>
+				<a href="http://metamodern.ch/" target="_blank" >WebSite</a>
 			</micha>
 		</div>
 		<div class="team">
@@ -218,25 +219,25 @@
 		//lettering functions
 		// $("#myTitle").lettering();
 		$("#link1, #link2").lettering('words');
-		/**
-		 * here we handle the mouse and click events
-		*/
-		let divNames = ['team', 'project', 'process', 'inspiration', 'output', 'german'];
-		for (let i = 0; i < divNames.length; i++) {
-			$(document).on('click touchstart', '#menu' + divNames[i], function () {
-				reveal(divNames[i]);
-			});
-		}
-		$(document).on('click touchstart', '#menushowAll', function () {
-			showAll();
-		});
-		$(document).on('click touchstart', '#menuIcon', function () {
-			closeOpenMenu();
-		});
-		//here for the <a> tag	
-		$(document).on('click touchstart', 'a', function () {
-			window.open(this.href, '_self');
-		});
+		// /**
+		//  * here we handle the mouse and click events
+		// */
+		// let divNames = ['team', 'project', 'process', 'inspiration', 'output', 'german'];
+		// for (let i = 0; i < divNames.length; i++) {
+		// 	$(document).on('click touchstart', '#menu' + divNames[i], function () {
+		// 		reveal(divNames[i]);
+		// 	});
+		// }
+		// $(document).on('click touchstart', '#menushowAll', function () {
+		// 	showAll();
+		// });
+		// $(document).on('click touchstart', '#menuIcon', function () {
+		// 	closeOpenMenu();
+		// });
+		// //here for the <a> tag	
+		// $(document).on('click touchstart', 'a', function () {
+		// 	window.open(this.href, '_self');
+		// });
 	</script>
 </body>
 
