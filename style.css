@@ -93,6 +93,7 @@ button:hover{
 /* Personal styles for team members */
 yano, micha, shintaro, selena, viktor, kayla{
     line-height: 25pt;
+    background-color: black;
     /* border: solid 3px #f00;  */
     /* font-family: 'Source Code Pro', mono; */
 
@@ -109,12 +110,14 @@ selena{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f00;
     /* border-bottom: solid 2px #0cf; */
+    background-color: black;
 }
 
 micha{
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f50;
     border-bottom: solid 2px #0cf;
+    background-color: black;
 }
 
 shintaro{
@@ -216,8 +219,8 @@ viktor{
     height: 300px;
 }
 .output{
-    background-color: cyan;
-    height: 300px;
+     /* background-color: cyan;*/
+    height: 200px;
 }
 .german{
     background-color: blue;
