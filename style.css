@@ -22,7 +22,14 @@ canvas{
     top: 0px;
     left: 0px;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    background-color: white;
+}
 body{
     /* background-color: chartreuse; */
     position: relative;
@@ -93,7 +100,7 @@ button:hover{
 /* Personal styles for team members */
 yano, micha, shintaro, selena, viktor, kayla{
     line-height: 25pt;
-    background-color: black;
+    background-color: white;
     /* border: solid 3px #f00;  */
     /* font-family: 'Source Code Pro', mono; */
 
@@ -260,12 +267,12 @@ viktor{
     /* right: 0px; */
     top:10%;
     left: 20vh;
-    /* line-height: 0.5em; */
+    line-height: 0.5em;
     /* padding: 1vw; */
     z-index: 0;
-    font-size: 8.5vw;
+    font-size: 7vw;
     font-weight: bolder;
-    transform: rotate(30deg);
+    /* transform: rotate(30deg); */
     
 }
 .footer{

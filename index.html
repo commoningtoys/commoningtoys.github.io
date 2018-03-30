@@ -23,30 +23,32 @@
 
 <body onload="init()" onresize="setPositionContainer()">
 	<div id="myMenu" class="menu">
-		<img src="img/icons/icon_01.png" id="menuIcon">
+		<img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
 		<!-- <br> -->
-		<menuelement id="menuteam">TEAM</menuelement>
+		<!-- ["team", "project", "process", "inspiration", "german", "output"]; -->
+		<menuelement onclick="reveal('team')" id="menuteam">TEAM</menuelement>
 		<!-- <br> -->
-		<menuelement id="menuproject">PROJECT</menuelement>
+		<menuelement onclick="reveal('project')" id="menuproject">PROJECT</menuelement>
 		<!-- <br> -->
-		<menuelement id="menuprocess">PROCESS</menuelement>
+		<menuelement onclick="reveal('process')" id="menuprocess">PROCESS</menuelement>
 		<!-- <br> -->
-		<menuelement id="menuoutput">OUTPUT</menuelement>
+		<menuelement onclick="reveal('output')" id="menuoutput">OUTPUT</menuelement>
 		<!-- <br> -->
-		<menuelement id="menuinspiration">INSPIRATION</menuelement>
+		<menuelement onclick="reveal('inspiration')" id="menuinspiration">INSPIRATION</menuelement>
 		<!-- <br> -->
-		<menuelement id="menugerman">DEUTSCH</menuelement>
+		<menuelement onclick="reveal('german')" id="menugerman">DEUTSCH</menuelement>
 		<!-- <br> -->
-		<menuelement id="menushowAll">SHOW ALL!</menuelement>
+		<menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
 	</div>
 	<div class="title" id="myTitle">
-		<p id="title2">THINKING TOYS
-			<br>FOR COMMONING</p>
+		<p>THINKING</p>
+		<p id="title2">TOYS</p>
+		<p>FOR COMMONING</p>
 	</div>
 	<div id="myContainer" class="container">
 		<div id="myHeader">
 			<a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk" target="_blank">
-				<img src="img/HGKLogo.png" alt="" id="header">
+				<img src="img/HGKLogo.png" id="header">
 			</a>
 		</div>
 		<script>setPositionContainer()</script>
@@ -190,7 +192,6 @@
 				<h1 style="background-color:black;">Michaela Büsse</h1>
 				<a href="http://metamodern.ch/">Michaela Büsse</a> is a curator, editor and a junior researcher in our team as well as a PhD candidate at the European
 				Centre for Art, Design and Media based Research (ECAM) in Basel.
-				<br>
 			</micha>
 		</div>
 		<div class="team">
@@ -219,11 +220,11 @@
 	</div>
 	<div class="footer" id="myFooter">
 		<div id="footer1">
-			<a href="http://p3.snf.ch/project-175913" id="link1">Swiss National Science Fundation</a> (SNSF No. 175913), runtime 01/2018 – 12/2021
+			<a href="http://p3.snf.ch/project-175913" target="_blank" id="link1">Swiss National Science Fundation</a> (SNSF No. 175913), runtime 01/2018 – 12/2021
 		</div>
 		<div id="footer2">
 			Hosted by the Institute of
-			<a href="https://www.ixdm.ch/" id="link2">Experimental Design and Media Cultures and the Critical Media Lab Basel</a> at FHNW Academy of Art and Design in Basel,
+			<a href="https://www.ixdm.ch/" target="_blank" id="link2">Experimental Design and Media Cultures and the Critical Media Lab Basel</a> at FHNW Academy of Art and Design in Basel,
 			Switzerland
 		</div>
 	</div>
@@ -248,10 +249,11 @@
 		*/
 		let previous = null, prevH, prevW, prev;
 		// needs refactoring
-		$(".project, .process, .inspiration, .team, .output, .german").click(function () {
+		$(".project, .process, .inspiration, .output, .german").click(function () {
 			let myDiv = this;
 			// if (e.target.tagName.includes('IMG')) return;//here we handle the the case we click on an image
 			if (previous == null) {
+				// continue;
 				//needs refactoring!!!!!!!
 			} else {
 				//reset the previous clicked div to its initial state
@@ -281,25 +283,25 @@
 		//lettering functions
 		// $("#myTitle").lettering();
 		$("#link1, #link2").lettering('words');
-		/**
-		 * here we handle the mouse and click events
-		*/
-		let divNames = ['team', 'project', 'process', 'inspiration', 'output', 'german'];
-		for (let i = 0; i < divNames.length; i++) {
-			$(document).on('click touchstart', '#menu' + divNames[i], function () {
-				reveal(divNames[i]);
-			});
-		}
-		$(document).on('click touchstart', '#menushowAll', function () {
-			showAll();
-		});
-		$(document).on('click touchstart', '#menuIcon', function () {
-			closeOpenMenu();
-		});
-		//here for the <a> tag	
-		$(document).on('click touchstart', 'a', function () {
-			window.open(this.href, '_self');
-		});
+		// /**
+		//  * here we handle the mouse and click events
+		// */
+		// let divNames = ['team', 'project', 'process', 'inspiration', 'output', 'german'];
+		// for (let i = 0; i < divNames.length; i++) {
+		// 	$(document).on('click touchstart', '#menu' + divNames[i], function () {
+		// 		reveal(divNames[i]);
+		// 	});
+		// }
+		// $(document).on('click touchstart', '#menushowAll', function () {
+		// 	showAll();
+		// });
+		// $(document).on('click touchstart', '#menuIcon', function () {
+		// 	closeOpenMenu();
+		// });
+		// //here for the <a> tag	
+		// $(document).on('click touchstart', 'a', function () {
+		// 	window.open(this.href, '_self');
+		// });
 	</script>
 </body>
 

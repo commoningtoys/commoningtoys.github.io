@@ -9,6 +9,7 @@ let Alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
 	'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
 	'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', ' '];
 let indexes = makeIndexes(Alphabet);
+
 function preload() {
 	mono = loadFont('font/SourceCodePro-Black.otf');
 }
@@ -27,6 +28,7 @@ function setup() {
 	flock = new Flock(10);
 	let myCnv = document.getElementById('defaultCanvas0');
 	myCnv.style.position = 'fixed';
+	textAlign(CENTER)
 }
 
 function draw() {
@@ -36,7 +38,7 @@ function draw() {
 	if (mouseIsPressed) flock.formSentence(mouseX, mouseY);
 	else flock.setFormingSentence(false);
 	//here we change the text
-	textSize(40);
+	textSize(txtSize());
 	if (frameCount % 4 == 0) {
 		if (swaptext[charIndex] != destinationText[charIndex]) {
 			let randIndex;
@@ -55,17 +57,23 @@ function draw() {
 		}
 	}
 	displayText = swaptext.join('');
-	document.getElementById('title2').innerHTML = 'THINKING ' + displayText + '<br>FOR COMMONING';
-	// text('THINKING \n' + displayText + '\nFOR COMMONING', 300, 300);
+	document.getElementById('title2').innerHTML = displayText;
+	// push()
+	// translate(width / 2, height / 2)
+	// rotate(PI/8)
+	// let txt = 'THINKING \n' + displayText + '\nFOR\nCOMMONING';
+	// let txtW = textWidth(txt);
+	// text(txt, 0, 0);
+	// pop()
 }
 /**
  * 
  * @param {array} arr 
  * @returns {array}
  */
-function makeIndexes(arr){
+function makeIndexes(arr) {
 	let resultArray = [];
-	for(let i = 0; i < arr.length; i++){
+	for (let i = 0; i < arr.length; i++) {
 		resultArray[i] = i;
 	}
 	return resultArray;
@@ -82,4 +90,16 @@ function swapText(arr1, arr2) {
 	for (let i = 0; i < arr1.length; i++)swap[i] = arr1[i];
 	for (let i = 0; i < arr1.length; i++)arr1[i] = arr2[i];
 	for (let i = 0; i < arr1.length; i++)arr2[i] = swap[i];
+}
+
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+	console.log(txtSize())	
+}
+
+function txtSize() {
+	let w = width;
+	let h = height;
+	if (w < h) return w / h * 90;
+	else return h / w * 90;
 }
