@@ -15,9 +15,9 @@
     /* border: 2px solid #555555; */
 }
 
-@font-face{
+@font-face {
     font-family: 'dither';
-    src: url('font/DITHER0008.ttf')  format('truetype');
+    src: url('font/DITHER0008.ttf') format('truetype');
 }
 
 canvas {
@@ -271,8 +271,8 @@ viktor {
     /* right: 0px; */
     width: max-content;
     left: 50%;
-    top:50%;
-    transform: translate(-50%, -50%);   
+    top: 50%;
+    transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     line-height: 0.5em;
@@ -366,8 +366,8 @@ img#menuIcon {
     max-width: 40px;
 }
 
-@media only screen and (max-width: 699px) {
-    .project, .sBlog, .moodBoard, .team, .foot {
+@media only screen and (max-width: 899px) {
+    .output, .german, .project, .process, .inspiration, .team, .footer, .foot {
         float: none;
         margin: 1vh auto;
     }
@@ -375,19 +375,21 @@ img#menuIcon {
         max-width: 42vw;
         min-width: 41vw
     }
-    /* .menu{
-        right: 0px;
-        padding-right: 1vw;
-        text-align: right;
-        top: 0px;
-    } */
+    menuelement {
+        background-color: #fff;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 0.1em;
+        cursor: pointer;
+        border: solid 5px #0cf;
+        margin: 2px 0px;
+    }
     #myHeader {
         min-height: 45px;
         position: relative;
     }
-    .project:hover, .sBlog:hover, .moodBoard:hover, .team:hover {
+    .output:hover, .german:hover, .project:hover, .process:hover, .inspiration:hover, .team:hover, .footer:hover {
         -webkit-transform: none;
-        /* Safari */
         -ms-transform: none;
         transform: none;
     }

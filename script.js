@@ -97,7 +97,7 @@ function init() {
     let mainPage = document.getElementById('mainPage');
     mainPage.style.width = 'auto';
     mainPage.style.height = 'auto';
-    if (screen.width > 699) setNumberOfColumns(mainPage, '2');
+    if (screen.width > 899) setNumberOfColumns(mainPage, '2');
     else setNumberOfColumns(mainPage, 'initial');
 }
 /**
@@ -109,7 +109,7 @@ function setPositionContainer() {
     let menu = BoundsById('menuIcon');
     let headerDiv  = BoundsById('myHeader');
 
-    if(screen.width < 699){
+    if(screen.width < 899){
         let w = screen.width - menu.width;
         let headerImg = document.getElementById('myHeader');
         headerImg.style.width = w + 'px';
