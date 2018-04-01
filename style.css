@@ -283,6 +283,7 @@ viktor {
     /* transform: rotate(30deg); */
 }
 
+
 .footer {
     position: relative;
     bottom: 0px;
@@ -376,12 +377,7 @@ img#menuIcon {
         min-width: 41vw
     }
     menuelement {
-        background-color: #fff;
-        font-family: inherit;
-        font-size: inherit;
         padding: 0.1em;
-        cursor: pointer;
-        border: solid 5px #0cf;
         margin: 2px 0px;
     }
     #myHeader {
