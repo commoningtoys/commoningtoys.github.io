@@ -97,7 +97,7 @@ function init() {
     let mainPage = document.getElementById('mainPage');
     mainPage.style.width = 'auto';
     mainPage.style.height = 'auto';
-    if (screen.width > 699) setNumberOfColumns(mainPage, '2');
+    if (screen.width > 899) setNumberOfColumns(mainPage, '2');
     else setNumberOfColumns(mainPage, 'initial');
 }
 /**
@@ -109,7 +109,7 @@ function setPositionContainer() {
     let menu = BoundsById('menuIcon');
     let headerDiv  = BoundsById('myHeader');
 
-    if(screen.width < 699){
+    if(screen.width < 899){
         let w = screen.width - menu.width;
         let headerImg = document.getElementById('myHeader');
         headerImg.style.width = w + 'px';
@@ -117,10 +117,10 @@ function setPositionContainer() {
     }
 
     //here we set the title always in the middle of the page
-    let titleBounds = BoundsById('myTitle');
-    let titleW = titleBounds.width;
-    let x = (window.innerWidth / 2) - (titleW / 2) ;
-    document.getElementById('myTitle').style.left = x + 'px';
+    // let titleBounds = BoundsById('myTitle');
+    // let titleW = titleBounds.width;
+    // let x = (window.innerWidth / 2) - (titleW / 2) ;
+    // document.getElementById('myTitle').style.left = x + 'px';
 }
 /**
  * this function returns the bounds of the menu at any time
@@ -131,9 +131,9 @@ function BoundsById(id) {
 
 /**
  * this function returns a random number between two numbers
- * @param {float} a 
- * @param {float} b 
- * @returns {float} random number between the input numbers
+ * @param {Number} a 
+ * @param {Number} b 
+ * @returns {Number} random number between the input numbers
  */
 function Random(a, b) {
     //if a is smaller than b we should swap them
@@ -196,7 +196,7 @@ function setNumberOfColumns(el, num) {
 /**
  * function to set the rotation of divs     
  * @param {HTMLElement} el - the element to be rotated
- * @param {float} deg - degree of rotation
+ * @param {Number} deg - degree of rotation
  */
 function setRotation(el, deg){
     el.style.transform = 'rotate(' + deg + 'deg)';

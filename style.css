@@ -1,36 +1,36 @@
 /* custom scrollbars */
-::-webkit-scrollbar-track
-{
-	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); */
-	background-color: #fff;
+
+::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1); */
+    background-color: #fff;
 }
 
-::-webkit-scrollbar
-{
-	width: 8px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb
-{
-	background-color: #f50;
-	/* border: 2px solid #555555; */
+::-webkit-scrollbar-thumb {
+    background-color: #f50;
+    /* border: 2px solid #555555; */
 }
 
-canvas{
+@font-face {
+    font-family: 'dither';
+    src: url('font/DITHER0008.ttf') format('truetype');
+}
+
+canvas {
     position: fixed;
     top: 0px;
     left: 0px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
+
+h1, h2, h3, h4, h5, h6 {
     background-color: white;
 }
-body{
+
+body {
     /* background-color: chartreuse; */
     position: relative;
     padding: 0px;
@@ -40,31 +40,31 @@ body{
     height: 100vh;
 }
 
-img{
+img {
     position: relative;
-    width:100%;
+    width: 100%;
     height: auto;
     float: right;
     max-width: 650px;
     border: solid 3px #f50;
 }
 
-a{
+a {
     color: #f50;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     /* font-style: italic; */
     font-weight: 100;
     /* border-bottom: solid 5px #0cf; */
-} 
+}
 
-letterLink{
+letterLink {
     color: #f50;
 }
 
-menuelement{
+menuelement {
     background-color: #fff;
     font-family: inherit;
     font-size: inherit;
@@ -74,85 +74,84 @@ menuelement{
     margin: 0.4em 0px;
 }
 
-menuelement:active{
+menuelement:active {
     border-bottom: solid 5px #f50;
 }
-menuelement:visited{
+
+menuelement:visited {
     font-style: italic;
     font-weight: 900;
     border-bottom: solid 5px #0cf;
 }
-menuelement:hover{
+
+menuelement:hover {
     font-style: italic;
     font-weight: 900;
     border-bottom: solid 5px #f50;
 }
-button{
+
+button {
     border: none;
     padding: 0px;
     background: white;
     background-image: none;
 }
-button:hover{
+
+button:hover {
     /* border-bottom: solid 5px #f50; */
     background-color: #0cf;
 }
+
 /* Personal styles for team members */
-yano, micha, shintaro, selena, viktor, kayla{
+
+yano, micha, shintaro, selena, viktor, kayla {
     line-height: 25pt;
     background-color: white;
     /* border: solid 3px #f00;  */
     /* font-family: 'Source Code Pro', mono; */
-
 }
 
-yano{
+yano {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(0, 255, 30);
     border-bottom: solid 2px rgb(255, 153, 0);
     background-color: black;
 }
 
-selena{
+selena {
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f00;
     /* border-bottom: solid 2px #0cf; */
     background-color: black;
 }
 
-micha{
+micha {
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f50;
     border-bottom: solid 2px #0cf;
     background-color: black;
 }
 
-shintaro{
+shintaro {
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: rgb(255, 255, 255);
     border-bottom: solid 2px #0cf;
     background-color: black;
 }
 
-kayla{
+kayla {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #f50;
     border-bottom: solid 2px #0cf;
 }
 
-viktor{
+viktor {
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f50;
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
-.output,
-.german,
-.project, 
-.process, 
-.inspiration, 
-.team,
-.footer{
+.output, .german, .project, .process, .inspiration, .team, .footer {
     display: block;
     width: 25vw;
     min-width: 250px;
@@ -166,30 +165,31 @@ viktor{
     padding: 0.8em;
     /* top: 100px; */
     border: solid 5px #0cf;
-    -webkit-transition: -webkit-transform 2s; /* Safari */
-    -ms-transition: -ms-transform 2s; /* mozilla */
+    -webkit-transition: -webkit-transform 2s;
+    /* Safari */
+    -ms-transition: -ms-transform 2s;
+    /* mozilla */
     transition: transform 2s;
     /* -webkit-column-count: 2; Chrome, Safari, Opera */
     /* -moz-column-count: 2; Firefox */
     /* column-count: 2; */
 }
 
-.german:hover,
-.project:hover, 
-.process:hover{
-    -webkit-transform: rotate(-2deg); /* Safari */
+.german:hover, .project:hover, .process:hover {
+    -webkit-transform: rotate(-2deg);
+    /* Safari */
     -ms-transform: rotate(-2deg);
     transform: rotate(-2deg);
 }
 
-.process:hover,
-.inspiration:hover, 
-.team:hover{
-    -webkit-transform: rotate(2deg); /* Safari */
+.process:hover, .inspiration:hover, .team:hover {
+    -webkit-transform: rotate(2deg);
+    /* Safari */
     -ms-transform: rotate(2deg);
     transform: rotate(2deg);
 }
-.menu{
+
+.menu {
     position: fixed;
     background-color: #ffffff00;
     /* border: solid 5px #0cf; */
@@ -206,48 +206,50 @@ viktor{
     padding-top: 1vw;
     /* min-width: 180px;
     width: 20vw; */
-} 
-.project{
+}
+
+.project {
     /* background-color: cyan; */
     height: 250px;
+}
 
-} 
-.process{
+.process {
     /*background-color: yellow;*/
     height: 250px;
     /* max-height: 400px; */
-} 
-.inspiration{
+}
+
+.inspiration {
     background-color: coral;
     height: 200px;
 }
-.team{
+
+.team {
     /* background-color: green; */
     height: 300px;
 }
-.output{
-     /* background-color: cyan;*/
+
+.output {
+    /* background-color: cyan;*/
     height: 200px;
 }
-.german{
+
+.german {
     background-color: blue;
     height: 300px;
 }
 
-.output a:hover,
-.german a:hover,
-.project a:hover,
-.process a:hover, 
-.inspiration a:hover, 
-.team a:hover{
+.output a:hover, .german a:hover, .project a:hover, .process a:hover, .inspiration a:hover, .team a:hover {
     font-weight: bolder;
     color: #0cf;
     border-bottom: solid 2px #f50;
-    background-color: white;
-    letter-spacing: 3px;
+    /* background-color: white; */
+    font-style: italic;
+    /* letter-spacing: 3px; */
 }
-.container{
-        /* left: 200px; */
+
+.container {
+    /* left: 200px; */
     /* top: 120px; */
     right: 0px;
     /* width: 78vw; */
@@ -258,24 +260,31 @@ viktor{
     display: block;
     padding-left: 4vw;
 }
-.title{
+
+.title {
     /* line-height: 0vh; */
+    font-family: 'dither';
     text-align: center;
     color: #f50;
     position: fixed;
     /* bottom: 176px; */
     /* right: 0px; */
-    top:10%;
-    left: 20vh;
+    width: max-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     line-height: 0.5em;
     /* padding: 1vw; */
     z-index: 0;
     font-size: 7vw;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     /* transform: rotate(30deg); */
-    
 }
-.footer{
+
+
+.footer {
     position: relative;
     bottom: 0px;
     height: auto;
@@ -293,26 +302,26 @@ viktor{
     left: 0;
     padding: 1rem; */
 }
+
 /* responsive video container */
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
     max-width: 100%;
-  }
-  
-  .video-container iframe,
-  .video-container object,
-  .video-container embed {
+}
+
+.video-container iframe, .video-container object, .video-container embed {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-#footer1, 
-#footer2{
+}
+
+#footer1, #footer2 {
     max-width: 45vw;
     min-width: 44vw;
     /* height: 125px; */
@@ -323,36 +332,33 @@ viktor{
     padding-left: 10px;
     border-left: solid 5px #f50;
 }
-#footer1 span:hover{
+
+#footer1 span:hover, #footer2 span:hover {
     font-weight: 900;
     color: #0cf;
     border-bottom: solid 2px #f50;
     /* font-size: 2vh */
 }
-#footer2 span:hover{
-    font-weight: 900;
-    color: #0cf;
-    border-bottom: solid 2px #f50;
-    /* font-size: 2vh; */
-}
 
-#myTitle span:hover{
+#myTitle span:hover {
     /* font-style: italic; */
     font-weight: 900;
     color: #0cf;
     /* font-size: 5vh; */
 }
-img#header{
+
+img#header {
     /* position: fixed; */
     /* top: 0px; */
     left: 0px;
     border: none;
-    float:none;
+    float: none;
     /* display: block;
     margin: auto; */
     /* background-color: #f00; */
 }
-img#menuIcon{
+
+img#menuIcon {
     float: none;
     /* top: 10px; */
     /* width: 17%; */
@@ -361,35 +367,29 @@ img#menuIcon{
     max-width: 40px;
 }
 
-@media only screen and (max-width: 699px) {
-    .project, .sBlog, .moodBoard, .team, .foot{
+@media only screen and (max-width: 899px) {
+    .output, .german, .project, .process, .inspiration, .team, .footer, .foot {
         float: none;
         margin: 1vh auto;
     }
-    #footer1,
-    #footer2{
+    #footer1, #footer2 {
         max-width: 42vw;
         min-width: 41vw
     }
-    /* .menu{
-        right: 0px;
-        padding-right: 1vw;
-        text-align: right;
-        top: 0px;
-    } */
-    #myHeader{
+    menuelement {
+        padding: 0.1em;
+        margin: 2px 0px;
+    }
+    #myHeader {
         min-height: 45px;
         position: relative;
     }
-    .project:hover, 
-    .sBlog:hover, 
-    .moodBoard:hover, 
-    .team:hover{
-    -webkit-transform: none; /* Safari */
-    -ms-transform: none;
-    transform: none;
-}
-    .container{
+    .output:hover, .german:hover, .project:hover, .process:hover, .inspiration:hover, .team:hover, .footer:hover {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+    .container {
         margin: auto;
         display: block;
         padding: 0px;

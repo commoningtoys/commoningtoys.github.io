@@ -24,20 +24,11 @@
 <body onload="init()" onresize="setPositionContainer()">
 	<div id="myMenu" class="menu">
 		<img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
-		<!-- <br> -->
-		<!-- ["team", "project", "process", "inspiration", "german", "output"]; -->
-		<!-- <menuelement onclick="reveal('team')" id="menuteam">TEAM</menuelement> -->
-		<!-- <br> -->
 		<menuelement onclick="reveal('project')" id="menuproject">PROJECT</menuelement>
-		<!-- <br> -->
 		<menuelement onclick="reveal('process')" id="menuprocess">PROCESS</menuelement>
-		<!-- <br> -->
 		<menuelement onclick="reveal('output')" id="menuoutput">OUTPUT</menuelement>
-		<!-- <br> -->
 		<menuelement onclick="reveal('inspiration')" id="menuinspiration">INSPIRATION</menuelement>
-		<!-- <br> -->
 		<menuelement onclick="reveal('german')" id="menugerman">DEUTSCH</menuelement>
-		<!-- <br> -->
 		<menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
 	</div>
 	<div class="title" id="myTitle">
@@ -143,16 +134,17 @@
 			╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝ -->
 		<div class="process">
 				<div>			
-			<Shintaro><h1 style="background-color:black;">Feb 2018, Masquerade for Commoning</h1></Shintaro>
-				</div>
+          <Shintaro>
+					<h1 style="background-color:black;">Feb 2018, Masquerade for Commoning</h1>
+				</Shintaro>
+			</div>
 
-				<div class="video-container">
-					<iframe src="https://player.vimeo.com/video/258980375" frameborder="0" webkitallowfullscreen mozallowfullscreen
-					 allowfullscreen></iframe>
-				</div>
+			<div class="video-container">
+				<iframe src="https://player.vimeo.com/video/258980375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
 
-				<div>
-					<Shintaro>
+			<div>
+				<Shintaro>
 					Our team took part at transmediale 2018 face value with the workshop
 					<a href="https://2018.transmediale.de/content/masquerade-for-commoning" target="_blank">"Masquerade for Commoning"</a>
 					which we held on Sunday 4th of Feb. Since we then just started, we used this lovely occasion as a team building effort with
@@ -199,7 +191,7 @@
 					<br> Join our session to collaboratively and playfully discuss, sketch, design masks and model constellations of commoning.
 					The blank mask accompanying this print (PDF output) is our invitation to the first Masquerade for Commoning at the last
 					day of Transmediale 2018 (Feb 4th (Sunday), 14:00–17:00, K2, HKW).
-			</Shintaro>
+				</Shintaro>
 			</div>
 		</div>
 		<div class="output">
@@ -221,7 +213,7 @@
 
 	<script>
 		//closes the menu on small devices
-		if (screen.width < 699) closeOpenMenu();
+		if (screen.width < 899) closeOpenMenu();
 		// for(let i = 0; i < myClasses.length; i++){
 		// 	let thisClass = document.getElementsByClassName(myClasses[i]);
 		// 	console.log(thisClass);
@@ -261,7 +253,7 @@
 			myDiv.style.width = '100%';
 			myDiv.style.height = 'auto';
 			//here we set the number of columns
-			setNumberOfColumns(myDiv, '2');
+			if (screen.width > 899) setNumberOfColumns(myDiv, '2');
 			// console.log(this);
 			//here we get the height of the top menu (needs refactoring set it as gloal variable)
 			// let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
