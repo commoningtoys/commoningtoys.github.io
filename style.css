@@ -44,7 +44,8 @@ img {
     position: relative;
     width: 100%;
     height: auto;
-    float: right;
+    /* float: left;
+    clear: both; */
     max-width: 650px;
     border: solid 3px #f50;
 }
@@ -176,17 +177,17 @@ viktor {
 }
 
 .german:hover, .project:hover, .process:hover {
-    -webkit-transform: rotate(-2deg);
+    -webkit-transform: rotate(-1deg);
     /* Safari */
-    -ms-transform: rotate(-2deg);
-    transform: rotate(-2deg);
+    -ms-transform: rotate(-1deg);
+    transform: rotate(-1deg);
 }
 
 .process:hover, .inspiration:hover, .team:hover {
-    -webkit-transform: rotate(2deg);
+    -webkit-transform: rotate(1deg);
     /* Safari */
-    -ms-transform: rotate(2deg);
-    transform: rotate(2deg);
+    -ms-transform: rotate(1deg);
+    transform: rotate(1deg);
 }
 
 .menu {
