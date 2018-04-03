@@ -225,14 +225,6 @@
 	<script>
 		//closes the menu on small devices
 		if (screen.width < 899) closeOpenMenu();
-		// for(let i = 0; i < myClasses.length; i++){
-		// 	let thisClass = document.getElementsByClassName(myClasses[i]);
-		// 	console.log(thisClass);
-		// 	for(let j = 0; j < thisClass.length; j++){
-		// 		let rot = Random(-3, 3);
-		// 		setRotation(thisClass[j], rot);
-		// 	}
-		// }
 		///////////////////////////////////////////////////////////
 		///// AT THE BEGINNING WE SHOW ONLY THE PROJECTS DIVS /////
 		///////////////////////////////////////////////////////////
@@ -244,7 +236,6 @@
 		// needs refactoring
 		$(".project, .process, .inspiration, .output, .german").click(function () {
 			let myDiv = this;
-			// if (e.target.tagName.includes('IMG')) return;//here we handle the the case we click on an image
 			if (previous == null) {
 				// continue;
 				//needs refactoring!!!!!!!
@@ -265,36 +256,14 @@
 			myDiv.style.height = 'auto';
 			//here we set the number of columns
 			if (screen.width > 899) setNumberOfColumns(myDiv, '2');
-			// console.log(this);
 			//here we get the height of the top menu (needs refactoring set it as gloal variable)
-			// let menuH = document.getElementById('myMenu').getBoundingClientRect().height;
 			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY; //this helps us to get the position of the div to scroll to
 			window.scrollTo(0, y);
 			// goTo(0, y);
 		});
 
 		//lettering functions
-		// $("#myTitle").lettering();
 		$("#link1, #link2").lettering('words');
-		// /**
-		//  * here we handle the mouse and click events
-		// */
-		// let divNames = ['team', 'project', 'process', 'inspiration', 'output', 'german'];
-		// for (let i = 0; i < divNames.length; i++) {
-		// 	$(document).on('click touchstart', '#menu' + divNames[i], function () {
-		// 		reveal(divNames[i]);
-		// 	});
-		// }
-		// $(document).on('click touchstart', '#menushowAll', function () {
-		// 	showAll();
-		// });
-		// $(document).on('click touchstart', '#menuIcon', function () {
-		// 	closeOpenMenu();
-		// });
-		// //here for the <a> tag	
-		// $(document).on('click touchstart', 'a', function () {
-		// 	window.open(this.href, '_self');
-		// });
 	</script>
 </body>
 
