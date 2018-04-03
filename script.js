@@ -22,7 +22,7 @@ for (let i = 0; i < myClasses.length; i++) {
 
 /**
  * function that reveals only certain elements of the website
- * @param {String} className - the class that needs to be set to 'display: none;' 
+ * @param {String} className - the class that needs to be shown! 
  */
 function reveal(className) {
     window.scrollTo(0, 0);
@@ -57,7 +57,6 @@ function showAll() {
 }
 /**
  * this function initializes the width and heights of all the divs
- * and sets the footer at the bottom of the page
  */
 function init() {
     for (let i = 0; i < myClasses.length; i++) {
