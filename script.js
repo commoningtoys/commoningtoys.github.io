@@ -44,28 +44,6 @@ function reveal(className) {
         }
     }
 }
-// /**
-//  * reveals elements based on tag name
-//  * @param {String} tagName - name of the tag to be searched
-//  */
-// function revealTag(tagName) {
-//     showAll();
-//     for (let i = 0; i < myTags.length; i++) {
-//         if (myTags[i].includes(tagName)) {
-//             // myTags[i].visible = true;
-//             let thisClass = document.getElementsByTagName(myTags[i]);
-//             for (let j = 0; j < thisClass.length; j++) {
-//                 thisClass[j].style.display = 'block';
-//             }
-//         } else {
-//             // myTags[i].visible = false;
-//             let thisClass = document.getElementsByTagName(myTags[i]);
-//             for (let j = 0; j < thisClass.length; j++) {
-//                 thisClass[j].style.display = 'none';
-//             }
-//         }
-//     }
-// }
 /**
  * function that shows all the posts of the wesite
  */
@@ -115,12 +93,6 @@ function setPositionContainer() {
         headerImg.style.width = w + 'px';
         headerImg.style.left = menu.width + 'px';
     }
-
-    //here we set the title always in the middle of the page
-    // let titleBounds = BoundsById('myTitle');
-    // let titleW = titleBounds.width;
-    // let x = (window.innerWidth / 2) - (titleW / 2) ;
-    // document.getElementById('myTitle').style.left = x + 'px';
 }
 /**
  * this function returns the bounds of the menu at any time
@@ -129,22 +101,7 @@ function BoundsById(id) {
     return document.getElementById(id).getBoundingClientRect();
 }
 
-/**
- * this function returns a random number between two numbers
- * @param {Number} a 
- * @param {Number} b 
- * @returns {Number} random number between the input numbers
- */
-function Random(a, b) {
-    //if a is smaller than b we should swap them
-    if (b < a) {
-        let Swap = b;
-        b = a;
-        a = Swap;
-    }
-    let c = Math.abs(a - b);
-    return a + (Math.random() * c);
-}
+
 /**
  * function to show hide the menu
  */
@@ -156,17 +113,6 @@ function closeOpenMenu() {
     menuIsShow = !menuIsShow;//every click we change the status of the boolean
     let myTags = document.getElementsByTagName('menuelement');
     let displayOption;
-    // let menu = document.getElementById('myMenu');
-    // if (getOrientation() == 90 || getOrientation() == -90) {
-    //     console.log(getOrientation());
-    //     menu.style.display = 'inline';
-    //     setNumberOfColumns(menu, '2');
-    //     // menu.style.lineHeight = '450px';
-    // } else {
-    //     menu.style.display = 'initial';
-    //     setNumberOfColumns(menu, 'initial');
-    //     // menu.style.lineHeight = 'initial';
-    // }
     for (let i = 0; i < myTags.length; i++) {
         menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'inherit';
     }
@@ -202,4 +148,20 @@ function setRotation(el, deg){
     el.style.transform = 'rotate(' + deg + 'deg)';
     el.style.WebkitTransform = 'rotate(' + deg + 'deg)';
     el.style.MozTransform = 'rotate(' + deg + 'deg)';    
+}
+/**
+ * this function returns a random number between two numbers
+ * @param {Number} a 
+ * @param {Number} b 
+ * @returns {Number} random number between the input numbers
+ */
+function Random(a, b) {
+    //if a is smaller than b we should swap them
+    if (b < a) {
+        let Swap = b;
+        b = a;
+        a = Swap;
+    }
+    let c = Math.abs(a - b);
+    return a + (Math.random() * c);
 }
