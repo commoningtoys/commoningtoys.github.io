@@ -6,7 +6,6 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width">
 	<title>Commoning</title>
-
 	<script src="libraries/jquery-3.3.1.min.js"></script>
 	<script src="libraries/jquery.lettering-0.6.1.min.js"></script>
 	<script src="libraries/p5.js"></script>
@@ -202,9 +201,13 @@
 		</div>
 		<div class="output">
 			<Shintaro>
-				<h1 style="background-color:black;">Masquerade for Commoning</h1>2.2018: printed matter. transmediale 2018 (<a href="https://drive.google.com/file/d/1XjQi_xBTAMJR38HRi8N2DcAHi9OZSBaz/view?usp=sharing" target="_blank">PDF</a>).
+				<h1 style="background-color:black;">Masquerade for Commoning</h1>2.2018: printed matter. transmediale 2018 (
+				<a href="https://drive.google.com/file/d/1XjQi_xBTAMJR38HRi8N2DcAHi9OZSBaz/view?usp=sharing" target="_blank">PDF</a>).
 			</Shintaro>
 		</div>
+		<!-- don't touch or remove this div it is used to store the content from are.na -->
+		<div id="dynamicContent"></div>
+		<!-- don't touch or remove this div it is used to store the content from are.na -->
 	</div>
 	<div class="footer" id="myFooter">
 		<div id="footer1">
@@ -224,38 +227,6 @@
 		///// AT THE BEGINNING WE SHOW ONLY THE PROJECTS DIVS /////
 		///////////////////////////////////////////////////////////
 		reveal('project');
-		/**
-		 * this function enlarges the divs by clicking on them
-		*/
-		let previous = null, prevH, prevW, prev;
-		// needs refactoring
-		$(".project, .process, .inspiration, .output, .german").click(function () {
-			let myDiv = this;
-			if (previous == null) {
-				// continue;
-				//needs refactoring!!!!!!!
-			} else {
-				//reset the previous clicked div to its initial state
-				setNumberOfColumns(previous, 'initial');
-				previous.style.height = prevH;
-				previous.style.width = prevW;
-				previous.style.overflowY = 'scroll';
-			}
-			//let's save the div so we can reset it later
-			previous = this;
-			prevH = this.style.height;
-			prevW = this.style.width;
-			//here we enlarge the div
-			myDiv.style.overflowY = 'hidden';
-			myDiv.style.width = '100%';
-			myDiv.style.height = 'auto';
-			//here we set the number of columns
-			if (screen.width > 899) setNumberOfColumns(myDiv, '2');
-			//here we get the height of the top menu (needs refactoring set it as gloal variable)
-			let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY; //this helps us to get the position of the div to scroll to
-			window.scrollTo(0, y);
-			// goTo(0, y);
-		});
 		//lettering functions
 		$("#link1, #link2").lettering('words');
 	</script>

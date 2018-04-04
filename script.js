@@ -122,6 +122,40 @@ function closeOpenMenu() {
 
     menuIsShow == true ? document.getElementById('menuIcon').src = icon1 : document.getElementById('menuIcon').src = icon2;
 }
+		/**
+		 * this function enlarges the divs by clicking on them
+		*/
+		function enlargeDivs() {
+			let previous = null, prevH, prevW, prev;
+			// needs refactoring
+			$(".project, .process, .inspiration, .output, .german").click(function () {
+				let myDiv = this;
+				if (previous == null) {
+					// continue;
+					//needs refactoring!!!!!!!
+				} else {
+					//reset the previous clicked div to its initial state
+					setNumberOfColumns(previous, 'initial');
+					previous.style.height = prevH;
+					previous.style.width = prevW;
+					previous.style.overflowY = 'scroll';
+				}
+				//let's save the div so we can reset it later
+				previous = this;
+				prevH = this.style.height;
+				prevW = this.style.width;
+				//here we enlarge the div
+				myDiv.style.overflowY = 'hidden';
+				myDiv.style.width = '100%';
+				myDiv.style.height = 'auto';
+				//here we set the number of columns
+				if (screen.width > 899) setNumberOfColumns(myDiv, '2');
+				//here we get the height of the top menu (needs refactoring set it as gloal variable)
+				let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY; //this helps us to get the position of the div to scroll to
+				window.scrollTo(0, y);
+				// goTo(0, y);
+			});
+		}
 /**
  * this function returns the device orientation in angles
  */

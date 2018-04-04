@@ -221,7 +221,8 @@ viktor {
 }
 
 .inspiration {
-    background-color: coral;
+    /* background-color: coral; */
+    color:black;
     height: 200px;
 }
 
