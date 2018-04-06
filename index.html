@@ -27,7 +27,7 @@
 		<menuelement onclick="reveal('project')" id="menuproject">PROJECT</menuelement>
 		<menuelement onclick="reveal('process')" id="menuprocess">PROCESS</menuelement>
 		<menuelement onclick="reveal('output')" id="menuoutput">OUTPUT</menuelement>
-		<menuelement onclick="reveal('inspiration')" id="menuinspiration">INSPIRATION</menuelement>
+		<menuelement  id="menuinspiration"> <a href="./inspiration.html">INSPIRATION</a></menuelement>
 		<menuelement onclick="reveal('german')" id="menugerman">DEUTSCH</menuelement>
 		<menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
 	</div>
@@ -227,6 +227,7 @@
 		///// AT THE BEGINNING WE SHOW ONLY THE PROJECTS DIVS /////
 		///////////////////////////////////////////////////////////
 		reveal('project');
+		enlargeDivs();
 		//lettering functions
 		$("#link1, #link2").lettering('words');
 	</script>

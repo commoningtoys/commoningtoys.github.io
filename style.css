@@ -152,7 +152,7 @@ viktor {
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
-.output, .german, .project, .process, .inspiration, .team, .footer {
+.output, .german, .project, .process, .team, .footer {
     display: block;
     width: 25vw;
     min-width: 250px;
@@ -183,7 +183,7 @@ viktor {
     transform: rotate(-1deg);
 }
 
-.process:hover, .inspiration:hover, .team:hover {
+.process:hover, .team:hover {
     -webkit-transform: rotate(1deg);
     /* Safari */
     -ms-transform: rotate(1deg);
@@ -219,11 +219,51 @@ viktor {
     height: 250px;
     /* max-height: 400px; */
 }
-
+#content{
+    /* position: fixed; */
+    box-sizing: border-box;
+    background-color: red;
+    position: relative;
+    max-width: 1200px;
+    height: 100%;
+    display: block;
+    margin: auto;
+    /* margin: 10px; */
+}
 .inspiration {
     /* background-color: coral; */
-    color:black;
-    height: 200px;
+    position: fixed;
+    color: black;
+    width: 30%;
+    height: 400px;
+    border: none;
+    text-align: center;
+    background-repeat:no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center; 
+    background-size: 95% auto;
+    padding: 20px
+    /* margin: 1%; */
+    /* line-height: 300px; */
+    /* height: 200px; */
+}
+
+.inspiration a {
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    box-shadow: 5px 5px 20px grey;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.inspiration:hover{
+    z-index: 999;
+}
+img.inspirationImage {
+    width: 300px;
+    border: none;
 }
 
 .team {
@@ -286,7 +326,6 @@ viktor {
     /* font-weight: bolder; */
     /* transform: rotate(30deg); */
 }
-
 
 .footer {
     position: relative;
