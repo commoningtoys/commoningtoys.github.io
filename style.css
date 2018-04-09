@@ -152,7 +152,7 @@ viktor {
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
-.output, .german, .project, .process, .team, .footer {
+.output, .german, .project, .process, .team, .inspiration, .footer {
     display: block;
     width: 25vw;
     min-width: 250px;
@@ -219,7 +219,27 @@ viktor {
     height: 250px;
     /* max-height: 400px; */
 }
-#content{
+.inspirationContent {
+    height: 250px;
+    /* background-color: coral; */
+    /* position: fixed;
+    color: black;
+    width: 33.33%;
+    min-width: 300px;
+    max-width: 400px;
+    height: 400px;
+    border: none;
+    text-align: center;
+    background-repeat:no-repeat;
+    /* background-attachment: fixed; */
+    /* background-position: center; 
+    background-size: 95% auto; */
+    /* padding: 20px */
+    /* margin: 1%; */
+    /* line-height: 300px; */
+    /* height: 200px; */
+}
+#dynamicContent{
     /* position: fixed; */
     box-sizing: border-box;
     background-color: red;
@@ -229,7 +249,7 @@ viktor {
     margin: auto;
     /* margin: 10px; */
 }
-.inspiration {
+.inspirationContent {
     /* background-color: coral; */
     position: fixed;
     color: black;
@@ -249,7 +269,7 @@ viktor {
     /* height: 200px; */
 }
 
-.inspiration a {
+.inspirationContent a {
     background-color: #fff;
     position: absolute;
     top: 50%;

@@ -27,7 +27,7 @@
 		<menuelement onclick="reveal('project')" id="menuproject">PROJECT</menuelement>
 		<menuelement onclick="reveal('process')" id="menuprocess">PROCESS</menuelement>
 		<menuelement onclick="reveal('output')" id="menuoutput">OUTPUT</menuelement>
-		<menuelement  id="menuinspiration"> <a href="./inspiration.html">INSPIRATION</a></menuelement>
+		<menuelement id="menuinspiration" onclick="reveal('inspiration')">INSPIRATION</menuelement>
 		<menuelement onclick="reveal('german')" id="menugerman">DEUTSCH</menuelement>
 		<menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
 	</div>
@@ -206,7 +206,10 @@
 			</Shintaro>
 		</div>
 		<!-- don't touch or remove this div it is used to store the content from are.na -->
-		<div id="dynamicContent"></div>
+		<div class="inspiration">
+			<button onclick="grid()">GRID ME!</button>
+			<div id="dynamicContent"></div>
+		</div>
 		<!-- don't touch or remove this div it is used to store the content from are.na -->
 	</div>
 	<div class="footer" id="myFooter">

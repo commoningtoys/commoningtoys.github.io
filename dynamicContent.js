@@ -12,7 +12,6 @@ function createContent(data) {
   for (let content of contents) {
     let img = imgTag(content.image.large.url);
     let url = content.image.large.url;
-    console.lo
     let source = aTag(content.source.url, content.title);
     const myHtml = img + source;
     let divPosition = {
@@ -20,11 +19,11 @@ function createContent(data) {
       left: Math.random() * (innerWidth - 400)
     }
     let d = document.createElement('div');
-    $(d).addClass('inspiration')
+    $(d).addClass('inspirationContent')
       .css("background-image", "url(" + url + ")")
       .html(source)
       .offset(divPosition)
-      .appendTo($('#content')) //main div
+      .appendTo($('#dynamicContent')) //main div
     // we run the enlarge divs script here so that it happens when the remote content is laoded
 
   }
@@ -42,7 +41,7 @@ function grid() {
   let content = document.getElementById('content');
   // content.style.position = 'relative';
   // content.style.float = 'left';
-  let myClass = document.getElementsByClassName('inspiration');
+  let myClass = document.getElementsByClassName('inspirationContent');
   for(let el of myClass){
     el.style.top = '0px';
     el.style.left = '0px';
