@@ -1,4 +1,4 @@
-const url = 'https://arenaapp.herokuapp.com/data';
+const url = 'https://arenanodeapp.herokuapp.com/data';
 let json;
 $.get(url, data => {
   json = data;
@@ -13,10 +13,12 @@ function createContent(data) {
     let img = imgTag(content.image.large.url);
     let url = content.image.large.url;
     let source = aTag(content.source.url, content.title);
+    let containerBounds = BoundsById('myContainer');
+    console.log(containerBounds);
     const myHtml = img + source;
     let divPosition = {
-      top: Math.random() * (innerHeight - 400),
-      left: Math.random() * (innerWidth - 400)
+      top: (Math.random() * (containerBounds.height - 400)),
+      left: containerBounds.left +  (Math.random() * (containerBounds.width - 400))
     }
     let d = document.createElement('div');
     $(d).addClass('inspirationContent')

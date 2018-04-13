@@ -147,8 +147,10 @@ function enlargeDivs() {
         myDiv.style.overflowY = 'hidden';
         myDiv.style.width = '100%';
         myDiv.style.height = 'auto';
+        if(!myDiv.className.includes('inspirationContent'))myDiv.style.height = '100vh';
+        console.log(myDiv.className.includes('inspiration'));
         //here we set the number of columns
-        if (screen.width > 899) setNumberOfColumns(myDiv, '2');
+        if (screen.width > 899 && !myDiv.className.includes('inspiration')) setNumberOfColumns(myDiv, '2');
         //here we get the height of the top menu (needs refactoring set it as gloal variable)
         let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY; //this helps us to get the position of the div to scroll to
         window.scrollTo(0, y);

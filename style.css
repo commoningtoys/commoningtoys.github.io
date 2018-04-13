@@ -219,7 +219,7 @@ viktor {
     height: 250px;
     /* max-height: 400px; */
 }
-.inspirationContent {
+.inspiration {
     height: 250px;
     /* background-color: coral; */
     /* position: fixed;
@@ -251,7 +251,7 @@ viktor {
 }
 .inspirationContent {
     /* background-color: coral; */
-    position: fixed;
+    position: absolute;
     color: black;
     width: 33.33%;
     min-width: 300px;
