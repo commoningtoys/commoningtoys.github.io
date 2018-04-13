@@ -3,7 +3,7 @@
  *************************************/
 const pix = window.devicePixelRatio;
 /***********************************/
-let myClasses = ["team", "project", "process", "inspiration", "german", "output"];
+let myClasses = ['team', 'project', 'process', 'inspiration', 'german', 'output'];
 // let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
 /**
  * Object to store visibility and name of classes
@@ -61,11 +61,13 @@ function init() {
     for (let i = 0; i < myClasses.length; i++) {
         let thisClass = document.getElementsByClassName(myClasses[i]);
         for (let j = 0; j < thisClass.length; j++) {
-            let randW = Random(20, 60);
-            thisClass[j].style.width = Math.floor(randW) + '%';
-            let randH = thisClass[j].style.width;
-            thisClass[j].style.height = Math.floor(randH) + 'px';
-
+            //set random with and height for all classes except inspiration
+            if (!myClasses[i].includes('inspiration')) {
+                let randW = Random(20, 60);
+                thisClass[j].style.width = Math.floor(randW) + '%';
+                let randH = thisClass[j].style.width;
+                thisClass[j].style.height = Math.floor(randH) + 'px';
+            }
         }
     }
     //set the first div project to width 100%
@@ -80,7 +82,7 @@ function init() {
  * stes the position of the divs below the menu bar
  */
 function setPositionContainer() {
-    let container = document.getElementById("myContainer");
+    let container = document.getElementById('myContainer');
     //here we set the header image near the menu button when on device
     let menu = BoundsById('menuIcon');
     let headerDiv = BoundsById('myHeader');
@@ -127,7 +129,7 @@ function closeOpenMenu() {
 function enlargeDivs() {
     let previous = null, prevH, prevW, prev;
     // needs refactoring
-    $(".project, .process, .inspiration, .output, .german").click(function () {
+    $('.project, .process, .output, .german').click(function () {
         let myDiv = this;
         if (previous == null) {
             // continue;
