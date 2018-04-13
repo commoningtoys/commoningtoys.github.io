@@ -4,29 +4,34 @@ $.get(url, data => {
   json = data;
   createContent(data);
 });
-
+/**
+ * this function creates the dynamic content
+ * @param {JSON} data JSON file 
+ */
 function createContent(data) {
-  console.log(data.contents);
+  // console.log(data.contents);
   const contents = data.contents;
   //we go trough all the elements of the json file
   for (let content of contents) {
+    // here we generate the html text
     let img = imgTag(content.image.large.url);
     let url = content.image.large.url;
     let source = aTag(content.source.url, content.title);
-    let containerBounds = BoundsById('myContainer');
-    console.log(containerBounds);
     const myHtml = img + source;
+    // here we get the bounds of the container div
+    // and we set the position of the div randomly
+    let containerBounds = BoundsById('myContainer');
     let divPosition = {
       top: (Math.random() * (containerBounds.height - 400)),
-      left: containerBounds.left +  (Math.random() * (containerBounds.width - 400))
+      left: (Math.random() * (containerBounds.width - 400))
     }
+    //here we generate the div and we attach html and position to it
     let d = document.createElement('div');
     $(d).addClass('inspirationContent')
       .css("background-image", "url(" + url + ")")
       .html(source)
       .offset(divPosition)
       .appendTo($('#dynamicContent')) //main div
-    // we run the enlarge divs script here so that it happens when the remote content is laoded
 
   }
 }
@@ -50,5 +55,4 @@ function grid() {
     el.style.position = 'relative';
     el.style.float = 'left';
   }
-
 }

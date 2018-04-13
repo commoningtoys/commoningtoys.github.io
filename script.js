@@ -147,7 +147,8 @@ function enlargeDivs() {
         myDiv.style.overflowY = 'hidden';
         myDiv.style.width = '100%';
         myDiv.style.height = 'auto';
-        if(!myDiv.className.includes('inspirationContent'))myDiv.style.height = '100vh';
+        //the insoiration div should be come as high as the page
+        if (myDiv.className.includes('inspiration')) myDiv.style.height = '100vh';
         console.log(myDiv.className.includes('inspiration'));
         //here we set the number of columns
         if (screen.width > 899 && !myDiv.className.includes('inspiration')) setNumberOfColumns(myDiv, '2');
