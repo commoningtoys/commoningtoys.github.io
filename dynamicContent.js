@@ -1,4 +1,5 @@
-const url = 'https://arenanodeapp.herokuapp.com/data';
+// const url = 'https://arenanodeapp.herokuapp.com/data';
+const url = 'http://localhost:5000/data';
 let json;
 let isGrid = false;
 let divPosition = [];
@@ -11,38 +12,49 @@ $.get(url, data => {
  * @param {JSON} data JSON file 
  */
 function createContent(data) {
-  // console.log(data.contents);
-  const contents = data.contents;
-  //we go trough all the elements of the json file
-  let i = 0;
-  for (let content of contents) {
-    // here we generate the html text
-    let img = imgTag(content.image.large.url);
-    let url = content.image.large.url;
-    let source = aTag(content.source.url, content.title);
-    const myHtml = img + source;
-    // here we get the bounds of the container div
-    // and we set the position of the div randomly
-    let containerBounds = BoundsById('myContainer');
-    divPosition[i] = {
-      top: (Math.random() * (containerBounds.height - 400)),
-      left: (Math.random() * (containerBounds.width - 400))
+  console.log(data);
+  for (const channel of data) {
+    const contents = channel.contents;
+    //we go trough all the elements of the json file
+    let i = 0;
+    for (let content of contents) {
+      // here we generate the html text
+      let source = '';
+      let url = '';
+      let img = imgTag(content.image.large.url);
+      if (content.source != null) {
+        url = content.image.large.url;
+        source = aTag(content.source.url, content.title);
+      } else {
+        url = content.image.large.url;
+        source = HTMLtitle(content.title);
+      }
+      const myHtml = img + source;
+      // here we get the bounds of the container div
+      // and we set the position of the div randomly
+      let containerBounds = BoundsById('myContainer');
+      divPosition.push({
+        top: (Math.random() * (containerBounds.height - 400)),
+        left: (Math.random() * (containerBounds.width - 400))
+      });
+      //here we generate the div and we attach html and position to it
+      let d = document.createElement('div');
+      $(d).addClass('inspirationContent')
+        .css("background-image", "url(" + url + ")")
+        .html(source)
+        .offset(divPosition[i])
+        .appendTo($('#dynamicContent')) //main div
+      i++;
     }
-    //here we generate the div and we attach html and position to it
-    let d = document.createElement('div');
-    $(d).addClass('inspirationContent')
-      .css("background-image", "url(" + url + ")")
-      .html(source)
-      .offset(divPosition[i])
-      .appendTo($('#dynamicContent')) //main div
-    i++;
   }
 }
 
 function aTag(link, text) {
   return ' <a href="' + link + '" target="_blank">' + text + '</a>';
 }
-
+function HTMLtitle(title) {
+  return '<a>' + title + '</a>';
+}
 function imgTag(str) {
   return ' <img src="' + str + '">';
 }
@@ -63,13 +75,13 @@ function grid() {
   } else {
     for (let el of myClass) {
       let containerBounds = BoundsById('myContainer');
-      el.style.top = containerBounds.top + divPosition[i].top + 'px';
-      el.style.left = containerBounds.left + divPosition[i].left + 'px';
-      el.style.position = 'fixed';
+      el.style.top = divPosition[i].top + 'px';
+      el.style.left = divPosition[i].left + 'px';
+      el.style.position = 'absolute';
       el.style.float = 'none';
       i++;
     }
   }
   isGrid = !isGrid;
-  
+
 }

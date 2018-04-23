@@ -251,8 +251,8 @@ viktor {
     /* margin: 10px; */
 }
 .inspirationContent, .inspirationContentGrid {
-    /* background-color: coral; */
     position: absolute;
+    float: none;
     color: black;
     width: 33.33%;
     min-width: 300px;
@@ -261,13 +261,8 @@ viktor {
     border: none;
     text-align: center;
     background-repeat:no-repeat;
-    /* background-attachment: fixed; */
     background-position: center; 
     background-size: 95% auto;
-    /* padding: 20px */
-    /* margin: 1%; */
-    /* line-height: 300px; */
-    /* height: 200px; */
 }
 
 .inspirationContentGrid{
