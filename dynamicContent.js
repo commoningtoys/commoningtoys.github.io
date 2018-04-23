@@ -1,5 +1,5 @@
-// const url = 'https://arenanodeapp.herokuapp.com/data';
-const url = 'http://localhost:5000/data';
+const url = 'https://arenanodeapp.herokuapp.com/data';
+// const url = 'http://localhost:5000/data';
 let json;
 let isGrid = false;
 let divPosition = [];
