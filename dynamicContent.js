@@ -9,7 +9,7 @@ $.get(url, data => {
 });
 /**
  * this function creates the dynamic content
- * @param {JSON} data JSON file 
+ * @param {Array} data Array of JSON files 
  */
 function createContent(data) {
   console.log(data);
