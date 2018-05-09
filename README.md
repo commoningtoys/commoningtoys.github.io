@@ -61,5 +61,5 @@ Fight against corporativist design!
 4. The website is open source so feel free to download yourself a copy of the repository and make it as your own webpage
 ***********************
 ## TO DO:
-### 1. add explanation for adding images to blog
-### 2. add german button to website
+### ~~1. add explanation for adding images to blog~~
+### ~~2. add german button to website~~
