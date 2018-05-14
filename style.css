@@ -106,7 +106,7 @@ button:hover {
 /* Personal styles for team members */
 
 yano, micha, shintaro, selena, viktor, kayla {
-    /* line-height: 25pt; */
+    line-height: 25pt;
     background-color: white;
     /* border: solid 3px #f00;  */
     /* font-family: 'Source Code Pro', mono; */
