@@ -106,17 +106,18 @@ button:hover {
 /* Personal styles for team members */
 
 yano, micha, shintaro, selena, viktor, kayla {
-    line-height: 25pt;
+    /* line-height: 25pt; */
     background-color: white;
     /* border: solid 3px #f00;  */
     /* font-family: 'Source Code Pro', mono; */
 }
 
 yano {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Source Code Pro', mono;
+    font-weight: bolder;
     color: rgb(0, 255, 30);
     border-bottom: solid 2px rgb(255, 153, 0);
-    background-color: black;
+    background-color: #fff;
 }
 
 selena {
