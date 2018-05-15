@@ -28,20 +28,6 @@ function createContent(data) {
     //we go trough all the elements of the json file
     let i = 0;
     for (let content of contents) {
-
-      // console.log(content.base_class);
-      // here we generate the html text
-      // let source = '';
-      // let url = '';
-      // // let img = imgTag(content.image.large.url);
-      // if (content.source != null) {
-      //   if (content.image != null) url = content.image.large.url;
-      //   source = aTag(content.source.url, content.title);
-      // } else {
-      //   if (content.image != null) url = content.image.large.url;
-      //   source = HTMLtitle(content.title);
-      // }
-      // const myHtml = img + source;
       // here we get the bounds of the container div
       // and we set the position of the div randomly
       let containerBounds = BoundsById('myContainer');
@@ -60,30 +46,53 @@ function createContent(data) {
     }
   }
 }
+/**
+ * this function returns the link to an image 
+ * it handles various exception putting a plceholder 
+ * image in the case the JSON doesn't provides a link to one
+ * @param {JSON} data JSON file with the data
+ * @returns the link to an image
+ */
 function imgUrl(data) {
+  // first we check if it is a 'Block' content or 'Channel'
   if (data.base_class.startsWith(BLOCK)) {
+    // does i have an image
     if (data.image != null) {
-      return data.image.large.url;
+      return data.image.large.url;//if yes we return the link
     } else {
-      return 'img/img_02.jpg';
+      return 'img/no.png';// otherwise a placeholder image
     }
   } else if (data.base_class.startsWith(CHANNEL)) {
+    // in the case of a channel we return the user avatar image
     return data.user.avatar_image.display;
-  } else return '';
+  } else return 'img/no.png';// if it is none of the above we put a placeholder image
 }
 
+
+/**
+ * this function returns the link the source of the arena content
+ * it handles various exception 
+ * @param {JSON} data JSON file with the data
+ * @returns HTML <a> tag with link to the source 
+ */
 function htmlContent(data) {
+  // first we check if it is a 'Block' content or 'Channel'
   if (data.base_class.startsWith(BLOCK)) {
     if (data.class.startsWith(TEXT)) {
+      // Text content should link to the arena original page
       let link = ARENA_URL + 'block/' + data.id;
       return aTag(link, data.title);
     } else if (data.class.startsWith(MEDIA) || data.class.startsWith(LINK) || data.class.startsWith(IMAGE)) {
+      // Media, Link and Image can be handled the same way
+      // returning the source url
       return aTag(data.source.url, data.title);
     } else if (data.class.startsWith(ATTACHMENT)) {
+      // Link needs to return the attachment link (amazon link)
       let link = data.attachment.url;
       return aTag(link, data.title);
     } else return data.title;
   } else if (data.base_class.startsWith(CHANNEL)) {
+    // Channel returns the url of the original channel
     let link = ARENA_URL + data.user.slug + '/' + data.slug;
     return aTag(link, data.title);
   } else return 'FAIL';
