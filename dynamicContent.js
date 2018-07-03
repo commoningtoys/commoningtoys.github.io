@@ -22,9 +22,18 @@ $.get(URL, data => {
  * @param {Array} data Array of JSON files 
  */
 function createContent(data) {
-  console.log(data);
+  // console.log(data);
   for (const channel of data) {
     const contents = channel.contents;
+    const COLOR  = createColor();
+    console.log(COLOR);
+    //sort the content by date
+    contents.sort((a, b) => {
+      let dateA = new Date(a.created_at), dateB = new Date(b.created_at);
+      // console.log(dateA, dateB);
+      return dateB - dateA;
+    });
+    // console.log(contents.created_at);
     //we go trough all the elements of the json file
     let i = 0;
     for (let content of contents) {
@@ -39,6 +48,7 @@ function createContent(data) {
       let d = document.createElement('div');
       $(d).addClass('inspirationContent')
         .css("background-image", "url(" + imgUrl(content) + ")")//" /*+ url + */"
+        .css("background-color", COLOR)
         .html(htmlContent(content))
         .offset(divPosition[i])
         .appendTo($('#dynamicContent')) //main div
@@ -133,4 +143,11 @@ function grid() {
   }
   isGrid = !isGrid;
 
+}
+
+function createColor(){
+  let r = Math.floor((Math.random() * 2.55) * 100);
+  let g = Math.floor((Math.random() * 2.55) * 100);
+  let b = Math.floor((Math.random() * 2.55) * 100);
+  return "rgba(" + r + "," + g + ", " + b + ", "+ 0.7 + ")";
 }
