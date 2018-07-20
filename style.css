@@ -255,6 +255,7 @@ viktor {
 }
 
 .inspirationContent, .inspirationContentGrid {
+    z-index: 0;
     position: absolute;
     float: none;
     color: black;
