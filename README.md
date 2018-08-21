@@ -2,7 +2,7 @@
 # This is a commonist [website](http://commoning.rocks). It means that everyone can contribute to it. The source will open. The contributions will be revised to avoid damaging the webpage.
 ## How to contribute to the website
 1. Each contributor has to define it's own _contribution style_ by adding it to the [css](https://github.com/commoningtoys/commoningWebsite/blob/master/style.css).
-    ```
+    ```css
     myName{
         /*
         various
@@ -15,7 +15,7 @@
     ```
 2. The contribution to website have to be done in the [index.html](https://github.com/commoningtoys/commoningWebsite/blob/master/index.html)
 Each contribution should look like this:
-    ```
+    ```html
     <div class="(process, team, inspiration, output, project or german)">
         <myName>
             My very own wonderful and meaningful contribution
