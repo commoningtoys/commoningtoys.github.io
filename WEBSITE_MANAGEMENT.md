@@ -145,6 +145,8 @@ Here below I will explain some git functions and HTML syntax
    $you git branch -d working-branch
    
    # if you make to complex changes, the merge function will prompt you to check all the changes, this is a tedious work and if it happens is better if you contact me.
+   
+   # now you are ready to push your changes to the web
    ```
 
 
