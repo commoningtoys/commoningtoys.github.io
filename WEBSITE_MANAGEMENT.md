@@ -135,7 +135,8 @@ Here below I will explain some git functions and HTML syntax
    $you pull origin master
    
    # first we need to add the changes to git to do so we type
-   $you git add . && git commit 
+   $you git add .
+   $you git commit -m "update index with post about (here put some text about the post SHORT!)" 
    # this command wil add the changes to the current branch and will ask you to leave a comment to comment it you need to write "update index.html with content 'title of the content'"
    
    # once this is done you need to merge the branches
