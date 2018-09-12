@@ -131,6 +131,9 @@ Here below I will explain some git functions and HTML syntax
 3. Now that you added your content and it looks good locally is time to merge your changes to the master branch
 
    ```bash
+   # first pull down all of the new content
+   $you pull origin master
+   
    # first we need to add the changes to git to do so we type
    $you git add . && git commit 
    # this command wil add the changes to the current branch and will ask you to leave a comment to comment it you need to write "update index.html with content 'title of the content'"
@@ -147,6 +150,9 @@ Here below I will explain some git functions and HTML syntax
    # if you make to complex changes, the merge function will prompt you to check all the changes, this is a tedious work and if it happens is better if you contact me.
    
    # now you are ready to push your changes to the web
+   
+   $you git push origin master
+   # now everything is online
    ```
 
 
