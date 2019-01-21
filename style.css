@@ -153,6 +153,11 @@ viktor {
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
+lena{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0cf;
+}
+
 .output, .german, .project, .process, .team, .inspiration, .footer {
     display: block;
     width: 25vw;
