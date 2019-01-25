@@ -153,6 +153,7 @@ viktor {
     border-bottom: solid 2px rgb(43, 255, 0);
 }
 
+<<<<<<< HEAD
 lena {
     color: rgb(255, 255, 255);
     border-bottom: solid 2px #0cf;
@@ -160,6 +161,14 @@ lena {
 
 }
 
+||||||| merged common ancestors
+=======
+lena{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0cf;
+}
+
+>>>>>>> b42c74e4ea6f8497b45d7a3e1010eb4dab442ae3
 .output, .german, .project, .process, .team, .inspiration, .footer {
     display: block;
     width: 25vw;
