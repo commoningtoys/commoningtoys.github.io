@@ -105,7 +105,7 @@ button:hover {
 
 /* Personal styles for team members */
 
-yano, micha, shintaro, selena, viktor, kayla {
+yano, micha, shintaro, selena, viktor, kayla, lena {
     line-height: 25pt;
     background-color: white;
     /* border: solid 3px #f00;  */
@@ -151,6 +151,13 @@ viktor {
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
     color: #f50;
     border-bottom: solid 2px rgb(43, 255, 0);
+}
+
+lena {
+    color: rgb(255, 255, 255);
+    border-bottom: solid 2px #0cf;
+    background-color: black;
+
 }
 
 .output, .german, .project, .process, .team, .inspiration, .footer {
@@ -243,6 +250,13 @@ viktor {
     /* height: 200px; */
 }
 
+.caption{
+    font-size: 75%;
+    font-style: italic; 
+}
+/*
+dznamic cintent stuff
+*/
 #dynamicContent {
     /* position: fixed; */
     box-sizing: border-box;
