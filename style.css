@@ -258,20 +258,25 @@ lena {
 dznamic cintent stuff
 */
 #dynamicContent {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    align-content: stretch;
+    justify-content: center;
     /* position: fixed; */
     box-sizing: border-box;
-    background-color: red;
+    /* background-color: red; */
     position: relative;
     max-width: 1200px;
-    display: block;
+    /* display: block; */
     margin: auto;
     /* margin: 10px; */
 }
 
 .inspirationContent, .inspirationContentGrid {
     z-index: 0;
-    position: absolute;
-    float: none;
+    /* position: absolute;
+    float: none; */
     color: black;
     width: 33.33%;
     min-width: 300px;
@@ -282,6 +287,7 @@ dznamic cintent stuff
     background-repeat: no-repeat;
     background-position: center;
     background-size: 95% auto;
+    margin: 5px;
 }
 
 .inspirationContentGrid {
@@ -293,13 +299,8 @@ dznamic cintent stuff
 
 .inspirationContent a {
     background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
     box-shadow: 5px 5px 20px grey;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    margin-top: 200px;
 }
 
 .inspirationContent yano {
