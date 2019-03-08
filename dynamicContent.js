@@ -11,7 +11,7 @@ const IMAGE = 'Image';
 const TEXT = 'Text';
 /*************************************/
 let json;
-let isGrid = false;
+let isGrid = true;
 let divPosition = [];
 $.get(URL, data => {
   json = data;
@@ -50,7 +50,7 @@ function createContent(data) {
         .css("background-image", "url(" + imgUrl(content) + ")")//" /*+ url + */"
         .css("background-color", COLOR)
         .html(htmlContent(content))
-        .offset(divPosition[i])
+        // .offset(divPosition[i])
         .appendTo($('#dynamicContent')) //main div
       i++;
     }
@@ -109,7 +109,15 @@ function htmlContent(data) {
 }
 
 function aTag(link, text) {
-  return ' <a href="' + link + '" target="_blank">' + text + '</a>';
+  const d = document.createElement('div')
+  d.setAttribute('class', 'content')
+  const a = document.createElement('a')
+  a.setAttribute('href', link);
+  a.innerText = text;
+  d.appendChild(a);
+  return d
+  // console.log(a);
+  // return ' <a href="' + link + '" target="_blank">' + text + '</a>';
 }
 function HTMLtitle(title) {
   return '<a>' + title + '</a>';
