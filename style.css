@@ -157,7 +157,6 @@ lena {
     color: rgb(255, 255, 255);
     border-bottom: solid 2px #0cf;
     background-color: black;
-
 }
 
 .output, .german, .project, .process, .team, .inspiration, .footer {
@@ -250,30 +249,37 @@ lena {
     /* height: 200px; */
 }
 
-.caption{
+.caption {
     font-size: 75%;
-    font-style: italic; 
+    font-style: italic;
 }
+
 /*
-dznamic cintent stuff
+dynamic content stuff
 */
+
 #dynamicContent {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    /* align-content: stretch; */
     /* position: fixed; */
     box-sizing: border-box;
-    background-color: red;
+    /* background-color: red; */
     position: relative;
     max-width: 1200px;
-    display: block;
+    /* display: block; */
     margin: auto;
     /* margin: 10px; */
 }
 
 .inspirationContent, .inspirationContentGrid {
     z-index: 0;
-    position: absolute;
-    float: none;
+    /* position: relative;
+    float: left; */
     color: black;
-    width: 33.33%;
+    width: 30%;
     min-width: 300px;
     max-width: 400px;
     height: 400px;
@@ -281,7 +287,8 @@ dznamic cintent stuff
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 95% auto;
+    background-size: 85% auto;
+    margin: 5px;
 }
 
 .inspirationContentGrid {
@@ -292,16 +299,20 @@ dznamic cintent stuff
 }
 
 .inspirationContent a {
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    box-shadow: 5px 5px 20px grey;
-    transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
+    /* text-align: center; */
+    /* background-color: #fff;
+    box-shadow: 5px 5px 20px grey; */
 }
-
+.content{
+    /* text-align: center; */
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 5px 5px 20px grey;
+    /* width: 75%; */
+    margin-top: 200px;
+    transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -webkit-transform: translate(0, -50%);
+}
 .inspirationContent yano {
     background-color: #fff;
     position: absolute;
@@ -333,7 +344,8 @@ img.inspirationImage {
 }
 
 .german {
-    background-color:#fff;
+    display: none;
+    background-color: #fff;
     height: 300px;
 }
 
