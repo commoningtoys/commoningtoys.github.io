@@ -154,6 +154,10 @@ viktor {
     background-color: yellow;
 }
 
+viktor h1{
+    color: #fff;
+}
+
 lena {
     color: rgb(255, 255, 255);
     border-bottom: solid 2px #0cf;
