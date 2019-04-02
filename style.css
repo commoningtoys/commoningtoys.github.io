@@ -24,6 +24,7 @@
 
 html {
     font-size: 100%;
+    scrollbar-color: #f50 #fff;
 }
 
 canvas {
@@ -33,7 +34,8 @@ canvas {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    background-color: black;
+    /* background-color: black; */
+    /* color: #F5F5F5; */
 }
 
 body {
@@ -235,20 +237,15 @@ lena {
     /* font-size: 5vh; */
 }
 
-img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    /* float: left;
-    clear: both; */
-    max-width: 650px;
-    border: solid 3px #f50;
-}
-
 .output, .german, .project, .process, .team {
-    display: block;
+    /* display: block;
     width: 25vw;
-    min-width: 250px;
+    min-width: 250px; */
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "ti ti" "tx md";
     overflow-y: scroll;
     font-size: 1rem;
     /* font-family: sans-serif; */
@@ -292,9 +289,33 @@ img {
     /* transform: rotate(1deg); */
 }
 
-.project {
-    /* background-color: cyan; */
-    height: 250px;
+/* .project {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "ti ti" "tx md";
+} */
+
+.media-content{
+    grid-area: md;
+}
+
+
+.media-conten img {
+    /* position: relative; */
+    width: 100%;
+    height: auto;
+    /* float: left;
+    clear: both; */
+    max-width: 550px;
+    border: solid 3px #f50;
+}
+.title-content{
+    grid-area: ti;
+    font-size: 2rem;
+}
+.text-content{
+    grid-area: tx;
 }
 
 .process {

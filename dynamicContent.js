@@ -13,10 +13,10 @@ const TEXT = 'Text';
 let json;
 let isGrid = true;
 let divPosition = [];
-$.get(URL, data => {
-  json = data;
-  createContent(data);
-});
+  $.get(URL, data => {
+    json = data;
+    createContent(data);
+  });
 /**
  * this function creates the dynamic content
  * @param {Array} data Array of JSON files 

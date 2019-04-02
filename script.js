@@ -3,6 +3,8 @@
  *************************************/
 const pix = window.devicePixelRatio;
 /***********************************/
+
+
 let myClasses = ['team', 'project', 'process', 'inspiration', 'german', 'output'];
 // let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
 /**
@@ -54,6 +56,73 @@ function showAll() {
         }
     }
 }
+
+function initialize_content() {
+
+    $.getJSON('content.json', data => {
+        console.log(data);
+        convert_date(data)
+        console.log(data);
+        process_data(data)
+    });
+}
+
+
+function convert_date(arr) {
+    for (const el of arr) {
+        console.log(el.date);
+        const date = el.date.split('/');
+        const month = parseInt(date[0]);
+        const year = parseInt(date[1]);
+        const parsed_date = new Date(year, month, 1);
+        el.date = parsed_date;
+    }
+}
+
+function process_data(data) {
+    const sorted_data = data.sort((a, b) => a.date - b.date);
+    for (const el of sorted_data) {
+        console.log(el.date)
+        const article = document.createElement('div');
+        // article.innerHTML = el.content
+        article.setAttribute('class', el.section);
+        article.setAttribute('id', el.id);
+
+        const title = document.createElement('div');
+        title.innerText = el.title;
+        title.setAttribute('class', 'title-content');
+
+        article.appendChild(title);
+
+        const txt = document.createElement('div');
+        txt.innerHTML = el.content;
+        txt.setAttribute('class', 'text-content');
+
+        article.appendChild(txt);
+
+        const media_content = document.createElement('div');
+        media_content.setAttribute('class', 'media-content');
+
+        for (const url of el.video_list) {
+            const my_iframe = document.createElement('iframe');
+            my_iframe.setAttribute('src', url);
+            media_content.appendChild(my_iframe);
+        }
+
+        for (const url of el.img_list) {
+            const my_img = document.createElement('img');
+            my_img.setAttribute('src', url);
+            media_content.appendChild(my_img);
+        };
+
+        article.appendChild(media_content);
+
+        const inspiration = document.getElementById('inspiration');
+        const main = document.getElementById('articles');
+        main.insertBefore(article, inspiration);
+    }
+}
+
 /**
  * this function initializes the width and heights of all the divs
  */
