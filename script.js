@@ -73,7 +73,7 @@ function init() {
     //set the first div project to width 100%
     //needs refactoring
     let mainPage = document.getElementById('mainPage');
-    mainPage.style.width = 'auto';
+    mainPage.style.width = '95%';
     mainPage.style.height = 'auto';
     if (screen.width > 899) setNumberOfColumns(mainPage, '2');
     else setNumberOfColumns(mainPage, 'initial');
@@ -147,7 +147,7 @@ function enlargeDivs() {
         prevW = this.style.width;
         //here we enlarge the div
         myDiv.style.overflowY = 'hidden';
-        myDiv.style.width = '100%';
+        myDiv.style.width = '95%';
         myDiv.style.height = 'auto';
         //the insoiration div should be come as high as the page
         if (myDiv.className.includes('inspiration')) myDiv.style.height = '100vh';

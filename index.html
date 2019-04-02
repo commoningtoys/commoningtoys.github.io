@@ -6,15 +6,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width">
 	<title>Commoning</title>
-	<meta name="description" content="The sustainable use and the organisation of common resources is highly complex. With the focus on alternative, utopia-inspired urban neighbourhood initiatives in Switzerland this research project proposes experimental design and inquiry into media-based thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of these sharing processes.">
-	<meta name="keywords" content="commoning,commonist,academia,research,basel,philosophy,media art,coding,agent based models">
+	<meta name="description"
+		content="The sustainable use and the organisation of common resources is highly complex. With the focus on alternative, utopia-inspired urban neighbourhood initiatives in Switzerland this research project proposes experimental design and inquiry into media-based thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of these sharing processes.">
+	<meta name="keywords"
+		content="commoning,commonist,academia,research,basel,philosophy,media art,coding,agent based models">
 	<meta name="author" content="Critical Media Lab">
 
 	<!-- Facebook -->
 	<meta property="og:url" content="http://commoning.rocks/">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="COMMONING">
-	<meta property="og:description" content="The sustainable use and the organisation of common resources is highly complex. With the focus on alternative, utopia-inspired urban neighbourhood initiatives in Switzerland this research project proposes experimental design and inquiry into media-based thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of these sharing processes.">
+	<meta property="og:description"
+		content="The sustainable use and the organisation of common resources is highly complex. With the focus on alternative, utopia-inspired urban neighbourhood initiatives in Switzerland this research project proposes experimental design and inquiry into media-based thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of these sharing processes.">
 	<meta property="og:image" content="http://commoning.rocks/img/commoning_web.gif">
 
 	<!-- Twitter -->
@@ -22,13 +25,14 @@
 	<meta name="twitter:site" content="COMMONING">
 	<meta name="twitter:creator" content="Critical Media Lab">
 	<meta name="twitter:title" content="COMMONING">
-	<meta name="twitter:description" content="The sustainable use and the organisation of common resources is highly complex. With the focus on alternative, utopia-inspired urban neighbourhood initiatives in Switzerland this research project proposes experimental design and inquiry into media-based thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of these sharing processes.">
+	<meta name="twitter:description"
+		content="The sustainable use and the organisation of common resources is highly complex. With the focus on alternative, utopia-inspired urban neighbourhood initiatives in Switzerland this research project proposes experimental design and inquiry into media-based thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of these sharing processes.">
 	<meta name="twitter:image" content="http://commoning.rocks/img/commoning_web.gif">
 	<script src="libraries/jquery-3.3.1.min.js"></script>
 	<script src="libraries/jquery.lettering-0.6.1.min.js"></script>
 	<script src="libraries/p5.js"></script>
 	<script src="libraries/p5.dom.js"></script>
-	<script src="libraries/p5.sound.js"></script>
+	<!-- <script src="libraries/p5.sound.js"></script> -->
 	<!-- <script src="sketch.js"></script> -->
 	<script src="script.js"></script>
 	<script src="dynamicContent.js"></script>
@@ -40,75 +44,104 @@
 </head>
 
 <body onload="init()" onresize="setPositionContainer()">
-	<div id="myMenu" class="menu">
-		<img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
-		<menuelement onclick="reveal('project')" id="menuproject">PROJECT</menuelement>
-		<menuelement onclick="reveal('process')" id="menuprocess">PROCESS</menuelement>
-		<menuelement onclick="reveal('output')" id="menuoutput">OUTPUT</menuelement>
-		<menuelement id="menuinspiration" onclick="reveal('inspiration')">INSPIRATION</menuelement>
-		<menuelement onclick="reveal('german')" id="menugerman">DEUTSCH</menuelement>
-		<menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
-	</div>
-	<div class="title" id="myTitle">
+	<!-- <div class="title" id="myTitle">
 		<p>THINKING</p>
 		<p id="title2">TOYS</p>
 		<p>FOR COMMONING</p>
-	</div>
+	</div> -->
 	<div id="myContainer" class="container">
-		<div id="myHeader">
+		<div id="myMenu" class="menu">
+			<img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
+			<menuelement onclick="reveal('project')" id="menuproject">PROJECT</menuelement>
+			<menuelement onclick="reveal('process')" id="menuprocess">PROCESS</menuelement>
+			<menuelement onclick="reveal('output')" id="menuoutput">OUTPUT</menuelement>
+			<menuelement id="menuinspiration" onclick="reveal('inspiration')">INSPIRATION</menuelement>
+			<menuelement onclick="reveal('german')" id="menugerman">DEUTSCH</menuelement>
+			<menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
+		</div>
+		<div id="myHeader" class="header">
 			<a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk" target="_blank">
 				<img src="img/HGKLogo.png" id="header">
 			</a>
 		</div>
-		<script>setPositionContainer()</script>
-		<div class="project" id="mainPage" style="width:100%;">
-			<shintaro>
-				<h1>Thinking Toys (or Games) for Commoning</h1>
-				<div>
-					<img src="img/diagram_overview.gif">
+		<div class="main" id="articles">
+
+			<div class="invisible">
+				<script>setPositionContainer()</script>
+				<div class="project" id="mainPage" style="width:95%;">
+					<shintaro>
+						<h1>Thinking Toys (or Games) for Commoning</h1>
+						<div>
+							<img src="img/diagram_overview.gif">
+						</div>
+						The sustainable use and the organisation of common resources is highly complex. With the focus
+						on
+						alternative,
+						utopia-inspired
+						urban neighbourhood initiatives in Switzerland this research project proposes experimental
+						design
+						and inquiry into
+						media-based
+						thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of
+						these sharing
+						processes.
+						<br>
+						<br> Commons are sustainably and collectively managed resources, such as food, or communication
+						infrastructures,
+						such
+						as Wi-Fi. Commoning, then, is the activity of sharing these resources. The aspiration formulated
+						throughout
+						numerous
+						alternative, utopia-inspired projects that seeks to design infrastructural aspects of urban
+						everyday
+						life in an
+						alternative
+						and autonomous way, through commoning, raises several questions. Since, based on the high level
+						of
+						complexity that
+						(occasionally)
+						comes with the shared use of resources, for the individual community member it is often
+						difficult to
+						estimate his
+						or
+						her own action and consequences to the very last detail. Especially when it comes to
+						unpredictable,
+						complex
+						adaptive
+						processes, he or she can no longer completely grasp them intuitively nor follow them without the
+						help of
+						media-based
+						thinking tools — such as computer-based models or scenarios — which make those processes not
+						only
+						visible but also
+						comprehensible.
+						<br>
+						<br>For this reason, a mobile software application will be developed and tested in close
+						collaboration with the
+						members
+						of three Swiss urban neighborhood projects: NeNa1 in Zurich, LeNa in Basel and Warmbächli in
+						Bern.
+						We will create
+						playful
+						simulations and design new thought-spaces for commoning. Our aim is to enable alternative and
+						engaging ways for
+						future
+						social participation and transformation processes.
+						<br>
+						<br>The four-year project, which combines methods from humanities, social science and design
+						inquires the following
+						central
+						question: How could an experimental and community-based approach to design and development of a
+						digital game system
+						stimulate
+						reflection on the intuitively incomprehensible complexity of commoning, make it more
+						understandable
+						and negotiable
+						through
+						playing and gaming?
+					</shintaro>
 				</div>
-				The sustainable use and the organisation of common resources is highly complex. With the focus on alternative,
-				utopia-inspired
-				urban neighbourhood initiatives in Switzerland this research project proposes experimental design and inquiry into
-				media-based
-				thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of these sharing
-				processes.
-				<br>
-				<br> Commons are sustainably and collectively managed resources, such as food, or communication infrastructures,
-				such
-				as Wi-Fi. Commoning, then, is the activity of sharing these resources. The aspiration formulated throughout
-				numerous
-				alternative, utopia-inspired projects that seeks to design infrastructural aspects of urban everyday life in an
-				alternative
-				and autonomous way, through commoning, raises several questions. Since, based on the high level of complexity that
-				(occasionally)
-				comes with the shared use of resources, for the individual community member it is often difficult to estimate his
-				or
-				her own action and consequences to the very last detail. Especially when it comes to unpredictable, complex
-				adaptive
-				processes, he or she can no longer completely grasp them intuitively nor follow them without the help of
-				media-based
-				thinking tools — such as computer-based models or scenarios — which make those processes not only visible but also
-				comprehensible.
-				<br>
-				<br>For this reason, a mobile software application will be developed and tested in close collaboration with the
-				members
-				of three Swiss urban neighborhood projects: NeNa1 in Zurich, LeNa in Basel and Warmbächli in Bern. We will create
-				playful
-				simulations and design new thought-spaces for commoning. Our aim is to enable alternative and engaging ways for
-				future
-				social participation and transformation processes.
-				<br>
-				<br>The four-year project, which combines methods from humanities, social science and design inquires the following
-				central
-				question: How could an experimental and community-based approach to design and development of a digital game system
-				stimulate
-				reflection on the intuitively incomprehensible complexity of commoning, make it more understandable and negotiable
-				through
-				playing and gaming?
-			</shintaro>
-		</div>
-		<!-- ██╗███╗   ██╗███████╗███████╗██████╗ ████████╗                                                 
+				<!-- ██╗███╗   ██╗███████╗███████╗██████╗ ████████╗                                                 
 			 ██║████╗  ██║██╔════╝██╔════╝██╔══██╗╚══██╔══╝                                                 
 			 ██║██╔██╗ ██║███████╗█████╗  ██████╔╝   ██║                                                    
 			 ██║██║╚██╗██║╚════██║██╔══╝  ██╔══██╗   ██║                                                    
@@ -137,768 +170,1036 @@
 			╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝    ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚══════╝ -->
 
 
-		<!-- German -->
-		<!-- German, About Project -->
+				<!-- German -->
+				<!-- German, About Project -->
 
-		<div class="process">
- 			 <viktor>
-  				<h1>Participating in the Encountering Ethics Workshop @2019 Research Through Design Conference, March 19, TU Delft</h1>
-  				
-   				Viktor took part in the <a href="https://encounteringethics.cargocollective.com/">workshop</a> which included interviewing (people impersonating) smart objetcs, building scenarios from the objects perspective and working on a manifesto for more desireable paradigms of smartness.
-   				<br>
-  				<br>
-   				Read the full report <a href="https://docs.google.com/document/d/1WvsLBtvNxV3MiLdzZLkDQNQhKSKuoewQuQ8lUc8lkRw/edit?usp=sharing">here</a>
-				<br>
-				for thoughts about extending care to objects, pushing towards a more-than-human centred design and the workshop's relevancy for the Thinking Toys for Commoning project.
-   				
-				<img src="img/EnctrngEtcsRTD2019.JPG">
-  			</viktor>
-		</div>
-		<div class="process">
-			<lena>
-				<h1>Mid-Feb 2019, Micro Residency 1b</h1>
-				<img src="img/residency/microresidency_1b_3.jpg" alt="">
-				<img src="img/residency/microresidency_1b_2.jpg" alt="">
-				Designers Sarah Hermanutz and Andreas Rau visited our lab and project for a week. Together with Michaela they were working on a multi-media
-				installation that uses an immersive and responsive environment to create sensitivity for metabolic processes and vegetal life.
-				<br>
-				<br>
-				The resulting installation "Give and Take" creates an experience that leads the observer from micro to macro scales of vital processes.
-				The immersive environment induces a perceptional link with thermal, climatic, meteorological processes that are enacted in partial response to the engaging individual.
-				<img src="img/residency/microresidency_1b_1.jpg" alt="">				
-				</lena>
-		</div>
+				<div class="process">
+					<viktor>
+						<h1>Participating in the Encountering Ethics Workshop @2019 Research Through Design Conference,
+							March 19, TU Delft</h1>
 
+						Viktor took part in the <a href="https://encounteringethics.cargocollective.com/">workshop</a>
+						which
+						included interviewing (people impersonating) smart objetcs, building scenarios from the objects
+						perspective and working on a manifesto for more desireable paradigms of smartness.
+						<br>
+						<br>
+						Read the full report <a
+							href="https://docs.google.com/document/d/1WvsLBtvNxV3MiLdzZLkDQNQhKSKuoewQuQ8lUc8lkRw/edit?usp=sharing">here</a>
+						<br>
+						for thoughts about extending care to objects, pushing towards a more-than-human centred design
+						and
+						the workshop's relevancy for the Thinking Toys for Commoning project.
 
-		<div class="process">
-			<lena>
-				<h1>Feb 2019, Talks at Leverage Points Conference Lüneburg</h1>
-				<img src="img/external_activity/leverage_points_conference_lueneburg_2.jpg" alt="">
-				<img src="img/external_activity/leverage_points_conference_lueneburg.jpg" alt="">
-				Michaela and Shintaro participated at the conference
-				<a href="https://leveragepoints2019.leuphana.de" target="_blank">Leverage Points 2019</a> in the context of sustainability research, system thinking,
-				resilience, policy making etc. Shintaro talked about “Learning the Complexities of Commoning. Playful Agent-Based Modeling as Thinking-Toys
-				for Urban Commoners” and Michaela about “Unsettling design - Material Encounters and Relational Practices”.
-				</lena>
-		</div>
-
-
-		<div class="process">
-			<lena>
-				<h1>Feb 2019, Transmediale</h1>
-				<img src="img/transmediale_2019.jpg" alt="">
-				We participated at transmediale 2019 in Berlin with a 
-				<a href="https://2019.transmediale.de/content/phantasms-of-decentralization-conversations-about-commoning-with-coming-media-0" target="_blank">conversation panel</a>
-				. We are currently preparing a transcript of the audio recording. The conversation addressed the potential entanglement of technologies with alternative forms of living together from 
-				different scales and levels. We also tried to discuss the affective and fantastic ingredients of commoning with tech – such as the 
-				phantasms of decentralization. With our great team and
-				<a href="http://code-operative.co.uk/about/" target="_blank">John Evans</a> and
-				<a href="https://shiba.computer/" target="_blank">Cade Diehm</a>.
-				</lena>
-		</div>
-
-
-		<div class="output">
-			<lena>
-				<h1>A first model about work time organization (Ämtli-Manager), 11.2018</h1>
-				<img src="img/games/amtli-model.png" alt="">
-				<img src="img/games/amtli-model-code.png" alt="">
-				With this agent-based model, we study the phenomenon of commoning (sharing common resources in a durable way) in the context of 
-				sustainable living initiatives and co-housing projects in Switzerland. We focus on the distribution of working time that members 
-				voluntarily contribute to community life. When are they feeling their contribution is fair? Are the others also behaving fairly? 
-				How can we make sure urgent tasks are done? What are the tipping points in agents behaviour? What tipping points can we observe on 
-				the level of the community?
-				<br>
-				<br>
-				The model is informed by our discussions with three co-housing initiatives (Warmbächli, LeNa and NeNa1), conducted in April 2018. 
-				We identified an interest in establishing and tracking fair division of work among the members, while at the same time not wanting 
-				to be too intrusive on member’s privacy and individual contribution. Some questions we retained are “how much would it cost to not 
-				clean the kitchen when it is your turn to do it?” (NeNa1) and “How to measure how much volunteering time each member needs to contribute 
-				to the community?” (LeNa). 
-				<br>
-				<br>
-				Ämtli manager is one complex model that addresses these questions. It is a system that identifies tasks that need to be done urgently 
-				(looking at how much time has passed since the task was done) and finds community members that could take up a task and acquire right to 
-				rest and relax. They, in return, can accept or refuse to take up the task - a decision based on both the amount of resting time the 
-				community member has acquired and the interest they have in doing that particular task. Agents have different personalities which 
-				determine their strategy for accepting or refusing tasks: they can be “curious” or “perfectionist”, “geniessers” or “capitalists”. 
-				Four tasks that describe common life appear in the model: ‘food depot management’ (‘‘Lebensmitteldepot’), ‘common kitchen maintenance’ 
-				(‘Großküchendienst’), ‘social work’ (‘Soziales’) and ‘facilities duty’ (‘Raumpflege’). A complex system of exchange of free time for work, 
-				combined with agents’ personalities, incentivises agents to pick up tasks and have the household running properly. 
-				<br>
-				<br>
-				Fairness is measured in function of stress and forcing the agents are feeling. If all agents refuse to take up a task, one will be 
-				forced and will therefore start feeling stressed. When that agent uses some of their resting time, the stress will decrease. If they 
-				do not have any, stress level will grow. Depending largely on the composition of the community in terms of agents personality, brute 
-				forcing will occur more or less often, affecting stress level of the community and signaling its dysfunctionalities (when agents need 
-				to be forced, we can assume common facilities are taken care of to a bare minimum).
-				<br>
-				<br>
-				The model outputs data that consist of time-based readings of states of agents' parameters. We experimented with different modes of 
-				visualisation of this model, looking at it historically, so that we can identify emergent behaviours and tipping points. We also 
-				looked at the data from the points of view of community members, tasks that need to be done and the whole environment (micro- and 
-				macro-views). Visualization remains an important aspect of this work. 
-				<br>
-				<br>
-				We can present some preliminary insights and findings already. For example, when all four types of community members are equally present, 
-				it tends to happen that the stress of all agents increases, except for those that we named “capitalists” - their stress stays at a 
-				reasonably low level and they are rarely “brute forced”. Contrarily, in a society made only of “geniessers”, stress stays at a typically 
-				low level. We can interpret this as a sort of recommendation for the behaviour in the community (be all geniessers) or community 
-				composition, although this would be rather far-fetched. We expect to observe more such patterns and tipping points when running the model 
-				in the future. 
-			</lena>
-		</div>
-
-
-		<div class="process">
-			<lena>
-				<h1>Oct-Dec 2018, Data Visualization collaboration with EPFL students</h1>
-				<img src="img/games/Amtli-model-epflviz.png" alt="">
-				We invited a <a href="https://github.com/lanzrein/" target="_blank" rel="noopener noreferrer">team</a> of computer science students from <a href="https://www.epfl.ch/" target="_blank" rel="noopener noreferrer">EPFL</a> to create a visual interface for the Ämtli-Manager. They came up with some <a href="https://lanzrein.github.io/data_viz_project/" target="_blank" rel="noopener noreferrer">interesting propositions</a> and produced an <a href="https://lanzrein.github.io/data_viz_project/myiris/viz.html" target="_blank" rel="noopener noreferrer">experimental 4-window interface</a> for observation of agents behaviour. The project was realized within the master course on <a href="https://edu.epfl.ch/coursebook/en/data-visualization-COM-480" target="_blank" rel="noopener noreferrer">Data Visualization</a>. We would like to thank the course teacher, Kirell Benzi for his support in getting the students interested to work with us. 
-			</lena>
-		</div>
-		
-		<div class="process">
-			<lena>
-				<h1>Dec 2018, Talk in Belgrade</h1>
-				<img src="img/external_activity/ka-drucacijem-gradu_12-2018.jpg">
-				Selena gave a lecture within the series <a href="https://www.czkd.org/2018/12/ka-drugacijem-gradu-artikulacija-zajednickog-i-politickog-u-tehnoloski-informisanom-diskursu/" target="_blank" rel="noopener noreferrer">“Towards a Different City” (Ka drugacijem gradu)</a> organized by Ministarstvo Prostora at CZKD, Belgrade. She talked about “Articulations of common through technology and design”, discussing, among other things the role of the ABM and games in Toys for Commoning project.
-			</lena>
-		</div>
-
-		<div class="process">
-			<lena>
-				<h1>Nov–Dec 2018, Ämtli-Manager Workshops</h1>
-				<img src="img/workshop/aemtli_manager_workshop_02.JPG">
-				We continued our collaboration with the co-operatives and conducted two workshops, where we tested the first
-				version of our
-				Ämtli-Manager (working title) and collected feedback concerning the topic of working time organization.
-				<img src="img/workshop/aemtli_manager_workshop_01.JPG">
-				<img src="img/workshop/aemtli_manager_workshop_03.JPG">
-			</lena>
-		</div>
-
-		<div class="process">
-			<lena>
-				<h1>Nov–Dec 2018, Micro Residency 1a</h1>
-				In this first micro-residency designers
-				<a href="http://sarahhermanutz.com/" target="_blank">Sarah Hermanutz</a>
-				and
-				<a href="http://www.andreasrau.eu/" target="_blank">Andreas Rau</a>
-				joint forces with researchers Desiree Förster and Michaela Büsse to inquire ways to create an immersive experience
-				of a complex system,
-				in particular climate change. Desiree’s doctoral research on atmospheric media and Andreas Rau’s and
-				Sarah Hermanutz’s interest in virtual reality temporarily complement our team’s skill set to explore how one can
-				relate to different levels of magnitude and entanglement. The residency will continue in February 2019 and
-				lead on an interactive installation to be exhibited at the Critical Media Lab.
-			</lena>
-		</div>
-
-		<div class="process">
-			<lena>
-				<h1>Nov 2018, Talk in Brussels</h1>
-				Shintaro gave a talk at the conference
-				<a href="https://scaffolds2018.epfl.ch/" target="_blank">“Scaffolds – Open Encounters with Art, Architecture and
-					Society”</a>
-				with the title “Co-Designing Thinking-Media with Commonists. The Criticality of Conflict, Play and Irony”.
-				<img src="img/external_activity/talk_scaffolds.JPG">
-			</lena>
-		</div>
-
-		<div class="process">
-			<lena>
-				<h1>Nov 2018, Workshop with Hyperwerk</h1>
-				<img src="img/workshop/hyperwerk_workshop_02.jpg">
-				<img src="img/workshop/hyperwerk_workshop_03.jpg">
-				Emergent gameplay is a central principle of game design. In the game design workshop
-				<a href="https://www.hypermagazine.ch/hypermagazine/organize-yourselves-or-you-will-be-organized/" target="_blank">“Organize
-					Yourselves Or You Will Be Organized”</a>
-				we experimented with creating simple rules that generate more complex emergent patterns of self-organization and
-				creating feedback
-				loops within the game. The workshop was conducted by Viktor and Shintaro with students of
-				<a href="https://www.hypermagazine.ch/" target="_blank">Hyperwerk</a>.
-
-
-				<img src="img/workshop/hyperwerk_workshop_04.jpg">
-			</lena>
-		</div>
-
-		<div class="process">
-			<lena>
-				<h1>Nov 2018, Istanbul Design Biennial</h1>
-				Viktor joined “Negotiating value at the School of Fluid Measures” with Berlin-based designer Judith Seng. They
-				explored the fluidity
-				of value in negotiations embedded in complex and ever-changing contexts. Judith took part at a
-				<a href="http://aschoolofschools.iksv.org/" target="_blank">A School of Schools</a>, the 4th Istanbul
-				Design Biennial, resulted in the seventh iteration of her ongoing Acting Things series. A transcript of the panel
-				discussion appeared
-				in the #21 of the
-				<a href="https://www.disegnodaily.com/journal" target="_blank">Disegno Magazine</a>.
-				<img src="img/acting_things_workshop_seng.jpg">
-				<span class="caption">Credit: ACTING THINGS VII - School of Fluid Measures by Judith Seng</span>
-			</lena>
-		</div>
-
-
-		<div class="process">
-			<lena>
-				<h1>Sep 2018, Playtest in Bristol</h1>
-				'Iris & Black Box' is a playful setup based on the agent-based model 'Ämtli Manager' that allows humans to become
-				one agent among
-				many computer agents. The prototype setup consisting of a modified version of the Ämtli Manager ABM and a physical
-				game console
-				for the human player was first tested at
-				<a href="https://www.watershed.co.uk/studio/projects/iglab" target="_blank">IGLab</a> in Bristol.
-				<img src="img/playtest_bristol.JPG">
-			</lena>
-		</div>
-
-		<div class="process">
-			<lena>
-				<h1>Aug–Sep 2018, Workshops for Yann</h1>
-				Yann participated in some
-				<a href="https://criticalengineering.org/intensives/2018/" target="_blank">workshops</a>: <br>
-				A) Surveillance Override with <a href="http://chootka.com/" target="_blank" rel="noopener noreferrer">Sarah Grant</a>
-				& <a href="https://www.janavirgin.com/" target="_blank" rel="noopener noreferrer">Joana Moll</a><br>B) Bio
-				Computing
-				with Slime Moulds with <a href="http://chootka.com/" target="_blank" rel="noopener noreferrer">Sarah Grant</a> and
-				<a href="http://automata.se/" target="_blank" rel="noopener noreferrer">Bengt Sjölen</a> <br>both in Berlin
-				<a href="https://weise7.org/" target="_blank">@WEISE7</a>.
-				<img src="img/physarium_workshop.jpg">
-			</lena>
-		</div>
-
-		<div class="process">
-			<lena>
-				<h1>May 2018, Commoning in Basel</h1>
-				At
-				<a href="http://68-88-18.ch/programm.html" target="_blank">this podium event</a>
-				under the heading of "Commoning", several current projects from Basel that deal with collaborative
-				working, living, and thinking were presented. With Christian Mueller (Zukunft.Klybeck) Roger Portmann (LeNa) Laura
-				Pregger (Hyperwerk).
-			</lena>
-		</div>
-
-
-
-		<div class="german">
-
-			<div>
-				<lena>
-					<h1> Denkspielzeug für Commoning</h1>
-					Die gemeinschaftlich-nachhaltige Nutzung und Organisation von Ressourcen ist komplex. Mit einem Fokus auf
-					alternativ-utopisch
-					inspirierte Stadt-Nachbarschaften in der Schweiz schlägt das Forschungsprojekt eine exemplarische Untersuchung und
-					gestalterisch-explorative
-					Entwicklung medialer Denkwerkzeuge vor, mit deren Hilfe die Komplexität solcher Prozesse besser veranschaulicht
-					werden
-					können.
-					<br>
-					<br> Gemeinschaftlich-nachhaltig genutzte Ressourcen, wie etwa Lebensmittel oder kommunikative Infrastrukturen wie
-					Wifi,
-					werden Commons genannt. Commoning meint die Aktivität des gemeinsamen Teilens dieser Ressourcen. Der durch
-					zahlreiche
-					alternativ-utopisch inspirierte Projekte formulierter Anspruch, infrastrukturelle Aspekte des urbanen
-					Alltagslebens
-					durch Commoning selbstverantwortlich und alternativ zu gestalten, wirft einige Fragen auf. Denn aufgrund der hohen
-					Komplexität,
-					die mit der gemeinschaftlichen Nutzung von Ressourcen bisweilen einhergeht, kann das einzelne
-					Gemeinschaftsmitglied
-					sein Commoning und dessen Konsequenzen oft nicht bis ins letzte Detail und in all seinen Konsequenzen durchdenken.
-					Besonders
-					wenn es um ein verstehendes Erfahren unvorhersehbarer, komplex-adaptiver Vorgänge geht, kann er oder sie deren
-					Ablauf,
-					so unsere These, rein intuitiv und ohne die Hilfe veranschaulichender medialer Denkwerkzeuge, wie computerbasierte
-					Modelle
-					oder Szenarien, nicht mehr vollständig erfassen.
-					<br>
-					<br> Aus diesem Grund wird im engen Austausch mit den Mitgliedern der schweizerischen Stadt-Nachbarschaftsprojekte
-					NeNa1
-					in Zürich, LeNa in Basel und Warmbächli in Bern eine mobile, digitale Software-Anwendung entwickelt und erprobt.
-					Dabei
-					geht es um die spielerische Anregung und Erschließung neuer Denk- und Handlungsräume im Bereich des Commonings.
-					Denn,
-					auf diese Weise – so unser Ziel – könnten sich neue Wege für zukünftige gesellschaftliche Teilhabe- und
-					Transformationsprozesse
-					eröffnen.
-					<br>
-					<br> Das vierjährige Projekt, in dem sowohl geistes- und sozialwissenschaftliche als auch gestalterische Methoden
-					kombiniert
-					werden, verfolgt zentral folgende Leitfrage: Wie lässt sich durch das gemeinschaftlich-experimentelle Gestalten
-					und
-					Entwickeln eines digitalen Spielsystems das Nachdenken über die intuitiv oft nicht nachvollziehbare Komplexität
-					des
-					Commoning anregen und Komplexität so spielerisch versteh- und besser verhandelbar machen?
-				</lena>
-			</div>
-
-		</div>
-
-		<!-- German, Partners and Funding -->
-
-		<div class="german">
-			<div>
-				<lena>
-					<h1>Partner und Fundierung</h1>
-					Dieses Forschungsprojekt wird vom “Schweizerischen Nationalfonds zur Förderung der Wissenschaftlichen Forschung”
-					(SNF Nr.
-					175913, von 01/2018 bis 12/2021) unterstützt. Durchgeführt wird es am Institut für Experimentelle Design- und
-					Medienkulturen
-					und im Critical Media Lab an der Hochschule für Gestaltung und Kunst FHNW in Basel. Hauptprojektpartner sind Lena,
-					Warmbächli
-					und NeNa1.
-				</lena>
-			</div>
-		</div>
-
-		<!-- German, Team -->
-
-		<div class="german">
-			<div>
-				<lena>
-					<h1>Team</h1>
-					<h2>Dr. Viktor Bedö</h2>
-					<a href="https://www.ixdm.ch/team/viktor-bedoe/" target="_blank">Viktor</a> ist ein Senior Reseacher im Team,
-					Gründer
-					des “The Street Game Lab Tacit Dimension” und freischaffender Innovationsberater. Er promovierte an der Humboldt
-					Universität
-					Berlin und an der Universität Pécs (2011) in Philosophie.
-					<h2>Lena Frei</h2>
-					Lena studiert Visual Communication and Iconic Research (MA) an der HGK FHNW. Sie hat einen BA in
-					Medienwissenschaften/Philosophie
-					(Universität Basel). In unserem Team hilft sie bei der Gestaltung und in anderen Bereichen.
-					<h2>Michaela Büsse</h2>
-					<a href="https://www.ixdm.ch/team/michaela-buesse/" target="_blank">Michaela</a> ist Kuratorin, Redakteurin und
-					Doktorandin
-					in unserem Team und zugleich an European Centre for Art, Design and Media based Research (ECAM) der HGK FHNW.
-					<h2>Yann Martins</h2>
-					<a href="https://www.ixdm.ch/team/yann-patrick-martins/" target="_blank">Yann</a> arbeitet als
-					Kreativ-Programmierer
-					in unserem Team. Er erwarb seinen Master in Visual Communication and Iconic Theory an der Hochschule für
-					Gestaltung
-					und Kunst FHNW.
-					<h2>Dr. Shintaro Miyazaki</h2>
-					<a href="https://www.ixdm.ch/team/shintaro-miyazaki/" target="_blank">Shintaro</a> ist Medienwissenschaftler und
-					experimenteller
-					Gestalter. Er ist Gesuchsteller und der Projektleiter. Promotion in Medientheorie an der Humboldt Universität zu
-					Berlin
-					(2012).
-					<h2>Dr. Selena Savić</h2>
-					<a href="https://www.ixdm.ch/team/selena-savic/Selena" target="_blank">Selena</a> ist Designforscherin und ist als
-					Postdoc
-					im Team. Sie hat ihr Doktorat am EPFL (Lausanne) und am Instituto Superior Técnico (Lissabon) abgeschlossen.
-
-				</lena>
-			</div>
-
-		</div>
-
-		<!-- German, Process -->
-
-		<!-- German, Process, Feb 2018, Masquerade for Commoning -->
-
-		<div class="german">
-			<div>
-				<lena>
-					<h1>Februar 2018, Masquerade for Commoning</h1>
-				</lena>
-				<div class="video-container">
-					<iframe src="https://player.vimeo.com/video/258980375" frameborder="0" webkitallowfullscreen mozallowfullscreen
-					 allowfullscreen></iframe>
+						<img src="img/EnctrngEtcsRTD2019.JPG">
+					</viktor>
 				</div>
-				<br>
-				<lena> Unser Team nahm an der Transmediale 2018 (mit dem Thema “Face Value”) teil und führte am Sonntag 4.
-					Februar,
-					den Workshop
-					<a href="https://2018.transmediale.de/content/masquerade-for-commoning" target="_blank">"Masquerade for Commoning"</a>
-					durch. Da unser Projekt zu diesem Zeitpunkt erst in den Startlöchern stand, nutzten wir den Anlass für eine
-					teamfördernde
-					Zusammenarbeit mit unseren Gästen Felix Gerloff aus dem Critical Media Lab und Kevin Rittberger, der schon im
-					Jahre
-					2015 in das Projekt "Syntegrity" involviert war.
-				</lena>
-			</div>
-		</div>
+				<div class="process">
+					<lena>
+						<h1>Mid-Feb 2019, Micro Residency 1b</h1>
+						<img src="img/residency/microresidency_1b_3.jpg" alt="">
+						<img src="img/residency/microresidency_1b_2.jpg" alt="">
+						Designers Sarah Hermanutz and Andreas Rau visited our lab and project for a week. Together with
+						Michaela they were working on a multi-media
+						installation that uses an immersive and responsive environment to create sensitivity for
+						metabolic
+						processes and vegetal life.
+						<br>
+						<br>
+						The resulting installation "Give and Take" creates an experience that leads the observer from
+						micro
+						to macro scales of vital processes.
+						The immersive environment induces a perceptional link with thermal, climatic, meteorological
+						processes that are enacted in partial response to the engaging individual.
+						<img src="img/residency/microresidency_1b_1.jpg" alt="">
+					</lena>
+				</div>
 
-		<!-- German, Process, April 2018, First Contact -->
 
-		<div class="german">
-			<div>
-				<lena>
-					<h1>April 2018, Kennenlern-Workshops</h1>
-				</lena>
-				<img src="img/lena.JPG">
-				<lena>
-					Wir führten erste Workshops mit unseren Projektpartnern Lena (Basel), Warmbächli (Bern) und NeNa1 (Zürich) durch
-					und erprobten
-					das artefaktbasierte Diskussion von Problemen. Viktor entwickelte eine passende Workshop-Methode, die sich als
-					durchaus
-					produktiv herausstellte.
-				</lena>
-				<br>
-				<img src="img/nena1_.png">
-				<div class="video-container">
-					<iframe src="https://player.vimeo.com/video/275850147" frameborder="0" webkitallowfullscreen mozallowfullscreen
-					 allowfullscreen></iframe>
+				<div class="process">
+					<lena>
+						<h1>Feb 2019, Talks at Leverage Points Conference Lüneburg</h1>
+						<img src="img/external_activity/leverage_points_conference_lueneburg_2.jpg" alt="">
+						<img src="img/external_activity/leverage_points_conference_lueneburg.jpg" alt="">
+						Michaela and Shintaro participated at the conference
+						<a href="https://leveragepoints2019.leuphana.de" target="_blank">Leverage Points 2019</a> in the
+						context of sustainability research, system thinking,
+						resilience, policy making etc. Shintaro talked about “Learning the Complexities of Commoning.
+						Playful Agent-Based Modeling as Thinking-Toys
+						for Urban Commoners” and Michaela about “Unsettling design - Material Encounters and Relational
+						Practices”.
+					</lena>
+				</div>
+
+
+				<div class="process">
+					<lena>
+						<h1>Feb 2019, Transmediale</h1>
+						<img src="img/transmediale_2019.jpg" alt="">
+						We participated at transmediale 2019 in Berlin with a
+						<a href="https://2019.transmediale.de/content/phantasms-of-decentralization-conversations-about-commoning-with-coming-media-0"
+							target="_blank">conversation panel</a>
+						. We are currently preparing a transcript of the audio recording. The conversation addressed the
+						potential entanglement of technologies with alternative forms of living together from
+						different scales and levels. We also tried to discuss the affective and fantastic ingredients of
+						commoning with tech – such as the
+						phantasms of decentralization. With our great team and
+						<a href="http://code-operative.co.uk/about/" target="_blank">John Evans</a> and
+						<a href="https://shiba.computer/" target="_blank">Cade Diehm</a>.
+					</lena>
+				</div>
+
+
+				<div class="output">
+					<lena>
+						<h1>A first model about work time organization (Ämtli-Manager), 11.2018</h1>
+						<img src="img/games/amtli-model.png" alt="">
+						<img src="img/games/amtli-model-code.png" alt="">
+						With this agent-based model, we study the phenomenon of commoning (sharing common resources in a
+						durable way) in the context of
+						sustainable living initiatives and co-housing projects in Switzerland. We focus on the
+						distribution
+						of working time that members
+						voluntarily contribute to community life. When are they feeling their contribution is fair? Are
+						the
+						others also behaving fairly?
+						How can we make sure urgent tasks are done? What are the tipping points in agents behaviour?
+						What
+						tipping points can we observe on
+						the level of the community?
+						<br>
+						<br>
+						The model is informed by our discussions with three co-housing initiatives (Warmbächli, LeNa and
+						NeNa1), conducted in April 2018.
+						We identified an interest in establishing and tracking fair division of work among the members,
+						while at the same time not wanting
+						to be too intrusive on member’s privacy and individual contribution. Some questions we retained
+						are
+						“how much would it cost to not
+						clean the kitchen when it is your turn to do it?” (NeNa1) and “How to measure how much
+						volunteering
+						time each member needs to contribute
+						to the community?” (LeNa).
+						<br>
+						<br>
+						Ämtli manager is one complex model that addresses these questions. It is a system that
+						identifies
+						tasks that need to be done urgently
+						(looking at how much time has passed since the task was done) and finds community members that
+						could
+						take up a task and acquire right to
+						rest and relax. They, in return, can accept or refuse to take up the task - a decision based on
+						both
+						the amount of resting time the
+						community member has acquired and the interest they have in doing that particular task. Agents
+						have
+						different personalities which
+						determine their strategy for accepting or refusing tasks: they can be “curious” or
+						“perfectionist”,
+						“geniessers” or “capitalists”.
+						Four tasks that describe common life appear in the model: ‘food depot management’
+						(‘‘Lebensmitteldepot’), ‘common kitchen maintenance’
+						(‘Großküchendienst’), ‘social work’ (‘Soziales’) and ‘facilities duty’ (‘Raumpflege’). A complex
+						system of exchange of free time for work,
+						combined with agents’ personalities, incentivises agents to pick up tasks and have the household
+						running properly.
+						<br>
+						<br>
+						Fairness is measured in function of stress and forcing the agents are feeling. If all agents
+						refuse
+						to take up a task, one will be
+						forced and will therefore start feeling stressed. When that agent uses some of their resting
+						time,
+						the stress will decrease. If they
+						do not have any, stress level will grow. Depending largely on the composition of the community
+						in
+						terms of agents personality, brute
+						forcing will occur more or less often, affecting stress level of the community and signaling its
+						dysfunctionalities (when agents need
+						to be forced, we can assume common facilities are taken care of to a bare minimum).
+						<br>
+						<br>
+						The model outputs data that consist of time-based readings of states of agents' parameters. We
+						experimented with different modes of
+						visualisation of this model, looking at it historically, so that we can identify emergent
+						behaviours
+						and tipping points. We also
+						looked at the data from the points of view of community members, tasks that need to be done and
+						the
+						whole environment (micro- and
+						macro-views). Visualization remains an important aspect of this work.
+						<br>
+						<br>
+						We can present some preliminary insights and findings already. For example, when all four types
+						of
+						community members are equally present,
+						it tends to happen that the stress of all agents increases, except for those that we named
+						“capitalists” - their stress stays at a
+						reasonably low level and they are rarely “brute forced”. Contrarily, in a society made only of
+						“geniessers”, stress stays at a typically
+						low level. We can interpret this as a sort of recommendation for the behaviour in the community
+						(be
+						all geniessers) or community
+						composition, although this would be rather far-fetched. We expect to observe more such patterns
+						and
+						tipping points when running the model
+						in the future.
+					</lena>
+				</div>
+
+
+				<div class="process">
+					<lena>
+						<h1>Oct-Dec 2018, Data Visualization collaboration with EPFL students</h1>
+						<img src="img/games/Amtli-model-epflviz.png" alt="">
+						We invited a <a href="https://github.com/lanzrein/" target="_blank"
+							rel="noopener noreferrer">team</a> of computer science students from <a
+							href="https://www.epfl.ch/" target="_blank" rel="noopener noreferrer">EPFL</a> to create a
+						visual interface for the Ämtli-Manager. They came up with some <a
+							href="https://lanzrein.github.io/data_viz_project/" target="_blank"
+							rel="noopener noreferrer">interesting propositions</a> and produced an <a
+							href="https://lanzrein.github.io/data_viz_project/myiris/viz.html" target="_blank"
+							rel="noopener noreferrer">experimental 4-window interface</a> for observation of agents
+						behaviour. The project was realized within the master course on <a
+							href="https://edu.epfl.ch/coursebook/en/data-visualization-COM-480" target="_blank"
+							rel="noopener noreferrer">Data Visualization</a>. We would like to thank the course teacher,
+						Kirell Benzi for his support in getting the students interested to work with us.
+					</lena>
+				</div>
+
+				<div class="process">
+					<lena>
+						<h1>Dec 2018, Talk in Belgrade</h1>
+						<img src="img/external_activity/ka-drucacijem-gradu_12-2018.jpg">
+						Selena gave a lecture within the series <a
+							href="https://www.czkd.org/2018/12/ka-drugacijem-gradu-artikulacija-zajednickog-i-politickog-u-tehnoloski-informisanom-diskursu/"
+							target="_blank" rel="noopener noreferrer">“Towards a Different City” (Ka drugacijem
+							gradu)</a>
+						organized by Ministarstvo Prostora at CZKD, Belgrade. She talked about “Articulations of common
+						through technology and design”, discussing, among other things the role of the ABM and games in
+						Toys
+						for Commoning project.
+					</lena>
+				</div>
+
+				<div class="process">
+					<lena>
+						<h1>Nov–Dec 2018, Ämtli-Manager Workshops</h1>
+						<img src="img/workshop/aemtli_manager_workshop_02.JPG">
+						We continued our collaboration with the co-operatives and conducted two workshops, where we
+						tested
+						the first
+						version of our
+						Ämtli-Manager (working title) and collected feedback concerning the topic of working time
+						organization.
+						<img src="img/workshop/aemtli_manager_workshop_01.JPG">
+						<img src="img/workshop/aemtli_manager_workshop_03.JPG">
+					</lena>
+				</div>
+
+				<div class="process">
+					<lena>
+						<h1>Nov–Dec 2018, Micro Residency 1a</h1>
+						In this first micro-residency designers
+						<a href="http://sarahhermanutz.com/" target="_blank">Sarah Hermanutz</a>
+						and
+						<a href="http://www.andreasrau.eu/" target="_blank">Andreas Rau</a>
+						joint forces with researchers Desiree Förster and Michaela Büsse to inquire ways to create an
+						immersive experience
+						of a complex system,
+						in particular climate change. Desiree’s doctoral research on atmospheric media and Andreas Rau’s
+						and
+						Sarah Hermanutz’s interest in virtual reality temporarily complement our team’s skill set to
+						explore
+						how one can
+						relate to different levels of magnitude and entanglement. The residency will continue in
+						February
+						2019 and
+						lead on an interactive installation to be exhibited at the Critical Media Lab.
+					</lena>
+				</div>
+
+				<div class="process">
+					<lena>
+						<h1>Nov 2018, Talk in Brussels</h1>
+						Shintaro gave a talk at the conference
+						<a href="https://scaffolds2018.epfl.ch/" target="_blank">“Scaffolds – Open Encounters with Art,
+							Architecture and
+							Society”</a>
+						with the title “Co-Designing Thinking-Media with Commonists. The Criticality of Conflict, Play
+						and
+						Irony”.
+						<img src="img/external_activity/talk_scaffolds.JPG">
+					</lena>
+				</div>
+
+				<div class="process">
+					<lena>
+						<h1>Nov 2018, Workshop with Hyperwerk</h1>
+						<img src="img/workshop/hyperwerk_workshop_02.jpg">
+						<img src="img/workshop/hyperwerk_workshop_03.jpg">
+						Emergent gameplay is a central principle of game design. In the game design workshop
+						<a href="https://www.hypermagazine.ch/hypermagazine/organize-yourselves-or-you-will-be-organized/"
+							target="_blank">“Organize
+							Yourselves Or You Will Be Organized”</a>
+						we experimented with creating simple rules that generate more complex emergent patterns of
+						self-organization and
+						creating feedback
+						loops within the game. The workshop was conducted by Viktor and Shintaro with students of
+						<a href="https://www.hypermagazine.ch/" target="_blank">Hyperwerk</a>.
+
+
+						<img src="img/workshop/hyperwerk_workshop_04.jpg">
+					</lena>
+				</div>
+
+				<div class="process">
+					<lena>
+						<h1>Nov 2018, Istanbul Design Biennial</h1>
+						Viktor joined “Negotiating value at the School of Fluid Measures” with Berlin-based designer
+						Judith
+						Seng. They
+						explored the fluidity
+						of value in negotiations embedded in complex and ever-changing contexts. Judith took part at a
+						<a href="http://aschoolofschools.iksv.org/" target="_blank">A School of Schools</a>, the 4th
+						Istanbul
+						Design Biennial, resulted in the seventh iteration of her ongoing Acting Things series. A
+						transcript
+						of the panel
+						discussion appeared
+						in the #21 of the
+						<a href="https://www.disegnodaily.com/journal" target="_blank">Disegno Magazine</a>.
+						<img src="img/acting_things_workshop_seng.jpg">
+						<span class="caption">Credit: ACTING THINGS VII - School of Fluid Measures by Judith Seng</span>
+					</lena>
+				</div>
+
+
+				<div class="process">
+					<lena>
+						<h1>Sep 2018, Playtest in Bristol</h1>
+						'Iris & Black Box' is a playful setup based on the agent-based model 'Ämtli Manager' that allows
+						humans to become
+						one agent among
+						many computer agents. The prototype setup consisting of a modified version of the Ämtli Manager
+						ABM
+						and a physical
+						game console
+						for the human player was first tested at
+						<a href="https://www.watershed.co.uk/studio/projects/iglab" target="_blank">IGLab</a> in
+						Bristol.
+						<img src="img/playtest_bristol.JPG">
+					</lena>
+				</div>
+
+				<div class="process">
+					<lena>
+						<h1>Aug–Sep 2018, Workshops for Yann</h1>
+						Yann participated in some
+						<a href="https://criticalengineering.org/intensives/2018/" target="_blank">workshops</a>: <br>
+						A) Surveillance Override with <a href="http://chootka.com/" target="_blank"
+							rel="noopener noreferrer">Sarah Grant</a>
+						& <a href="https://www.janavirgin.com/" target="_blank" rel="noopener noreferrer">Joana
+							Moll</a><br>B) Bio
+						Computing
+						with Slime Moulds with <a href="http://chootka.com/" target="_blank"
+							rel="noopener noreferrer">Sarah
+							Grant</a> and
+						<a href="http://automata.se/" target="_blank" rel="noopener noreferrer">Bengt Sjölen</a>
+						<br>both in
+						Berlin
+						<a href="https://weise7.org/" target="_blank">@WEISE7</a>.
+						<img src="img/physarium_workshop.jpg">
+					</lena>
+				</div>
+
+				<div class="process">
+					<lena>
+						<h1>May 2018, Commoning in Basel</h1>
+						At
+						<a href="http://68-88-18.ch/programm.html" target="_blank">this podium event</a>
+						under the heading of "Commoning", several current projects from Basel that deal with
+						collaborative
+						working, living, and thinking were presented. With Christian Mueller (Zukunft.Klybeck) Roger
+						Portmann (LeNa) Laura
+						Pregger (Hyperwerk).
+					</lena>
+				</div>
+
+
+
+				<div class="german">
+
+					<div>
+						<lena>
+							<h1> Denkspielzeug für Commoning</h1>
+							Die gemeinschaftlich-nachhaltige Nutzung und Organisation von Ressourcen ist komplex. Mit
+							einem
+							Fokus auf
+							alternativ-utopisch
+							inspirierte Stadt-Nachbarschaften in der Schweiz schlägt das Forschungsprojekt eine
+							exemplarische Untersuchung und
+							gestalterisch-explorative
+							Entwicklung medialer Denkwerkzeuge vor, mit deren Hilfe die Komplexität solcher Prozesse
+							besser
+							veranschaulicht
+							werden
+							können.
+							<br>
+							<br> Gemeinschaftlich-nachhaltig genutzte Ressourcen, wie etwa Lebensmittel oder
+							kommunikative
+							Infrastrukturen wie
+							Wifi,
+							werden Commons genannt. Commoning meint die Aktivität des gemeinsamen Teilens dieser
+							Ressourcen.
+							Der durch
+							zahlreiche
+							alternativ-utopisch inspirierte Projekte formulierter Anspruch, infrastrukturelle Aspekte
+							des
+							urbanen
+							Alltagslebens
+							durch Commoning selbstverantwortlich und alternativ zu gestalten, wirft einige Fragen auf.
+							Denn
+							aufgrund der hohen
+							Komplexität,
+							die mit der gemeinschaftlichen Nutzung von Ressourcen bisweilen einhergeht, kann das
+							einzelne
+							Gemeinschaftsmitglied
+							sein Commoning und dessen Konsequenzen oft nicht bis ins letzte Detail und in all seinen
+							Konsequenzen durchdenken.
+							Besonders
+							wenn es um ein verstehendes Erfahren unvorhersehbarer, komplex-adaptiver Vorgänge geht, kann
+							er
+							oder sie deren
+							Ablauf,
+							so unsere These, rein intuitiv und ohne die Hilfe veranschaulichender medialer
+							Denkwerkzeuge,
+							wie computerbasierte
+							Modelle
+							oder Szenarien, nicht mehr vollständig erfassen.
+							<br>
+							<br> Aus diesem Grund wird im engen Austausch mit den Mitgliedern der schweizerischen
+							Stadt-Nachbarschaftsprojekte
+							NeNa1
+							in Zürich, LeNa in Basel und Warmbächli in Bern eine mobile, digitale Software-Anwendung
+							entwickelt und erprobt.
+							Dabei
+							geht es um die spielerische Anregung und Erschließung neuer Denk- und Handlungsräume im
+							Bereich
+							des Commonings.
+							Denn,
+							auf diese Weise – so unser Ziel – könnten sich neue Wege für zukünftige gesellschaftliche
+							Teilhabe- und
+							Transformationsprozesse
+							eröffnen.
+							<br>
+							<br> Das vierjährige Projekt, in dem sowohl geistes- und sozialwissenschaftliche als auch
+							gestalterische Methoden
+							kombiniert
+							werden, verfolgt zentral folgende Leitfrage: Wie lässt sich durch das
+							gemeinschaftlich-experimentelle Gestalten
+							und
+							Entwickeln eines digitalen Spielsystems das Nachdenken über die intuitiv oft nicht
+							nachvollziehbare Komplexität
+							des
+							Commoning anregen und Komplexität so spielerisch versteh- und besser verhandelbar machen?
+						</lena>
+					</div>
+
+				</div>
+
+				<!-- German, Partners and Funding -->
+
+				<div class="german">
+					<div>
+						<lena>
+							<h1>Partner und Fundierung</h1>
+							Dieses Forschungsprojekt wird vom “Schweizerischen Nationalfonds zur Förderung der
+							Wissenschaftlichen Forschung”
+							(SNF Nr.
+							175913, von 01/2018 bis 12/2021) unterstützt. Durchgeführt wird es am Institut für
+							Experimentelle Design- und
+							Medienkulturen
+							und im Critical Media Lab an der Hochschule für Gestaltung und Kunst FHNW in Basel.
+							Hauptprojektpartner sind Lena,
+							Warmbächli
+							und NeNa1.
+						</lena>
+					</div>
+				</div>
+
+				<!-- German, Team -->
+
+				<div class="german">
+					<div>
+						<lena>
+							<h1>Team</h1>
+							<h2>Dr. Viktor Bedö</h2>
+							<a href="https://www.ixdm.ch/team/viktor-bedoe/" target="_blank">Viktor</a> ist ein Senior
+							Reseacher im Team,
+							Gründer
+							des “The Street Game Lab Tacit Dimension” und freischaffender Innovationsberater. Er
+							promovierte
+							an der Humboldt
+							Universität
+							Berlin und an der Universität Pécs (2011) in Philosophie.
+							<h2>Lena Frei</h2>
+							Lena studiert Visual Communication and Iconic Research (MA) an der HGK FHNW. Sie hat einen
+							BA in
+							Medienwissenschaften/Philosophie
+							(Universität Basel). In unserem Team hilft sie bei der Gestaltung und in anderen Bereichen.
+							<h2>Michaela Büsse</h2>
+							<a href="https://www.ixdm.ch/team/michaela-buesse/" target="_blank">Michaela</a> ist
+							Kuratorin,
+							Redakteurin und
+							Doktorandin
+							in unserem Team und zugleich an European Centre for Art, Design and Media based Research
+							(ECAM)
+							der HGK FHNW.
+							<h2>Yann Martins</h2>
+							<a href="https://www.ixdm.ch/team/yann-patrick-martins/" target="_blank">Yann</a> arbeitet
+							als
+							Kreativ-Programmierer
+							in unserem Team. Er erwarb seinen Master in Visual Communication and Iconic Theory an der
+							Hochschule für
+							Gestaltung
+							und Kunst FHNW.
+							<h2>Dr. Shintaro Miyazaki</h2>
+							<a href="https://www.ixdm.ch/team/shintaro-miyazaki/" target="_blank">Shintaro</a> ist
+							Medienwissenschaftler und
+							experimenteller
+							Gestalter. Er ist Gesuchsteller und der Projektleiter. Promotion in Medientheorie an der
+							Humboldt Universität zu
+							Berlin
+							(2012).
+							<h2>Dr. Selena Savić</h2>
+							<a href="https://www.ixdm.ch/team/selena-savic/Selena" target="_blank">Selena</a> ist
+							Designforscherin und ist als
+							Postdoc
+							im Team. Sie hat ihr Doktorat am EPFL (Lausanne) und am Instituto Superior Técnico
+							(Lissabon)
+							abgeschlossen.
+
+						</lena>
+					</div>
+
+				</div>
+
+				<!-- German, Process -->
+
+				<!-- German, Process, Feb 2018, Masquerade for Commoning -->
+
+				<div class="german">
+					<div>
+						<lena>
+							<h1>Februar 2018, Masquerade for Commoning</h1>
+						</lena>
+						<div class="video-container">
+							<iframe src="https://player.vimeo.com/video/258980375" frameborder="0" webkitallowfullscreen
+								mozallowfullscreen allowfullscreen></iframe>
+						</div>
+						<br>
+						<lena> Unser Team nahm an der Transmediale 2018 (mit dem Thema “Face Value”) teil und führte am
+							Sonntag 4.
+							Februar,
+							den Workshop
+							<a href="https://2018.transmediale.de/content/masquerade-for-commoning"
+								target="_blank">"Masquerade for Commoning"</a>
+							durch. Da unser Projekt zu diesem Zeitpunkt erst in den Startlöchern stand, nutzten wir den
+							Anlass für eine
+							teamfördernde
+							Zusammenarbeit mit unseren Gästen Felix Gerloff aus dem Critical Media Lab und Kevin
+							Rittberger,
+							der schon im
+							Jahre
+							2015 in das Projekt "Syntegrity" involviert war.
+						</lena>
+					</div>
+				</div>
+
+				<!-- German, Process, April 2018, First Contact -->
+
+				<div class="german">
+					<div>
+						<lena>
+							<h1>April 2018, Kennenlern-Workshops</h1>
+						</lena>
+						<img src="img/lena.JPG">
+						<lena>
+							Wir führten erste Workshops mit unseren Projektpartnern Lena (Basel), Warmbächli (Bern) und
+							NeNa1 (Zürich) durch
+							und erprobten
+							das artefaktbasierte Diskussion von Problemen. Viktor entwickelte eine passende
+							Workshop-Methode, die sich als
+							durchaus
+							produktiv herausstellte.
+						</lena>
+						<br>
+						<img src="img/nena1_.png">
+						<div class="video-container">
+							<iframe src="https://player.vimeo.com/video/275850147" frameborder="0" webkitallowfullscreen
+								mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
+				<!-- German, Process, Debriefing + Next Steps -->
+
+				<div class="german">
+					<div>
+						<lena>
+							<h1>Mai 2018, Nachbesprechung und weitere Schritte</h1>
+						</lena>
+						<img src="img/may.JPG">
+						<lena>
+							Nach den intensiven “Kennenlern-Workshops” mit den drei Projektpartnern waren wir ziemlich
+							erschöpft, erholten uns
+							aber schnell
+							und setzten uns an die Nachbesprechung und dem Entwickeln erster Ideen für weitere Schritte
+							(ein
+							erstes
+							agentenbasiertes
+							Modell, ein fragmentiertes Spiel-Szenario und mehr Ideen für weiterführende Workshops).
+						</lena>
+					</div>
+				</div>
+
+				<!-- German, Process, April 2018, Kick-Off Meeting -->
+
+				<div class="german">
+					<div>
+						<lena>
+							<h1>April 2018, Kick-Off Tagung</h1>
+						</lena>
+						<img src="img/kickoff1.JPG">
+						<lena>
+							Um unseren Denkraum zu öffnen und uns mit möglichen Fachkollegen zu verbinden, organisierten
+							wir
+							eine Kick-Off
+							Tagung rund
+							um die Themen “commoning”, “gaming” und “modelling”. Unsere zentrale Frage für die
+							Diskussionen
+							lautete: Wie
+							können
+							spielerische Einrichtungen uns helfen, die Komplexität von gemeinsamem Wirken in urbanen
+							Nachbarschaften zu
+							verstehen,
+							zu bewältigen und kritisch zu überdenken?yla>
+							<br>
+							<br>Am ersten Tag des zweitägigen Workshops konnten die Teilnehmer ihre Perspektive
+							bezüglich
+							der vorhin
+							gestellten
+							Frage erklären, dies unter Einbezug und Vorstellung von verwandter Arbeit und Projekten. Am
+							zweiten Tag
+							diskutierten
+							und tauschten wir Ideen, Konzepte, Arbeitstechniken und Herangehensweisen innerhalb des
+							Dreiecks
+							von commoning,
+							modelling
+							und playing aus, begleitet von spielerischer Konversation und der Entwicklung von
+							Prototypen.
+							<br>
+							<br>Teilnehmer/Innen: Adam van Heerden, Bruce Edmonds, Gabriele Ferri, Geeske Scholz, Gilly
+							Krajevsky, Ivo Balmer,
+							Jelena
+							Viskovic, Mary Dellenbaugh-Losse, Shusha Niederberger, Panayotis Antoniadis, Paul Chaney,
+							Sebastian Quack, Roger
+							Portmann
+							and Tobias Willimann.
+						</lena>
+						<br>
+						<br>
+						<img src="img/kickoff2.JPG">
+						<img src="img/kickoff3.JPG">
+						<div class="video-container">
+							<iframe src="https://player.vimeo.com/video/268622364" frameborder="0" webkitallowfullscreen
+								mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- May 2018, Debriefing + Next Steps -->
+
+
+				<div class="process">
+					<div>
+						<lena>
+							<h1>May 2018, Debriefing + Next Steps</h1>
+						</lena>
+						<img src="img/may.JPG">
+						<lena>
+							After the intensive "First Contact" workshops with the three co-operatives we were quite
+							exhausted, but recovered
+							soon with
+							a debriefing, developing first ideas for next steps (first agend based model, a fragmented
+							play/game scenario,
+							more
+							ideas for catch-up workshops).
+						</lena>
+					</div>
+				</div>
+
+
+				<!-- April 2018, First Contact -->
+
+
+				<div class="process">
+					<div>
+						<lena>
+							<h1>April 2018, First Contact</h1>
+						</lena>
+						<img src="img/lena.JPG">
+						<lena>
+							We conducted first workshops with our project partners, Lena (Basel), Warmbächli (Bern) and
+							NeNa1 (Zurich) and
+							started exploring
+							artefact based problem addressing. Viktor designed a adequate workshop method, which proved
+							to
+							be quite
+							productive.
+
+						</lena>
+						<img src="img/nena1_.png">
+						<div class="video-container">
+							<iframe src="https://player.vimeo.com/video/275850147" frameborder="0" webkitallowfullscreen
+								mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Our first models, 05.2018 -->
+
+
+				<div class="output">
+					<lena>
+						<h1 style="background-color: #00f">Our first models, 05.2018</h1>
+					</lena>
+					<br>
+					<div>
+						<lena>
+							Schelling's Model of Segregation
+							<br>
+							<a href="https://github.com/commoningtoys/SchellingsModelOfSegregation"
+								target="_blank">Here</a>
+							a description of
+							the
+							model
+						</lena>
+						<a href="http://commoning.rocks/SchellingsModelOfSegregation/" target="_blank">
+							<img src="img/games/screen2.png">
+						</a>
+					</div>
+					<br>
+					<div>
+						<lena>Predator VS Prey Model
+							<br>
+							<a href="https://github.com/commoningtoys/predatorVSpreyGrass" target="_blank">Here</a> a
+							description of the model
+						</lena>
+						<a href="http://commoning.rocks/predatorVSpreyGrass/" target="_blank">
+							<img src="img/games/screen3.png">
+						</a>
+					</div>
+					<br>
+					<div>
+						<lena>Coward VS Heroes Model
+							<br>
+							<a href="https://github.com/commoningtoys/CowardVSHeroes" target="_blank">Here</a> a
+							description
+							of the model
+						</lena>
+						<a href="http://commoning.rocks/CowardVSHeroes/" target="_blank">
+							<img src="img/games/screen1.png">
+						</a>
+					</div>
+				</div>
+
+
+				<!-- April 2018, Kick-Off Meeting -->
+
+
+				<div class="process">
+					<div>
+						<lena>
+							<h1>April 2018, Kick-Off Meeting</h1>
+						</lena>
+						<img src="img/kickoff1.JPG">
+						<lena>
+							In order to open up our thinking space and connect with possible academic peers, we
+							organised a
+							kick-off meeting
+							around "commoning",
+							"gaming" and "modelling". Our central question for the discussions was: How could playful
+							setups
+							enable grasping,
+							negotiating
+							and thinking critically about the complexities of commoning in urban neighborhoods?
+							<br>
+							<br> On day one of the two-day workshop, participants shortly presented their perspective on
+							the
+							above question by
+							introducing
+							some of their related work or projects. On the second day we discussed and exchanged ideas,
+							concepts, tool-sets,
+							and
+							approaches within the triangle of commoning, modeling and playing by a playful conversation
+							and
+							prototyping
+							format.
+							<br>
+							<br> Participants: Adam van Heerden, Bruce Edmonds, Gabriele Ferri, Geeske Scholz, Gilly
+							Krajevsky, Ivo Balmer,
+							Jelena
+							Viskovic, Mary Dellenbaugh-Losse, Shusha Niederberger, Panayotis Antoniadis, Paul Chaney,
+							Sebastian Quack, Roger
+							Portmann
+							and Tobias Willimann.
+						</lena>
+						<img src="img/kickoff2.JPG">
+						<img src="img/kickoff3.JPG">
+						<div class="video-container">
+							<iframe src="https://player.vimeo.com/video/268622364" frameborder="0" webkitallowfullscreen
+								mozallowfullscreen allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Team -->
+
+
+				<div class="project">
+					<lena>
+						<h1>Team</h1>
+						<h2>Dr. Viktor Bedö</h2>
+						<a href="https://www.ixdm.ch/team/viktor-bedoe/" target="_blank">Viktor</a> is a senior
+						researcher
+						in the team,
+						founder
+						of the street game lab Tacit Dimension and freelance innovation consultant. He obtained a PhD in
+						philosophy at
+						Humboldt
+						University Berlin and University Pécs (2011).
+						<h2>Lena Frei</h2>
+						Lena studies Visual Communication and Iconic Research (MA). She has a BA in Media Studies/
+						Philosophy (University
+						of Basel),
+						is our in-team co-designer and is helping in other matters too.
+						<h2>Michaela Büsse</h2>
+						<a href="https://www.ixdm.ch/team/michaela-buesse/" target="_blank">Michaela</a> is a curator,
+						editor and a junior
+						researcher
+						in our team as well as a PhD candidate at the European Centre for Art, Design and Media based
+						Research (ECAM) in
+						Basel.
+						<h2>Yann Martins</h2>
+						<a href="https://www.ixdm.ch/team/yann-patrick-martins/" target="_blank">Yann</a> works as a
+						creative coder in the
+						team.
+						He graduated in Visual Communication and Iconic Theory (MA) from the Basel School of Design.
+						<h2>Dr. Shintaro Miyazaki</h2>
+						<a href="https://www.ixdm.ch/team/shintaro-miyazaki/" target="_blank">Shintaro</a> is a media
+						scholar and
+						experimental
+						designer. He is the principal investigator and project leader. He obtained a PhD in media theory
+						at
+						Humboldt-Universität
+						zu Berlin (2012).
+						<h2>Dr. Selena Savić</h2>
+						<a href="https://www.ixdm.ch/team/selena-savic/Selena" target="_blank">Selena</a> is a designer
+						researcher, scholar
+						and
+						a post-doctoral researcher in the team. She obtained a joint PhD by EPFL (Lausanne) and
+						Instituto
+						Superior Técnico
+						(Lisbon).
+					</lena>
+				</div>
+
+
+				<!-- Partners and Funding -->
+
+
+				<div class="project">
+					<lena>
+						<h1>Partners and Funding</h1>
+						This research project is funded by the
+						<a href="http://p3.snf.ch/project-175913" target="_blank">Swiss National Science Fundation</a>
+						(SNSF No. 175913, runtime 01/2018 – 12/2021) and is hosted by the Institute of
+						<a href="https://www.ixdm.ch/" target="_blank">Experimental Design and Media Cultures and the
+							Critical Media Lab
+							Basel</a>
+						at FHNW Academy of Art and Design in Basel, Switzerland. Key projects partners are
+						<a href="http://www.lena.coop/" target="_blank">Lena</a>,
+						<a href="https://www.warmbaechli.ch/" target="_blank">Warmbächli</a>
+						and
+						<a href="https://www.nena1.ch/" target="_blank">NeNa1</a>.
+					</lena>
+				</div>
+
+
+				<!-- Feb 2018, Masquerade for Commoning -->
+
+
+				<div class="process">
+					<lena>
+						<h1>Feb 2018, Masquerade for Commoning</h1>
+					</lena>
+
+
+					<div class="video-container">
+						<iframe src="https://player.vimeo.com/video/258980375" frameborder="0" webkitallowfullscreen
+							mozallowfullscreen allowfullscreen></iframe>
+					</div>
+					<lena>
+						Our team took part at transmediale 2018 face value with the workshop
+						<a href="https://2018.transmediale.de/content/masquerade-for-commoning"
+							target="_blank">"Masquerade
+							for Commoning"</a>
+						which we held on Sunday 4th of Feb. Since we then just started, we used this lovely occasion as
+						a
+						team building
+						effort with
+						guest colleague Felix Gerloff from the lab and external guest Kevin Rittberger. Kevin was
+						involved
+						earlier in 2015
+						with
+						<a href="https://www.ixdm.ch/community-in-progress-syntegrity/"
+							target="_blank">"Syntegrity".</a>
+						<br>
+						<br> Here a more detailed announcement of the workshop: Masquerade for Commoning wants to
+						encourage
+						you to tackle
+						face
+						value – Transmediale 2018’s thought-provoking trigger – via modulating the idea of the mask.
+						Would a
+						playful
+						masquerade
+						be helpful in order to discuss how we could respond to current practices of taking things at
+						face
+						value too fast
+						and
+						at the same time enable us to self-critically recognize moments when we also take our own
+						ideals,
+						values, and
+						utopias
+						at face value? What kind of biases and exploitative mechanisms are involved when we think, for
+						example, about
+						alternative
+						models for creating value together? How would the masquerade unfold if we modulated face value
+						with
+						commoning?
+						<br>
+						<br> Commoning => a verb expressing the joint action of creating things together by drawing on a
+						network of human
+						and
+						non-human relations created with the expectation of mutual care, aid, benefits and a shared
+						understanding that some
+						things
+						could belong to all of us.
+						<br>
+						<br> Mask => an object or filter that can modify an identity in order to lie about it, take on a
+						role, represent
+						another,
+						assume a collective identity, make identities equal, abstract an identity, reveal an identity,
+						take
+						possession of
+						the
+						mask's powers...
+						<br>
+						<br> Masquerade => a joint action of assuming and executing modified identities which usually
+						involves the creation
+						of
+						new relationships between masked identities and produces a complex situation of co-dependencies.
+						<br>
+						<br> Masquerade for Commoning suggests to understand face value spectrally, not only
+						dialectically
+						and reconsider
+						current
+						models of valorization as producers of unwanted artifacts of our agricultural software that has
+						been
+						running for
+						over
+						five thousand years. We want to modulate and synthesize the mask, the act of masking, the
+						masquerade, faces and
+						values
+						with cultural practices of commoning. The mask as a tangible artifact could enable different
+						modes
+						of
+						understanding,
+						enacting and modelling the dynamics that is at work in commoning. Performed by the workshop
+						participants or in a
+						real-life
+						situation, the Masquerade for Commoning might shed new light on different constellations, social
+						relations and
+						dependencies
+						between individual agents and their environments.
+						<br>
+						<br> In our times, we – you and us – are confronted with a difficult riddle: How can we imagine
+						and
+						build a
+						radically
+						different system of valorization and distribution while facing the constraints of current
+						(neoliberal) geopolitical
+						powers?
+						Commoning, at face value, might be a simple and evident solution but it surely involves drama.
+						More
+						than a
+						political
+						theory or philosophy, commoning is an active, living process which involves a complex ecosystem
+						of
+						things, persons,
+						infrastructures,
+						resources, technologies, and architectures. Here, the mask comes into play almost seamlessly —
+						etymologically
+						related
+						to ghosts and darkness and even mockery, masks have evolved into agents of impersonation, of
+						taking
+						on a role in a
+						drama
+						or performance. Masks are used to abstract certain aspects of an individual but also to conjure
+						more-than-human
+						superpowers.
+						Masks are old artifacts humans used since immemorial times in rituals and on special occasions.
+						A
+						flat mask,
+						moreover,
+						as provided here, has a back and a front side. Thus it embodies the principle of binaries. Would
+						that be a pathway
+						to
+						digitality?
+						<br>
+						<br> Join our session to collaboratively and playfully discuss, sketch, design masks and model
+						constellations of
+						commoning.
+						The blank mask accompanying this print (PDF output) is our invitation to the first Masquerade
+						for
+						Commoning at the
+						last
+						day of Transmediale 2018 (Feb 4th (Sunday), 14:00–17:00, K2, HKW).
+					</lena>
+				</div>
+
+
+				<!-- Masquerade for Commoning, 02.2018 -->
+
+
+				<div class="output">
+					<lena>
+						<h1>Masquerade for Commoning, 02.2018</h1>
+						<img src="img/pdf.png" alt=""> Printed matter. transmediale 2018 (
+						<a href="https://drive.google.com/file/d/1XjQi_xBTAMJR38HRi8N2DcAHi9OZSBaz/view?usp=sharing"
+							target="_blank">PDF</a>).
+					</lena>
 				</div>
 			</div>
-		</div>
-
-		<!-- German, Process, Debriefing + Next Steps -->
-
-		<div class="german">
-			<div>
-				<lena>
-					<h1>Mai 2018, Nachbesprechung und weitere Schritte</h1>
-				</lena>
-				<img src="img/may.JPG">
-				<lena>
-					Nach den intensiven “Kennenlern-Workshops” mit den drei Projektpartnern waren wir ziemlich erschöpft, erholten uns
-					aber schnell
-					und setzten uns an die Nachbesprechung und dem Entwickeln erster Ideen für weitere Schritte (ein erstes
-					agentenbasiertes
-					Modell, ein fragmentiertes Spiel-Szenario und mehr Ideen für weiterführende Workshops).
-				</lena>
-			</div>
-		</div>
-
-		<!-- German, Process, April 2018, Kick-Off Meeting -->
-
-		<div class="german">
-			<div>
-				<lena>
-					<h1>April 2018, Kick-Off Tagung</h1>
-				</lena>
-				<img src="img/kickoff1.JPG">
-				<lena>
-					Um unseren Denkraum zu öffnen und uns mit möglichen Fachkollegen zu verbinden, organisierten wir eine Kick-Off
-					Tagung rund
-					um die Themen “commoning”, “gaming” und “modelling”. Unsere zentrale Frage für die Diskussionen lautete: Wie
-					können
-					spielerische Einrichtungen uns helfen, die Komplexität von gemeinsamem Wirken in urbanen Nachbarschaften zu
-					verstehen,
-					zu bewältigen und kritisch zu überdenken?yla>
-					<br>
-					<br>Am ersten Tag des zweitägigen Workshops konnten die Teilnehmer ihre Perspektive bezüglich der vorhin
-					gestellten
-					Frage erklären, dies unter Einbezug und Vorstellung von verwandter Arbeit und Projekten. Am zweiten Tag
-					diskutierten
-					und tauschten wir Ideen, Konzepte, Arbeitstechniken und Herangehensweisen innerhalb des Dreiecks von commoning,
-					modelling
-					und playing aus, begleitet von spielerischer Konversation und der Entwicklung von Prototypen.
-					<br>
-					<br>Teilnehmer/Innen: Adam van Heerden, Bruce Edmonds, Gabriele Ferri, Geeske Scholz, Gilly Krajevsky, Ivo Balmer,
-					Jelena
-					Viskovic, Mary Dellenbaugh-Losse, Shusha Niederberger, Panayotis Antoniadis, Paul Chaney, Sebastian Quack, Roger
-					Portmann
-					and Tobias Willimann.
-				</lena>
-				<br>
-				<br>
-				<img src="img/kickoff2.JPG">
-				<img src="img/kickoff3.JPG">
-				<div class="video-container">
-					<iframe src="https://player.vimeo.com/video/268622364" frameborder="0" webkitallowfullscreen mozallowfullscreen
-					 allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-
-
-		<!-- May 2018, Debriefing + Next Steps -->
-
-
-		<div class="process">
-			<div>
-				<lena>
-					<h1>May 2018, Debriefing + Next Steps</h1>
-				</lena>
-				<img src="img/may.JPG">
-				<lena>
-					After the intensive "First Contact" workshops with the three co-operatives we were quite exhausted, but recovered
-					soon with
-					a debriefing, developing first ideas for next steps (first agend based model, a fragmented play/game scenario,
-					more
-					ideas for catch-up workshops).
-				</lena>
-			</div>
-		</div>
-
-
-		<!-- April 2018, First Contact -->
-
-
-		<div class="process">
-			<div>
-				<lena>
-					<h1>April 2018, First Contact</h1>
-				</lena>
-				<img src="img/lena.JPG">
-				<lena>
-					We conducted first workshops with our project partners, Lena (Basel), Warmbächli (Bern) and NeNa1 (Zurich) and
-					started exploring
-					artefact based problem addressing. Viktor designed a adequate workshop method, which proved to be quite
-					productive.
-
-				</lena>
-				<img src="img/nena1_.png">
-				<div class="video-container">
-					<iframe src="https://player.vimeo.com/video/275850147" frameborder="0" webkitallowfullscreen mozallowfullscreen
-					 allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-
-
-		<!-- Our first models, 05.2018 -->
-
-
-		<div class="output">
-			<lena>
-				<h1 style="background-color: #00f">Our first models, 05.2018</h1>
-			</lena>
-			<br>
-			<div>
-				<lena>
-					Schelling's Model of Segregation
-					<br>
-					<a href="https://github.com/commoningtoys/SchellingsModelOfSegregation" target="_blank">Here</a> a description of
-					the
-					model
-				</lena>
-				<a href="http://commoning.rocks/SchellingsModelOfSegregation/" target="_blank">
-					<img src="img/games/screen2.png">
-				</a>
-			</div>
-			<br>
-			<div>
-				<lena>Predator VS Prey Model
-					<br>
-					<a href="https://github.com/commoningtoys/predatorVSpreyGrass" target="_blank">Here</a> a description of the model
-				</lena>
-				<a href="http://commoning.rocks/predatorVSpreyGrass/" target="_blank">
-					<img src="img/games/screen3.png">
-				</a>
-			</div>
-			<br>
-			<div>
-				<lena>Coward VS Heroes Model
-					<br>
-					<a href="https://github.com/commoningtoys/CowardVSHeroes" target="_blank">Here</a> a description of the model
-				</lena>
-				<a href="http://commoning.rocks/CowardVSHeroes/" target="_blank">
-					<img src="img/games/screen1.png">
-				</a>
-			</div>
-		</div>
-
-
-		<!-- April 2018, Kick-Off Meeting -->
-
-
-		<div class="process">
-			<div>
-				<lena>
-					<h1>April 2018, Kick-Off Meeting</h1>
-				</lena>
-				<img src="img/kickoff1.JPG">
-				<lena>
-					In order to open up our thinking space and connect with possible academic peers, we organised a kick-off meeting
-					around "commoning",
-					"gaming" and "modelling". Our central question for the discussions was: How could playful setups enable grasping,
-					negotiating
-					and thinking critically about the complexities of commoning in urban neighborhoods?
-					<br>
-					<br> On day one of the two-day workshop, participants shortly presented their perspective on the above question by
-					introducing
-					some of their related work or projects. On the second day we discussed and exchanged ideas, concepts, tool-sets,
-					and
-					approaches within the triangle of commoning, modeling and playing by a playful conversation and prototyping
-					format.
-					<br>
-					<br> Participants: Adam van Heerden, Bruce Edmonds, Gabriele Ferri, Geeske Scholz, Gilly Krajevsky, Ivo Balmer,
-					Jelena
-					Viskovic, Mary Dellenbaugh-Losse, Shusha Niederberger, Panayotis Antoniadis, Paul Chaney, Sebastian Quack, Roger
-					Portmann
-					and Tobias Willimann.
-				</lena>
-				<img src="img/kickoff2.JPG">
-				<img src="img/kickoff3.JPG">
-				<div class="video-container">
-					<iframe src="https://player.vimeo.com/video/268622364" frameborder="0" webkitallowfullscreen mozallowfullscreen
-					 allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-
-
-		<!-- Team -->
-
-
-		<div class="project">
-			<lena>
-				<h1>Team</h1>
-				<h2>Dr. Viktor Bedö</h2>
-				<a href="https://www.ixdm.ch/team/viktor-bedoe/" target="_blank">Viktor</a> is a senior researcher in the team,
-				founder
-				of the street game lab Tacit Dimension and freelance innovation consultant. He obtained a PhD in philosophy at
-				Humboldt
-				University Berlin and University Pécs (2011).
-				<h2>Lena Frei</h2>
-				Lena studies Visual Communication and Iconic Research (MA). She has a BA in Media Studies/ Philosophy (University
-				of Basel),
-				is our in-team co-designer and is helping in other matters too.
-				<h2>Michaela Büsse</h2>
-				<a href="https://www.ixdm.ch/team/michaela-buesse/" target="_blank">Michaela</a> is a curator, editor and a junior
-				researcher
-				in our team as well as a PhD candidate at the European Centre for Art, Design and Media based Research (ECAM) in
-				Basel.
-				<h2>Yann Martins</h2>
-				<a href="https://www.ixdm.ch/team/yann-patrick-martins/" target="_blank">Yann</a> works as a creative coder in the
-				team.
-				He graduated in Visual Communication and Iconic Theory (MA) from the Basel School of Design.
-				<h2>Dr. Shintaro Miyazaki</h2>
-				<a href="https://www.ixdm.ch/team/shintaro-miyazaki/" target="_blank">Shintaro</a> is a media scholar and
-				experimental
-				designer. He is the principal investigator and project leader. He obtained a PhD in media theory at
-				Humboldt-Universität
-				zu Berlin (2012).
-				<h2>Dr. Selena Savić</h2>
-				<a href="https://www.ixdm.ch/team/selena-savic/Selena" target="_blank">Selena</a> is a designer researcher, scholar
-				and
-				a post-doctoral researcher in the team. She obtained a joint PhD by EPFL (Lausanne) and Instituto Superior Técnico
-				(Lisbon).
-			</lena>
-		</div>
-
-
-		<!-- Partners and Funding -->
-
-
-		<div class="project">
-			<lena>
-				<h1>Partners and Funding</h1>
-				This research project is funded by the
-				<a href="http://p3.snf.ch/project-175913" target="_blank">Swiss National Science Fundation</a>
-				(SNSF No. 175913, runtime 01/2018 – 12/2021) and is hosted by the Institute of
-				<a href="https://www.ixdm.ch/" target="_blank">Experimental Design and Media Cultures and the Critical Media Lab
-					Basel</a>
-				at FHNW Academy of Art and Design in Basel, Switzerland. Key projects partners are
-				<a href="http://www.lena.coop/" target="_blank">Lena</a>,
-				<a href="https://www.warmbaechli.ch/" target="_blank">Warmbächli</a>
-				and
-				<a href="https://www.nena1.ch/" target="_blank">NeNa1</a>.
-			</lena>
-		</div>
-
-
-		<!-- Feb 2018, Masquerade for Commoning -->
-
-
-		<div class="process">
-			<lena>
-				<h1>Feb 2018, Masquerade for Commoning</h1>
-			</lena>
-
-
-			<div class="video-container">
-				<iframe src="https://player.vimeo.com/video/258980375" frameborder="0" webkitallowfullscreen mozallowfullscreen
-				 allowfullscreen></iframe>
-			</div>
-			<lena>
-				Our team took part at transmediale 2018 face value with the workshop
-				<a href="https://2018.transmediale.de/content/masquerade-for-commoning" target="_blank">"Masquerade for Commoning"</a>
-				which we held on Sunday 4th of Feb. Since we then just started, we used this lovely occasion as a team building
-				effort with
-				guest colleague Felix Gerloff from the lab and external guest Kevin Rittberger. Kevin was involved earlier in 2015
-				with
-				<a href="https://www.ixdm.ch/community-in-progress-syntegrity/" target="_blank">"Syntegrity".</a>
-				<br>
-				<br> Here a more detailed announcement of the workshop: Masquerade for Commoning wants to encourage you to tackle
-				face
-				value – Transmediale 2018’s thought-provoking trigger – via modulating the idea of the mask. Would a playful
-				masquerade
-				be helpful in order to discuss how we could respond to current practices of taking things at face value too fast
-				and
-				at the same time enable us to self-critically recognize moments when we also take our own ideals, values, and
-				utopias
-				at face value? What kind of biases and exploitative mechanisms are involved when we think, for example, about
-				alternative
-				models for creating value together? How would the masquerade unfold if we modulated face value with commoning?
-				<br>
-				<br> Commoning => a verb expressing the joint action of creating things together by drawing on a network of human
-				and
-				non-human relations created with the expectation of mutual care, aid, benefits and a shared understanding that some
-				things
-				could belong to all of us.
-				<br>
-				<br> Mask => an object or filter that can modify an identity in order to lie about it, take on a role, represent
-				another,
-				assume a collective identity, make identities equal, abstract an identity, reveal an identity, take possession of
-				the
-				mask's powers...
-				<br>
-				<br> Masquerade => a joint action of assuming and executing modified identities which usually involves the creation
-				of
-				new relationships between masked identities and produces a complex situation of co-dependencies.
-				<br>
-				<br> Masquerade for Commoning suggests to understand face value spectrally, not only dialectically and reconsider
-				current
-				models of valorization as producers of unwanted artifacts of our agricultural software that has been running for
-				over
-				five thousand years. We want to modulate and synthesize the mask, the act of masking, the masquerade, faces and
-				values
-				with cultural practices of commoning. The mask as a tangible artifact could enable different modes of
-				understanding,
-				enacting and modelling the dynamics that is at work in commoning. Performed by the workshop participants or in a
-				real-life
-				situation, the Masquerade for Commoning might shed new light on different constellations, social relations and
-				dependencies
-				between individual agents and their environments.
-				<br>
-				<br> In our times, we – you and us – are confronted with a difficult riddle: How can we imagine and build a
-				radically
-				different system of valorization and distribution while facing the constraints of current (neoliberal) geopolitical
-				powers?
-				Commoning, at face value, might be a simple and evident solution but it surely involves drama. More than a
-				political
-				theory or philosophy, commoning is an active, living process which involves a complex ecosystem of things, persons,
-				infrastructures,
-				resources, technologies, and architectures. Here, the mask comes into play almost seamlessly — etymologically
-				related
-				to ghosts and darkness and even mockery, masks have evolved into agents of impersonation, of taking on a role in a
-				drama
-				or performance. Masks are used to abstract certain aspects of an individual but also to conjure more-than-human
-				superpowers.
-				Masks are old artifacts humans used since immemorial times in rituals and on special occasions. A flat mask,
-				moreover,
-				as provided here, has a back and a front side. Thus it embodies the principle of binaries. Would that be a pathway
-				to
-				digitality?
-				<br>
-				<br> Join our session to collaboratively and playfully discuss, sketch, design masks and model constellations of
-				commoning.
-				The blank mask accompanying this print (PDF output) is our invitation to the first Masquerade for Commoning at the
-				last
-				day of Transmediale 2018 (Feb 4th (Sunday), 14:00–17:00, K2, HKW).
-			</lena>
-		</div>
-
-
-		<!-- Masquerade for Commoning, 02.2018 -->
-
-
-		<div class="output">
-			<lena>
-				<h1>Masquerade for Commoning, 02.2018</h1>
-				<img src="img/pdf.png" alt=""> Printed matter. transmediale 2018 (
-				<a href="https://drive.google.com/file/d/1XjQi_xBTAMJR38HRi8N2DcAHi9OZSBaz/view?usp=sharing" target="_blank">PDF</a>).
-			</lena>
-		</div>
 
 
 
-		<!--  
+			<!--  
 
 			DOON'T TOUCH ANY OF THE THINGS BELOW HERE!!!!!!!!!!!!!
 
@@ -910,24 +1211,28 @@
 
 
 
-		<!-- don't touch or remove this div it is used to store the content from are.na -->
-		<div class="inspiration">
-			<!-- <button onclick="grid()">GRID ME!</button> -->
-			<div id="dynamicContent"></div>
+			<!-- don't touch or remove this div it is used to store the content from are.na -->
+			<div class="inspiration">
+				<!-- <button onclick="grid()">GRID ME!</button> -->
+				<div id="dynamicContent"></div>
+			</div>
+			<!-- don't touch or remove this div it is used to store the content from are.na -->
 		</div>
-		<!-- don't touch or remove this div it is used to store the content from are.na -->
-	</div>
-	<div class="footer" id="myFooter">
-		<div id="footer1">
-			<a href="http://p3.snf.ch/project-175913" target="_blank" id="link1">Swiss National Science Fundation</a> (SNSF No.
-			175913),
-			runtime 01/2018 – 12/2021
-		</div>
-		<div id="footer2">
-			Hosted by the Institute of
-			<a href="https://www.ixdm.ch/" target="_blank" id="link2">Experimental Design and Media Cultures and the Critical
-				Media
-				Lab Basel</a> at FHNW Academy of Art and Design in Basel, Switzerland
+		<div class="footer" id="myFooter">
+			<div id="footer1">
+				<a href="http://p3.snf.ch/project-175913" target="_blank" id="link1">Swiss National Science
+					Fundation</a>
+				(SNSF No.
+				175913),
+				runtime 01/2018 – 12/2021
+			</div>
+			<div id="footer2">
+				Hosted by the Institute of
+				<a href="https://www.ixdm.ch/" target="_blank" id="link2">Experimental Design and Media Cultures and the
+					Critical
+					Media
+					Lab Basel</a> at FHNW Academy of Art and Design in Basel, Switzerland
+			</div>
 		</div>
 	</div>
 

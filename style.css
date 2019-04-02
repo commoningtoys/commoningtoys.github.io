@@ -14,10 +14,16 @@
     background-color: #f50;
     /* border: 2px solid #555555; */
 }
-
+.invisible{
+    display: none;
+}
 @font-face {
     font-family: 'dither';
     src: url('font/DITHER0008.ttf') format('truetype');
+}
+
+html {
+    font-size: 100%;
 }
 
 canvas {
@@ -40,16 +46,6 @@ body {
     height: 100vh;
 }
 
-img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    /* float: left;
-    clear: both; */
-    max-width: 650px;
-    border: solid 3px #f50;
-}
-
 a {
     color: #f50;
     text-decoration: none;
@@ -68,11 +64,11 @@ letterLink {
 menuelement {
     background-color: #fff;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 1rem;
     padding: 0.3em;
     cursor: pointer;
-    border: solid 5px #0cf;
-    margin: 0.4em 0px;
+    border: solid 3px #0cf;
+    margin: 0px 0px 0.4rem 5px;
 }
 
 menuelement:active {
@@ -154,7 +150,7 @@ viktor {
     background-color: yellow;
 }
 
-viktor h1{
+viktor h1 {
     color: #fff;
 }
 
@@ -164,61 +160,136 @@ lena {
     background-color: black;
 }
 
-.output, .german, .project, .process, .team, .inspiration, .footer {
+.main {
+    grid-area: mn;
+    overflow-y: scroll;
+}
+
+.footer {
+    grid-area: ft;
+    /* position: relative; */
+    /* bottom: 0px; */
+    /* height: auto; */
+    /* width: 95vw; */
+    /* margin: auto; */
+    /* overflow-y: initial;   s */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    font-size: 0.75rem;
+    border: none;
+}
+
+.menu {
+    grid-area: mu;
+    /* position: fixed; */
+    /* background-color: #ff0; */
+    /* border: solid 3px #0cf; */
+    /* max-width: 200px; */
+    /* width: auto; */
+    /* clear: left; */
+    /* height: auto; */
+    /* overflow-y: initial; */
+    /* line-height: 450%; */
+    z-index: 999999;
+    display: grid;
+    grid-template-rows: repeat(6, minmax(auto, 50px));
+    margin-top: 0.3rem;
+    /* margin: 0px; */
+    /* z-index: 999; */
+    /* padding-left: 1vw; */
+    /* padding-top: 1vw; */
+    /* min-width: 180px;
+    width: 20vw; */
+}
+
+.header {
+    grid-area: hd;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px calc(100% - 210px);
+    grid-template-rows: 50px calc(100vh - 120px) 50px;
+    grid-template-areas: "hd hd hd" "mu mn mn" "ft ft ft";
+}
+
+#footer1, #footer2 {
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: solid 5px #f50;
+}
+
+#footer1 span:hover, #footer2 span:hover {
+    font-weight: 900;
+    color: #0cf;
+    border-bottom: solid 2px #f50;
+    /* font-size: 2vh */
+}
+
+#myTitle span:hover {
+    /* font-style: italic; */
+    font-weight: 900;
+    color: #0cf;
+    /* font-size: 5vh; */
+}
+
+img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* float: left;
+    clear: both; */
+    max-width: 650px;
+    border: solid 3px #f50;
+}
+
+.output, .german, .project, .process, .team {
     display: block;
     width: 25vw;
     min-width: 250px;
     overflow-y: scroll;
-    font-size: 100%;
+    font-size: 1rem;
     /* font-family: sans-serif; */
-    margin: 0.5vw;
+    margin: 0.5rem;
     /* clear: both; */
     /* padding: 3vw; */
     float: right;
     padding: 0.8em;
     /* top: 100px; */
-    border: solid 5px #0cf;
-    -webkit-transition: -webkit-transform 2s;
+    outline: solid 3px #0cf;
+    /* -webkit-transition: -webkit-transform 2s; */
     /* Safari */
-    -ms-transition: -ms-transform 2s;
+    /* -ms-transition: -ms-transform 2s; */
     /* mozilla */
-    transition: transform 2s;
+    /* transition: transform 2s; */
     /* -webkit-column-count: 2; Chrome, Safari, Opera */
     /* -moz-column-count: 2; Firefox */
     /* column-count: 2; */
 }
 
+.output a:hover, .german a:hover, .project a:hover, .process a:hover, .inspiration a:hover, .team a:hover {
+    font-weight: bolder;
+    color: #0cf;
+    border-bottom: solid 2px #f50;
+    /* background-color: white; */
+    font-style: italic;
+    /* letter-spacing: 3px; */
+}
+
 .german:hover, .project:hover, .process:hover {
-    -webkit-transform: rotate(-1deg);
+    /* -webkit-transform: rotate(-1deg); */
     /* Safari */
-    -ms-transform: rotate(-1deg);
-    transform: rotate(-1deg);
+    /* -ms-transform: rotate(-1deg); */
+    /* transform: rotate(-1deg); */
 }
 
 .process:hover, .team:hover {
-    -webkit-transform: rotate(1deg);
+    /* -webkit-transform: rotate(1deg); */
     /* Safari */
-    -ms-transform: rotate(1deg);
-    transform: rotate(1deg);
-}
-
-.menu {
-    position: fixed;
-    background-color: #ffffff00;
-    /* border: solid 5px #0cf; */
-    /* max-width: 200px; */
-    width: auto;
-    /* clear: left; */
-    height: auto;
-    overflow-y: initial;
-    /* line-height: 450%; */
-    display: grid;
-    margin: 0px;
-    z-index: 999;
-    padding-left: 1vw;
-    padding-top: 1vw;
-    /* min-width: 180px;
-    width: 20vw; */
+    /* -ms-transform: rotate(1deg); */
+    /* transform: rotate(1deg); */
 }
 
 .project {
@@ -232,36 +303,45 @@ lena {
     /* max-height: 400px; */
 }
 
-.inspiration {
-    width: 100%;
-    height: 100vh;
-    /* background-color: coral; */
-    /* position: fixed;
-    color: black;
-    width: 33.33%;
-    min-width: 300px;
-    max-width: 400px;
-    height: 400px;
-    border: none;
-    text-align: center;
-    background-repeat:no-repeat;
-    /* background-attachment: fixed; */
-    /* background-position: center; 
-    background-size: 95% auto; */
-    /* padding: 20px */
-    /* margin: 1%; */
-    /* line-height: 300px; */
-    /* height: 200px; */
+.team {
+    /* background-color: green; */
+    height: 300px;
+}
+
+.output {
+    /* background-color: cyan;*/
+    height: 200px;
+}
+
+.german {
+    display: none;
+    background-color: #fff;
+    height: 300px;
 }
 
 .caption {
-    font-size: 75%;
+    font-size: 0.75rem;
     font-style: italic;
 }
 
 /*
 dynamic content stuff
 */
+
+.inspiration {
+    display: block;
+    position: relative;
+    width: 95%;
+    height: auto;
+    min-height: 350px;
+    max-height: 600px;
+    overflow-y: scroll;
+    font-size: 1rem;
+    margin: 0.5vw;
+    float: right;
+    padding: 0.8em;
+    outline: solid 3px #0cf;
+}
 
 #dynamicContent {
     display: flex;
@@ -273,6 +353,7 @@ dynamic content stuff
     box-sizing: border-box;
     /* background-color: red; */
     position: relative;
+    /* width: 80%; */
     max-width: 1200px;
     /* display: block; */
     margin: auto;
@@ -284,10 +365,10 @@ dynamic content stuff
     /* position: relative;
     float: left; */
     color: black;
-    width: 30%;
-    min-width: 300px;
+    width: 20%;
+    min-width: 100px;
     max-width: 400px;
-    height: 400px;
+    height: auto;
     border: none;
     text-align: center;
     background-repeat: no-repeat;
@@ -308,16 +389,18 @@ dynamic content stuff
     /* background-color: #fff;
     box-shadow: 5px 5px 20px grey; */
 }
-.content{
+
+.content {
     /* text-align: center; */
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 5px 5px 20px grey;
     /* width: 75%; */
-    margin-top: 200px;
+    margin-top: 50%;
     transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
 }
+
 .inspirationContent yano {
     background-color: #fff;
     position: absolute;
@@ -338,44 +421,6 @@ img.inspirationImage {
     border: none;
 }
 
-.team {
-    /* background-color: green; */
-    height: 300px;
-}
-
-.output {
-    /* background-color: cyan;*/
-    height: 200px;
-}
-
-.german {
-    display: none;
-    background-color: #fff;
-    height: 300px;
-}
-
-.output a:hover, .german a:hover, .project a:hover, .process a:hover, .inspiration a:hover, .team a:hover {
-    font-weight: bolder;
-    color: #0cf;
-    border-bottom: solid 2px #f50;
-    /* background-color: white; */
-    font-style: italic;
-    /* letter-spacing: 3px; */
-}
-
-.container {
-    /* left: 200px; */
-    /* top: 120px; */
-    right: 0px;
-    /* width: 78vw; */
-    margin: auto auto auto 200px;
-    min-height: 100%;
-    position: relative;
-    z-index: 1;
-    display: block;
-    padding-left: 4vw;
-}
-
 .title {
     /* line-height: 0vh; */
     font-family: 'dither';
@@ -394,29 +439,10 @@ img.inspirationImage {
     -webkit-transform: translate(-50%, -50%);
     line-height: 0.5em;
     /* padding: 1vw; */
-    z-index: 0;
-    font-size: 7vw;
+    z-index: -9999;
+    font-size: 7rem;
     /* font-weight: bolder; */
     /* transform: rotate(30deg); */
-}
-
-.footer {
-    position: relative;
-    bottom: 0px;
-    height: auto;
-    width: 95vw;
-    margin: auto;
-    /* background-color: rgba(255, 255, 255, 0.488); */
-    overflow-y: initial;
-    /* background-color: #f50; */
-    /* height: auto; */
-    font-size: 1.5vh;
-    border: none;
-    /* position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem; */
 }
 
 /* responsive video container */
@@ -437,53 +463,27 @@ img.inspirationImage {
     height: 100%;
 }
 
-#footer1, #footer2 {
-    max-width: 45vw;
-    min-width: 44vw;
-    /* height: 125px; */
-    /* min-height: 125px; */
-    height: auto;
-    display: inline-table;
-    margin: auto;
-    padding-left: 10px;
-    border-left: solid 5px #f50;
-}
-
-#footer1 span:hover, #footer2 span:hover {
-    font-weight: 900;
-    color: #0cf;
-    border-bottom: solid 2px #f50;
-    /* font-size: 2vh */
-}
-
-#myTitle span:hover {
-    /* font-style: italic; */
-    font-weight: 900;
-    color: #0cf;
-    /* font-size: 5vh; */
-}
-
 img#header {
-    /* position: fixed; */
-    /* top: 0px; */
-    left: 0px;
+    height: 50px;
+    width: auto;
+    float: right;
     border: none;
-    float: none;
-    /* display: block;
-    margin: auto; */
-    /* background-color: #f00; */
 }
 
 img#menuIcon {
-    float: none;
+    display: none;
+    /* float: none; */
     /* top: 10px; */
     /* width: 17%; */
-    height: auto;
+    /* height: auto; */
     max-height: 40px;
     max-width: 40px;
 }
 
 @media only screen and (max-width: 899px) {
+    html {
+        font-size: 75%;
+    }
     .output, .german, .project, .process, .inspiration, .team, .footer, .foot {
         float: none;
         margin: 1vh auto;
@@ -494,18 +494,34 @@ img#menuIcon {
     }
     menuelement {
         padding: 0.1em;
-        margin: 2px 0px;
+        margin: 0px 0px 2px 0px;
     }
-    #myHeader {
+    /* #myHeader {
         min-height: 45px;
         position: relative;
-    }
+    } */
     .output:hover, .german:hover, .project:hover, .process:hover, .inspiration:hover, .team:hover, .footer:hover {
         -webkit-transform: none;
         -ms-transform: none;
         transform: none;
     }
-    .container, .inspiration {
+    .container {
+        display: grid;
+        grid-template-columns: 50px calc(100% - 50px);
+        grid-template-rows: 40px calc(100vh - 78px) 40px;
+        grid-template-areas: "mu hd hd" "mn mn mn" "ft ft ft";
+    }
+    img#menuIcon{
+        display: block;
+        height: 34px;
+        width: auto;
+    }
+    img#header {
+        float: left;
+        width: 75%;
+        height: auto;
+    }
+    /* .container, .inspiration {
         margin: auto;
         display: block;
         padding: 0px;
@@ -514,5 +530,5 @@ img#menuIcon {
     .inspiration {
         margin-bottom: 2%;
         max-width: 899px;
-    }
+    } */
 }
