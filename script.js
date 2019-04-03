@@ -88,8 +88,8 @@ function process_data(data) {
     const month = el.date.getMonth() + 1;
     const year = el.date.getFullYear();
     article.setAttribute('data-date', month + '/' + year);
-    const link_to_div = window.location.href + 'index.html#' + el.id;
-    console.log(link_to_div);
+    // console.log(window.location);
+    const link_to_div = window.location.origin + '/index.html#' + el.id;
     article.setAttribute('data-clipboard-text', link_to_div)
 
     const title = document.createElement('div');
