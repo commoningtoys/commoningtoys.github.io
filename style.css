@@ -228,7 +228,7 @@ lena {
     overflow-y: scroll;
     font-size: 1rem;
     margin: 0.5rem;
-    /* float: right; */
+    float: right;
     padding: 0.8em;
     outline: solid 3px #0cf;
 }
@@ -256,13 +256,18 @@ lena {
 
 .title-content {
     grid-area: ti;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    color: #F5F5F5;
+    background-color: #000;
+    margin-bottom: 0.3rem;
 }
 
 .text-content {
     grid-area: tx;
 }
-
+.text-content p{
+    background: rgba(255, 255, 255, 0.75);
+}
 .process {
     /*background-color: yellow;*/
     height: 250px;

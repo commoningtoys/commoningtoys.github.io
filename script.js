@@ -78,42 +78,40 @@ function convert_date(arr) {
     el.date = parsed_date;
   }
 }
-let sorted_data;
-let load_interval
-let load_index = 0;
 function process_data(data) {
   sorted_data = data.sort((a, b) => a.date - b.date);
   for (const el of sorted_data) {
     const article = document.createElement('div');
     // article.innerHTML = el.content
-    article.setAttribute('class', el.section);
+    article.setAttribute('class', el.section + ' copy');
     article.setAttribute('id', el.id);
+    const month = el.date.getMonth() + 1;
+    const year = el.date.getFullYear();
+    article.setAttribute('data-date', month + '/' + year);
+    const link_to_div = window.location.href + 'index.html#' + el.id;
+    console.log(link_to_div);
+    article.setAttribute('data-clipboard-text', link_to_div)
 
     const title = document.createElement('div');
     title.innerText = el.title;
     title.setAttribute('class', 'title-content');
-
+    title.addEventListener('click', event => {
+      console.log(window.location.href)
+      // const clipboard_txt = 
+    })
     article.appendChild(title);
 
     const txt = document.createElement('div');
-    txt.innerHTML = el.content;
     txt.setAttribute('class', 'text-content');
-
+    const p = document.createElement('p')
+    p.innerHTML = el.content;
+    txt.appendChild(p);
     article.appendChild(txt);
 
     const media_content = document.createElement('div');
     media_content.setAttribute('class', 'media-content');
 
     for (const url of el.video_list) {
-      // const words = url.split('/');
-      // const id = words[words.length - 1];
-      // console.log(id)
-      // $.getJSON(`https://api.vimeo.com/videos/${id}/pictures`, data => console.log(data))
-      // $.ajax({
-      //   "url": `https://api.vimeo.com/videos/${id}/pictures`,
-      //   success: data => console.log(data)
-
-      // })
       const my_iframe = document.createElement('iframe');
       my_iframe.setAttribute('src', url);
       my_iframe.setAttribute('frameborder', '0');
@@ -252,6 +250,9 @@ function enlargeDivs() {
     // goTo(0, y);
   });
 }
+
+
+
 /**
  * this function returns the device orientation in angles
  */
