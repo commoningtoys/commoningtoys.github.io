@@ -35,8 +35,6 @@
   <script src="libraries/p5.dom.min.js"></script> -->
   <!-- <script src="libraries/p5.sound.js"></script> -->
   <!-- <script src="sketch.js"></script> -->
-  <script src="script.js"></script>
-  <script src="dynamicContent.js"></script>
   <!-- <script src="JSAnimation/agent.js"></script>
 	<script src="JSAnimation/flock.js"></script>
 	<script src="JSAnimation/sketch.js"></script> -->
@@ -44,7 +42,7 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body onresize="setPositionContainer()">
+<body>
   <div class="title" id="myTitle">
     <p>THINKING</p>
     <p id="title2">TOYS</p>
@@ -144,7 +142,7 @@
           </p>
         </div>
       </div>
-      <script>initialize_content()</script>
+      <!-- <script>initialize_content()</script> -->
       <!-- <script>setPositionContainer()</script> -->
 
 
@@ -183,29 +181,12 @@
     </div>
   </div>
 
+  <script src="script.js"></script>
+  <script src="dynamicContent.js"></script>
   <script>
-    /**
-     * scroll page by mouse position
-     */
-    // let scroll_pace = 0;
-    // const page = document.getElementById('articles');
-    // page.onmouseover = (event) =>{
-    //   console.log(event);
-    //   const mid_point = innerHeight / 2;
-    //   const y = (mid_point - event.clientY) / mid_point;
-    //   console.log(y)
-    //   page.scrollTop -= y * 30;
-    // }
-
-
-    new ClipboardJS('.copy');
+    new ClipboardJS('.copy');// to save to clipboard
     //closes the menu on small devices
     if (innerWidth < 899) closeOpenMenu();
-    ///////////////////////////////////////////////////////////
-    ///// AT THE BEGINNING WE SHOW ONLY THE PROJECTS DIVS /////
-    ///////////////////////////////////////////////////////////
-    // reveal('project');
-    // enlargeDivs();
     //lettering functions
     $("#link1, #link2").lettering('words');
   </script>

@@ -57,19 +57,27 @@ function showAll() {
   }
 }
 
+let content;
+let start_content = 0;
+let end_content = 5;
+
+const content_range = 5;
+
+
 function initialize_content() {
 
   $.getJSON('content.json', data => {
     console.log(data);
-    convert_date(data)
+    data = convert_data(data).sort((a, b) => a.date - b.date);
     console.log(data);
-    process_data(data)
+    render_content(data);
   });
 }
+initialize_content();
 
-
-function convert_date(arr) {
-  for (const el of arr) {
+function convert_data(arr) {
+  const result = arr;
+  for (const el of result) {
     console.log(el.date);
     const date = el.date.split('/');
     const month = parseInt(date[0]);
@@ -77,10 +85,14 @@ function convert_date(arr) {
     const parsed_date = new Date(year, month, 1);
     el.date = parsed_date;
   }
+  return result;
 }
-function process_data(data) {
-  sorted_data = data.sort((a, b) => a.date - b.date);
-  for (const el of sorted_data) {
+
+
+function render_content(data) {
+  for (const el of data) {
+    // const el = content[i];
+    // console.log(i);
     const article = document.createElement('div');
     // article.innerHTML = el.content
     article.setAttribute('class', el.section + ' copy');
@@ -95,10 +107,6 @@ function process_data(data) {
     const title = document.createElement('div');
     title.innerText = el.title;
     title.setAttribute('class', 'title-content');
-    title.addEventListener('click', event => {
-      console.log(window.location.href)
-      // const clipboard_txt = 
-    })
     article.appendChild(title);
 
     const txt = document.createElement('div');
@@ -126,7 +134,7 @@ function process_data(data) {
       media_content.appendChild(my_img);
     };
 
-    article.appendChild(media_content);
+    // article.appendChild(media_content);
     // set random width to div;
     if (innerWidth > 899) {
       const random_w = (3 + Math.floor(Math.random() * 5)) * 10;
@@ -135,52 +143,48 @@ function process_data(data) {
     const inspiration = document.getElementById('inspiration');
     const main = document.getElementById('articles');
     main.insertBefore(article, inspiration);
+    $(article).click(enlargeDivs);
+    $(article).click((el)=>{
+      console.log($(this));
+      const $media = $(media_content);
+      const container = article;
+      $(container).append($media);
+    })
   }
-
-  enlargeDivs();
 }
+
 
 /**
- * this function initializes the width and heights of all the divs
- * DEPRECATED WILL BE REMOVED
- */
-function init() {
-  for (let i = 0; i < myClasses.length; i++) {
-    let thisClass = document.getElementsByClassName(myClasses[i]);
-    for (let j = 0; j < thisClass.length; j++) {
-      //set random with and height for all classes except inspiration
-      if (!myClasses[i].includes('inspiration')) {
-        let randW = Random(20, 60);
-        thisClass[j].style.width = Math.floor(randW) + '%';
-        let randH = thisClass[j].style.width;
-        thisClass[j].style.height = Math.floor(randH) + 'px';
-      }
-    }
+ * this function enlarges the divs by clicking on them
+*/
+let previous = null, prevH, prevW, prev;
+function enlargeDivs() {
+  console.log('fired');
+  let myDiv = this;
+  if (previous == null) {
+    // continue;
+    //needs refactoring!!!!!!!
+  } else {
+    //reset the previous clicked div to its initial state
+    previous.style.height = prevH;
+    previous.style.width = prevW;
+    previous.style.overflowY = 'scroll';
   }
-  //set the first div project to width 100%
-  //needs refactoring
-  let mainPage = document.getElementById('mainPage');
-  mainPage.style.width = '95%';
-  mainPage.style.height = 'auto';
-  if (screen.width > 899) setNumberOfColumns(mainPage, '2');
-  else setNumberOfColumns(mainPage, 'initial');
+  //let's save the div so we can reset it later
+  previous = this;
+  prevH = this.style.height;
+  prevW = this.style.width;
+  //here we enlarge the div
+  myDiv.style.width = '95%';
+  myDiv.style.height = 'auto';
+  myDiv.style.maxHeight = '650px';
+  // if (screen.width > 899 && !myDiv.className.includes('inspiration')) setNumberOfColumns(myDiv, '2');
+  //here we get the height of the top menu (needs refactoring set it as gloal variable)
+  const y = parseFloat(this.getBoundingClientRect().y) + document.getElementById('articles').scrollTop - 100; //this helps us to get the position of the div to scroll to
+  document.getElementById('articles').scrollTop = y;
 }
-/**
- * stes the position of the divs below the menu bar
- */
-function setPositionContainer() {
-  // let container = document.getElementById('myContainer');
-  // //here we set the header image near the menu button when on device
-  // let menu = BoundsById('menuIcon');
-  // let headerDiv = BoundsById('myHeader');
 
-  // if (screen.width < 899) {
-  //   let w = screen.width - menu.width;
-  //   let headerImg = document.getElementById('myHeader');
-  //   headerImg.style.width = w + 'px';
-  //   headerImg.style.left = menu.width + 'px';
-  // }
-}
+
 /**
  * this function returns the bounds of the menu at any time
  */
@@ -209,46 +213,6 @@ function closeOpenMenu() {
   // menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
 
   menuIsShow == true ? document.getElementById('menuIcon').src = icon1 : document.getElementById('menuIcon').src = icon2;
-}
-/**
- * this function enlarges the divs by clicking on them
-*/
-function enlargeDivs() {
-  let previous = null, prevH, prevW, prev;
-  // needs refactoring
-  $('.project, .process, .output, .german').click(function () {
-    let myDiv = this;
-    if (previous == null) {
-      // continue;
-      //needs refactoring!!!!!!!
-    } else {
-      //reset the previous clicked div to its initial state
-      // setNumberOfColumns(previous, 'initial');
-      previous.style.height = prevH;
-      previous.style.width = prevW;
-      previous.style.overflowY = 'scroll';
-    }
-    //let's save the div so we can reset it later
-    previous = this;
-    prevH = this.style.height;
-    prevW = this.style.width;
-    //here we enlarge the div
-    // myDiv.style.overflowY = 'hidden';
-    myDiv.style.width = '95%';
-    myDiv.style.height = 'auto';
-    myDiv.style.maxHeight = '650px';
-    // myDiv.style.
-    //the insoiration div should be come as high as the page
-    // if (myDiv.className.includes('inspiration')) myDiv.style.height = '100vh';
-    // console.log(myDiv.className.includes('inspiration'));
-    //here we set the number of columns
-    // if (screen.width > 899 && !myDiv.className.includes('inspiration')) setNumberOfColumns(myDiv, '2');
-    //here we get the height of the top menu (needs refactoring set it as gloal variable)
-    const y = parseFloat(this.getBoundingClientRect().y) + document.getElementById('articles').scrollTop - 100; //this helps us to get the position of the div to scroll to
-    // window.scrollTo(0, 50);
-    document.getElementById('articles').scrollTop = y;
-    // goTo(0, y);
-  });
 }
 
 
