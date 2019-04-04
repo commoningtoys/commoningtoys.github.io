@@ -220,7 +220,8 @@ lena {
     /* display: block;
     width: 25vw;
     min-width: 250px; */
-    height: 250px;
+    height: auto;
+    max-height: 250px;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, max-content));
     grid-template-rows: repeat(2, minmax(0, max-content));
@@ -241,7 +242,9 @@ lena {
     font-style: italic;
     /* letter-spacing: 3px; */
 }
-
+/* 
+to change design of single article divs change them down here
+*/
 .media-content {
     grid-area: md;
     /* outline: solid 3px #f50; */
@@ -252,6 +255,12 @@ lena {
     height: auto;
     max-width: 550px;
     border: solid 3px #f50;
+}
+
+.media-content iframe{
+    width: 100%;
+    height: auto;
+    max-width: 550px;
 }
 
 .title-content {
@@ -265,29 +274,15 @@ lena {
 .text-content {
     grid-area: tx;
 }
+/* text */
 .text-content p{
     background: rgba(255, 255, 255, 0.75);
-}
-.process {
-    /*background-color: yellow;*/
-    height: 250px;
-    /* max-height: 400px; */
-}
-
-.team {
-    /* background-color: green; */
-    height: 300px;
-}
-
-.output {
-    /* background-color: cyan;*/
-    height: 200px;
 }
 
 .german {
     display: none;
-    background-color: #fff;
-    height: 300px;
+    /* background-color: #fff; */
+    /* height: 300px; */
 }
 
 .caption {
