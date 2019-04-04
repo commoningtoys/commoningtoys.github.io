@@ -30,11 +30,6 @@ canvas {
     left: 0px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    /* background-color: black; */
-    /* color: #F5F5F5; */
-}
-
 body {
     /* background-color: chartreuse; */
     position: relative;
@@ -66,7 +61,7 @@ menuelement {
     font-size: 1rem;
     padding: 0.3em;
     cursor: pointer;
-    border: solid 3px #0cf;
+    border: solid 2px #0cf;
     margin-bottom: 5px
     /* margin: 0px 0px 0.4rem 5px; */
 }
@@ -234,11 +229,12 @@ lena {
     margin: 0.5rem;
     float: right;
     padding: 0.8em;
-    outline: solid 3px #0cf;
+    outline: solid 2px #0cf;
     word-break: break-word;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+    background-size: 100% auto;
 }
 .enlarged{
     height: auto;
@@ -252,7 +248,7 @@ lena {
     margin: 0.5rem;
     float: right;
     padding: 0.8em;
-    outline: solid 3px #0cf;
+    outline: solid 2px #0cf;
     word-break: break-word;
 }
 .preview a:hover, .inspiration a:hover, .enlarged a:hover{
@@ -274,7 +270,7 @@ to change design of single article divs change them down here
 
 .media-content {
     grid-area: md;
-    /* outline: solid 3px #f50; */
+    /* outline: solid 2px #f50; */
 }
 
 .media-content img, img.thumb-content {
@@ -333,7 +329,7 @@ dynamic content stuff
     margin: 0.5vw;
     float: right;
     padding: 0.8em;
-    outline: solid 3px #0cf;
+    outline: solid 2px #0cf;
 }
 
 #dynamicContent {
@@ -366,7 +362,7 @@ dynamic content stuff
     text-align: center;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100% auto;
+    background-size: 85% auto;
     margin: 5px;
 }
 
