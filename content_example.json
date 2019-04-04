@@ -1,6 +1,6 @@
 {
     "section": "output or process etc. ", // here you put the type of content
-    "title": "test test test", // here is for the title of the div
+    "title": "month year, title, location if present", // here is for the title of the div
     "id": "test", // unique id it must be at least 1 word up to 4 words separated by '_'
     "date": "1/2015",
     "content": "html text only with a tags (links) <a href=\"https://2018.transmediale.de/content/masquerade-for-commoning\" target=\"_blank\">&quot;Masquerade for Commoning&quot;</a>", // the text content of the article/div use a tags for links don't forget target _blank and escape " (quotes) with \ (backslash)

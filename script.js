@@ -27,7 +27,8 @@ for (let i = 0; i < myClasses.length; i++) {
  * @param {HTMLObjectElement} el - the section that needs to be shown! 
  */
 function reveal(el) {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
+  document.querySelector('div.main').scrollTo(0, 0);
   console.log(el.dataset.section);
   const section = el.dataset.section
   const articles = document.getElementById('articles').children;
@@ -43,6 +44,7 @@ function reveal(el) {
  * function that shows all the posts of the wesite
  */
 function showAll() {
+  document.querySelector('div.main').scrollTo(0, 0);
   const articles = document.getElementById('articles').children;
   for (const child of articles)child.style.display = 'grid';
 }
@@ -95,7 +97,8 @@ function render_content(data) {
     const link_to_div = window.location.origin + '/index.html#' + el.id;
     article.setAttribute('data-clipboard-text', link_to_div)
     const image_url = el.img_list[0] || 'img/commoning_web.gif'
-    article.style.backgroundImage = 'url(' + image_url + ')'
+    article.style.backgroundImage = 'url(' + image_url + ')';
+    if(el.section === 'german') article.style.display = 'none';
     const title = document.createElement('div');
     title.innerText = el.title;
     title.setAttribute('class', 'title-content');
