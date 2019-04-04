@@ -149,8 +149,13 @@ kayla {
 
 viktor {
     /* font-family: Georgia, 'Times New Roman', Times, serif; */
-    color: #f50;
-    border-bottom: solid 2px rgb(43, 255, 0);
+    /*border-bottom: solid 2px rgb(43, 255, 0); */
+    /*color: black;*/
+    background-color: yellow;
+}
+
+viktor h1{
+    color: #fff;
 }
 
 lena {
