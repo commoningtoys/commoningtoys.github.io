@@ -24,37 +24,27 @@ for (let i = 0; i < myClasses.length; i++) {
 
 /**
  * function that reveals only certain elements of the website
- * @param {String} className - the class that needs to be shown! 
+ * @param {HTMLObjectElement} el - the section that needs to be shown! 
  */
-function reveal(className) {
+function reveal(el) {
   window.scrollTo(0, 0);
-  console.log('imWorking');
-  for (let i = 0; i < ClassObjects.length; i++) {
-    if (ClassObjects[i].name.includes(className)) {
-      ClassObjects[i].visible = true;
-      let thisClass = document.getElementsByClassName(ClassObjects[i].name);
-      for (let j = 0; j < thisClass.length; j++) {
-        thisClass[j].style.display = 'grid';
-      }
-    } else {
-      ClassObjects[i].visible = false;
-      let thisClass = document.getElementsByClassName(ClassObjects[i].name);
-      for (let j = 0; j < thisClass.length; j++) {
-        thisClass[j].style.display = 'none';
-      }
-    }
+  console.log(el.dataset.section);
+  const section = el.dataset.section
+  const articles = document.getElementById('articles').children;
+  let i = 0;
+  for (const child of articles) {
+    if(child.dataset.section === section)child.style.display = 'grid';
+    else child.style.display = 'none';
+    i++
   }
+  console.log(i);
 }
 /**
  * function that shows all the posts of the wesite
  */
 function showAll() {
-  for (let i = 0; i < myClasses.length; i++) {
-    let thisClass = document.getElementsByClassName(myClasses[i]);
-    for (let j = 0; j < thisClass.length; j++) {
-      thisClass[j].style.display = 'grid';
-    }
-  }
+  const articles = document.getElementById('articles').children;
+  for (const child of articles)child.style.display = 'grid';
 }
 
 let content;
@@ -93,17 +83,19 @@ function render_content(data) {
   for (const el of data) {
     // const el = content[i];
     // console.log(i);
+    // create asrticle element
     const article = document.createElement('div');
-    // article.innerHTML = el.content
-    article.setAttribute('class', el.section + ' copy');
+    article.setAttribute('class', 'preview copy');
     article.setAttribute('id', el.id);
+    // add data: date, section && link
     const month = el.date.getMonth() + 1;
     const year = el.date.getFullYear();
     article.setAttribute('data-date', month + '/' + year);
-    // console.log(window.location);
+    article.setAttribute('data-section', el.section);
     const link_to_div = window.location.origin + '/index.html#' + el.id;
     article.setAttribute('data-clipboard-text', link_to_div)
-
+    const image_url = el.img_list[0] || 'img/commoning_web.gif'
+    article.style.backgroundImage = 'url(' + image_url + ')'
     const title = document.createElement('div');
     title.innerText = el.title;
     title.setAttribute('class', 'title-content');
@@ -114,7 +106,7 @@ function render_content(data) {
     const p = document.createElement('p')
     p.innerHTML = el.content;
     txt.appendChild(p);
-    article.appendChild(txt);
+    // article.appendChild(txt);
 
     const media_content = document.createElement('div');
     media_content.setAttribute('class', 'media-content');
@@ -132,23 +124,23 @@ function render_content(data) {
       const my_img = document.createElement('img');
       my_img.setAttribute('src', url);
       media_content.appendChild(my_img);
-    };
-
+    }
     // article.appendChild(media_content);
     // set random width to div;
     if (innerWidth > 899) {
-      const random_w = (3 + Math.floor(Math.random() * 5)) * 10;
+      const random_w = (2 + Math.floor(Math.random() * 3)) * 10;
       article.style.width = random_w + '%';
     }
-    const inspiration = document.getElementById('inspiration');
     const main = document.getElementById('articles');
-    main.insertBefore(article, inspiration);
+    main.appendChild(article);
     $(article).click(enlargeDivs);
-    $(article).click((el)=>{
+    $(article).click((el) => {
       console.log($(this));
       const $media = $(media_content);
+      const $content = $(txt);
       const container = article;
       $(container).append($media);
+      $(container).append($content);
     })
   }
 }
@@ -161,6 +153,7 @@ let previous = null, prevH, prevW, prev;
 function enlargeDivs() {
   console.log('fired');
   let myDiv = this;
+  console.log(this)
   if (previous == null) {
     // continue;
     //needs refactoring!!!!!!!
@@ -172,16 +165,19 @@ function enlargeDivs() {
   }
   //let's save the div so we can reset it later
   previous = this;
-  prevH = this.style.height;
+  prevH = '350px';
   prevW = this.style.width;
   //here we enlarge the div
-  myDiv.style.width = '95%';
+  myDiv.style.width = '85%';
   myDiv.style.height = 'auto';
   myDiv.style.maxHeight = '650px';
-  // if (screen.width > 899 && !myDiv.className.includes('inspiration')) setNumberOfColumns(myDiv, '2');
+  myDiv.setAttribute('class', 'enlarged copy');
+  myDiv.style.backgroundImage = 'none';
   //here we get the height of the top menu (needs refactoring set it as gloal variable)
-  const y = parseFloat(this.getBoundingClientRect().y) + document.getElementById('articles').scrollTop - 100; //this helps us to get the position of the div to scroll to
-  document.getElementById('articles').scrollTop = y;
+  const main = document.querySelector('div.main')
+  const y = parseFloat(this.getBoundingClientRect().y) + main.scrollTop - 100; //this helps us to get the position of the div to scroll to
+  console.log(document.querySelector('div.main').scrollTop, y)
+  main.scrollTop = y;
 }
 
 

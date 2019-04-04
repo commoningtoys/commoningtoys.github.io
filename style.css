@@ -160,6 +160,12 @@ lena {
     background-color: black;
 }
 
+.article-container{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .main {
     grid-area: mn;
     overflow-y: scroll;
@@ -216,10 +222,25 @@ lena {
     /* font-size: 5vh; */
 }
 
-.output, .german, .project, .process, .team {
-    /* display: block;
-    width: 25vw;
-    min-width: 250px; */
+.preview{
+    height: auto;
+    max-height: 250px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: "ti ti";
+    /* overflow-y: scroll; */
+    font-size: 1rem;
+    margin: 0.5rem;
+    float: right;
+    padding: 0.8em;
+    outline: solid 3px #0cf;
+    word-break: break-word;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+.enlarged{
     height: auto;
     max-height: 250px;
     display: grid;
@@ -232,9 +253,10 @@ lena {
     float: right;
     padding: 0.8em;
     outline: solid 3px #0cf;
+    word-break: break-word;
 }
+.preview a:hover, .inspiration a:hover, .enlarged a:hover{
 
-.output a:hover, .german a:hover, .project a:hover, .process a:hover, .inspiration a:hover, .team a:hover {
     font-weight: bolder;
     color: #0cf;
     border-bottom: solid 2px #f50;
@@ -245,12 +267,17 @@ lena {
 /* 
 to change design of single article divs change them down here
 */
+
+.thumb-content{
+    grid-area: tb;
+}
+
 .media-content {
     grid-area: md;
     /* outline: solid 3px #f50; */
 }
 
-.media-content img {
+.media-content img, img.thumb-content {
     width: 100%;
     height: auto;
     max-width: 550px;
@@ -266,8 +293,8 @@ to change design of single article divs change them down here
 .title-content {
     grid-area: ti;
     font-size: 1.5rem;
-    color: #F5F5F5;
-    background-color: #000;
+    color: #fff;
+    background-color: #0005;
     margin-bottom: 0.3rem;
 }
 
@@ -457,13 +484,23 @@ img#menuIcon {
         width: 85%;
         height:50vh;
     }
-    .output, .german, .project, .process, .team {
+
+    .preview{
         display: grid;
         grid-template-columns: repeat(2, minmax(0, max-content));
         grid-template-rows: repeat(3, max-content);
         grid-template-areas: "ti ti" "tx tx" "md md";
         overflow-y: scroll;
     }
+
+    .enlarged{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, max-content));
+        grid-template-rows: repeat(3, max-content);
+        grid-template-areas: "ti ti" "tx tx" "md md";
+        overflow-y: scroll;
+    }
+
     .media-content{
         text-align: center;
     }
@@ -480,20 +517,11 @@ img#menuIcon {
         /* margin: 0px 0px 10px 0px; */
         text-align: center;
     }
-    .output:hover, .german:hover, .project:hover, .process:hover, .inspiration:hover, .team:hover, .footer:hover {
-        -webkit-transform: none;
-        -ms-transform: none;
-        transform: none;
-    }
     .container {
         display: grid;
         grid-template-columns: 50px calc(100% - 50px);
         grid-template-rows: 40px calc(100vh - 80px) min-content;
         grid-template-areas: "mu hd hd" "mn mn mn" "ft ft ft";
-    }
-    .main {
-        width: 95%;
-        margin: 0 auto;
     }
     img#menuIcon {
         display: block;
@@ -503,14 +531,4 @@ img#menuIcon {
     img#header {
         max-height: 40px;
     }
-    /* .container, .inspiration {
-        margin: auto;
-        display: block;
-        padding: 0px;
-        width: 100%;
-    }
-    .inspiration {
-        margin-bottom: 2%;
-        max-width: 899px;
-    } */
 }

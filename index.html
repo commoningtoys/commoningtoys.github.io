@@ -51,11 +51,11 @@
   <div id="myContainer" class="container">
     <div id="myMenu" class="menu">
       <img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
-      <menuelement onclick="reveal('project')" id="menuproject">PROJECT</menuelement>
-      <menuelement onclick="reveal('process')" id="menuprocess">PROCESS</menuelement>
-      <menuelement onclick="reveal('output')" id="menuoutput">OUTPUT</menuelement>
-      <menuelement id="menuinspiration" onclick="reveal('inspiration')">INSPIRATION</menuelement>
-      <menuelement onclick="reveal('german')" id="menugerman">DEUTSCH</menuelement>
+      <menuelement onclick="reveal(this)" id="menuproject" data-section="project">PROJECT</menuelement>
+      <menuelement onclick="reveal(this)" id="menuprocess" data-section="process">PROCESS</menuelement>
+      <menuelement onclick="reveal(this)" id="menuoutput" data-section="output">OUTPUT</menuelement>
+      <menuelement id="menuinspiration" onclick="reveal(this)" data-section="inspiration">INSPIRATION</menuelement>
+      <menuelement onclick="reveal(this)" id="menugerman" data-section="german">DEUTSCH</menuelement>
       <menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
     </div>
     <div id="myHeader" class="header">
@@ -63,83 +63,85 @@
         <img src="img/HGKLogo.png" id="header">
       </a>
     </div>
-    <div class="main" id="articles">
-      <div class="project" id="mainPage" style="height: 80vh; max-height: 1550px">
-        <div class="title-content">
-          Thinking Toys (or Games) for Commoning
-        </div>
-        <div class="media-content">
-          <img src="img/diagram_overview.gif">
-        </div>
-        <div class="text-content">
-
-          <p>
-            The sustainable use and the organisation of common resources is highly complex. With the focus
-            on
-            alternative,
-            utopia-inspired
-            urban neighbourhood initiatives in Switzerland this research project proposes experimental
-            design
-            and inquiry into
-            media-based
-            thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of
-            these sharing
-            processes.
-            <br>
-            <br> Commons are sustainably and collectively managed resources, such as food, or communication
-            infrastructures,
-            such
-            as Wi-Fi. Commoning, then, is the activity of sharing these resources. The aspiration formulated
-            throughout
-            numerous
-            alternative, utopia-inspired projects that seeks to design infrastructural aspects of urban
-            everyday
-            life in an
-            alternative
-            and autonomous way, through commoning, raises several questions. Since, based on the high level
-            of
-            complexity that
-            (occasionally)
-            comes with the shared use of resources, for the individual community member it is often
-            difficult to
-            estimate his
-            or
-            her own action and consequences to the very last detail. Especially when it comes to
-            unpredictable,
-            complex
-            adaptive
-            processes, he or she can no longer completely grasp them intuitively nor follow them without the
-            help of
-            media-based
-            thinking tools — such as computer-based models or scenarios — which make those processes not
-            only
-            visible but also
-            comprehensible.
-            <br>
-            <br>For this reason, a mobile software application will be developed and tested in close
-            collaboration with the
-            members
-            of three Swiss urban neighborhood projects: NeNa1 in Zurich, LeNa in Basel and Warmbächli in
-            Bern.
-            We will create
-            playful
-            simulations and design new thought-spaces for commoning. Our aim is to enable alternative and
-            engaging ways for
-            future
-            social participation and transformation processes.
-            <br>
-            <br>The four-year project, which combines methods from humanities, social science and design
-            inquires the following
-            central
-            question: How could an experimental and community-based approach to design and development of a
-            digital game system
-            stimulate
-            reflection on the intuitively incomprehensible complexity of commoning, make it more
-            understandable
-            and negotiable
-            through
-            playing and gaming?
-          </p>
+    <div class="main">
+      <div class="article-container" id="articles">
+        <div class="enlarged copy" id="mainPage"  data-date="1/2018" data-section="project" data-clipboard-text="http://127.0.0.1:5500/index.html#mainPage" style="height: 80vh; max-height: 1550px">
+          <div class="title-content">
+            Thinking Toys (or Games) for Commoning
+          </div>
+          <div class="media-content">
+            <img src="img/diagram_overview.gif">
+          </div>
+          <div class="text-content">
+  
+            <p>
+              The sustainable use and the organisation of common resources is highly complex. With the focus
+              on
+              alternative,
+              utopia-inspired
+              urban neighbourhood initiatives in Switzerland this research project proposes experimental
+              design
+              and inquiry into
+              media-based
+              thinking tools which will help to better illustrate, demonstrate and negotiate the complexity of
+              these sharing
+              processes.
+              <br>
+              <br> Commons are sustainably and collectively managed resources, such as food, or communication
+              infrastructures,
+              such
+              as Wi-Fi. Commoning, then, is the activity of sharing these resources. The aspiration formulated
+              throughout
+              numerous
+              alternative, utopia-inspired projects that seeks to design infrastructural aspects of urban
+              everyday
+              life in an
+              alternative
+              and autonomous way, through commoning, raises several questions. Since, based on the high level
+              of
+              complexity that
+              (occasionally)
+              comes with the shared use of resources, for the individual community member it is often
+              difficult to
+              estimate his
+              or
+              her own action and consequences to the very last detail. Especially when it comes to
+              unpredictable,
+              complex
+              adaptive
+              processes, he or she can no longer completely grasp them intuitively nor follow them without the
+              help of
+              media-based
+              thinking tools — such as computer-based models or scenarios — which make those processes not
+              only
+              visible but also
+              comprehensible.
+              <br>
+              <br>For this reason, a mobile software application will be developed and tested in close
+              collaboration with the
+              members
+              of three Swiss urban neighborhood projects: NeNa1 in Zurich, LeNa in Basel and Warmbächli in
+              Bern.
+              We will create
+              playful
+              simulations and design new thought-spaces for commoning. Our aim is to enable alternative and
+              engaging ways for
+              future
+              social participation and transformation processes.
+              <br>
+              <br>The four-year project, which combines methods from humanities, social science and design
+              inquires the following
+              central
+              question: How could an experimental and community-based approach to design and development of a
+              digital game system
+              stimulate
+              reflection on the intuitively incomprehensible complexity of commoning, make it more
+              understandable
+              and negotiable
+              through
+              playing and gaming?
+            </p>
+          </div>
         </div>
       </div>
       <!-- <script>initialize_content()</script> -->
@@ -161,7 +163,7 @@
 
 
       <!-- don't touch or remove this div it is used to store the content from are.na -->
-      <div class="inspiration" id="inspiration">
+      <div class="inspiration" id="inspiration" data-date="1/2018" data-section="inspiration" data-clipboard-text="http://127.0.0.1:5500/index.html#inspiration">
         <!-- <button onclick="grid()">GRID ME!</button> -->
         <div id="dynamicContent"></div>
       </div>
