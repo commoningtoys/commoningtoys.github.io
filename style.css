@@ -490,11 +490,13 @@ img#menuIcon {
     }
 
     .enlarged{
+        float: none;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, max-content));
         grid-template-rows: repeat(3, max-content);
         grid-template-areas: "ti ti" "tx tx" "md md";
         overflow-y: scroll;
+        margin: 0px auto;
     }
 
     .media-content{

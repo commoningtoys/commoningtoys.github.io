@@ -4,6 +4,7 @@
 const pix = window.devicePixelRatio;
 /***********************************/
 
+const converter = new showdown.Converter();
 
 let myClasses = ['team', 'project', 'process', 'inspiration', 'german', 'output'];
 // let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
@@ -96,7 +97,7 @@ function render_content(data) {
     article.setAttribute('data-section', el.section);
     const link_to_div = window.location.origin + '/index.html#' + el.id;
     article.setAttribute('data-clipboard-text', link_to_div)
-    const image_url = el.img_list[0] || 'img/commoning_web.gif'
+    const image_url = el.img_list[0] || 'img/commoning_web.png'
     article.style.backgroundImage = 'url(' + image_url + ')';
     if(el.section === 'german') article.style.display = 'none';
     const title = document.createElement('div');
@@ -106,8 +107,10 @@ function render_content(data) {
 
     const txt = document.createElement('div');
     txt.setAttribute('class', 'text-content');
-    const p = document.createElement('p')
-    p.innerHTML = el.content;
+    const p = document.createElement('p');
+    const MD_to_html = converter.makeHtml(el.content);
+    console.log(MD_to_html);
+    p.innerHTML = MD_to_html;
     txt.appendChild(p);
     // article.appendChild(txt);
 
@@ -168,7 +171,7 @@ function enlargeDivs() {
   }
   //let's save the div so we can reset it later
   previous = this;
-  prevH = '350px';
+  prevH = '250px';
   prevW = this.style.width;
   //here we enlarge the div
   myDiv.style.width = '85%';
