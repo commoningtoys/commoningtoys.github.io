@@ -13,20 +13,20 @@ const TEXT = 'Text';
 let json;
 let isGrid = true;
 let divPosition = [];
-$.get(URL, data => {
-  json = data;
-  createContent(data);
-});
+// let arena_index = 0;
+  $.get(URL, data => {
+    json = data;
+    createContent(data);
+  });
 /**
  * this function creates the dynamic content
  * @param {Array} data Array of JSON files 
  */
 function createContent(data) {
-  // console.log(data);
+  console.log(data);
   for (const channel of data) {
     const contents = channel.contents;
     const COLOR  = createColor();
-    console.log(COLOR);
     //sort the content by date
     contents.sort((a, b) => {
       let dateA = new Date(a.created_at), dateB = new Date(b.created_at);
@@ -68,13 +68,13 @@ function imgUrl(data) {
   if (data.base_class.startsWith(BLOCK)) {
     // does i have an image
     if (data.image != null) {
-      return data.image.large.url;//if yes we return the link
+      return data.image.thumb.url;//if yes we return the link
     } else {
       return 'img/no.png';// otherwise a placeholder image
     }
   } else if (data.base_class.startsWith(CHANNEL)) {
     // in the case of a channel we return the user avatar image
-    return data.user.avatar_image.display;
+    return data.user.avatar_image.thumb;
   } else return 'img/no.png';// if it is none of the above we put a placeholder image
 }
 

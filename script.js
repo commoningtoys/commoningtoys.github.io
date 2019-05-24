@@ -3,6 +3,9 @@
  *************************************/
 const pix = window.devicePixelRatio;
 /***********************************/
+
+const converter = new showdown.Converter();
+
 let myClasses = ['team', 'project', 'process', 'inspiration', 'german', 'output'];
 // let myTags = ['yano', 'micha', 'shintaro', 'selena', 'viktor', 'kayla']
 /**
@@ -11,94 +14,184 @@ let myClasses = ['team', 'project', 'process', 'inspiration', 'german', 'output'
  * @param {boolean} _visible - boolean to set the visibility of the class
  */
 function ClassObject(_name, _visible) {
-    this.name = _name;
-    this.visible = _visible;
+  this.name = _name;
+  this.visible = _visible;
 }
 
 let ClassObjects = [];
 for (let i = 0; i < myClasses.length; i++) {
-    ClassObjects.push(new ClassObject(myClasses[i], true));
+  ClassObjects.push(new ClassObject(myClasses[i], true));
 }
 
 /**
  * function that reveals only certain elements of the website
- * @param {String} className - the class that needs to be shown! 
+ * @param {HTMLObjectElement} el - the section that needs to be shown! 
  */
-function reveal(className) {
-    window.scrollTo(0, 0);
-    console.log('imWorking');
-    for (let i = 0; i < ClassObjects.length; i++) {
-        if (ClassObjects[i].name.includes(className)) {
-            ClassObjects[i].visible = true;
-            let thisClass = document.getElementsByClassName(ClassObjects[i].name);
-            for (let j = 0; j < thisClass.length; j++) {
-                thisClass[j].style.display = 'block';
-            }
-        } else {
-            ClassObjects[i].visible = false;
-            let thisClass = document.getElementsByClassName(ClassObjects[i].name);
-            for (let j = 0; j < thisClass.length; j++) {
-                thisClass[j].style.display = 'none';
-            }
-        }
-    }
+function reveal(el) {
+  // window.scrollTo(0, 0);
+  document.querySelector('div.main').scrollTo(0, 0);
+  console.log(el.dataset.section);
+  const section = el.dataset.section
+  const articles = document.getElementById('articles').children;
+  let i = 0;
+  for (const child of articles) {
+    if(child.dataset.section === section)child.style.display = 'grid';
+    else child.style.display = 'none';
+    i++
+  }
+  console.log(i);
 }
 /**
  * function that shows all the posts of the wesite
  */
 function showAll() {
-    for (let i = 0; i < myClasses.length; i++) {
-        let thisClass = document.getElementsByClassName(myClasses[i]);
-        for (let j = 0; j < thisClass.length; j++) {
-            thisClass[j].style.display = 'block';
-        }
-    }
+  document.querySelector('div.main').scrollTo(0, 0);
+  const articles = document.getElementById('articles').children;
+  for (const child of articles)child.style.display = 'grid';
 }
-/**
- * this function initializes the width and heights of all the divs
- */
-function init() {
-    for (let i = 0; i < myClasses.length; i++) {
-        let thisClass = document.getElementsByClassName(myClasses[i]);
-        for (let j = 0; j < thisClass.length; j++) {
-            //set random with and height for all classes except inspiration
-            if (!myClasses[i].includes('inspiration')) {
-                let randW = Random(20, 60);
-                thisClass[j].style.width = Math.floor(randW) + '%';
-                let randH = thisClass[j].style.width;
-                thisClass[j].style.height = Math.floor(randH) + 'px';
-            }
-        }
-    }
-    //set the first div project to width 100%
-    //needs refactoring
-    let mainPage = document.getElementById('mainPage');
-    mainPage.style.width = 'auto';
-    mainPage.style.height = 'auto';
-    if (screen.width > 899) setNumberOfColumns(mainPage, '2');
-    else setNumberOfColumns(mainPage, 'initial');
-}
-/**
- * stes the position of the divs below the menu bar
- */
-function setPositionContainer() {
-    let container = document.getElementById('myContainer');
-    //here we set the header image near the menu button when on device
-    let menu = BoundsById('menuIcon');
-    let headerDiv = BoundsById('myHeader');
 
-    if (screen.width < 899) {
-        let w = screen.width - menu.width;
-        let headerImg = document.getElementById('myHeader');
-        headerImg.style.width = w + 'px';
-        headerImg.style.left = menu.width + 'px';
-    }
+let content;
+let start_content = 0;
+let end_content = 5;
+
+const content_range = 5;
+
+
+function initialize_content() {
+
+  $.getJSON('content.json', data => {
+    console.log(data);
+    data = convert_data(data).sort((a, b) => a.date - b.date);
+    console.log(data);
+    render_content(data);
+  });
 }
+initialize_content();
+
+function convert_data(arr) {
+  const result = arr;
+  for (const el of result) {
+    console.log(el.date);
+    const date = el.date.split('/');
+    const month = parseInt(date[0]);
+    const year = parseInt(date[1]);
+    const parsed_date = new Date(year, month, 1);
+    el.date = parsed_date;
+  }
+  return result;
+}
+
+
+function render_content(data) {
+  for (const el of data) {
+    // const el = content[i];
+    // console.log(i);
+    // create asrticle element
+    const article = document.createElement('div');
+    article.setAttribute('class', 'preview copy');
+    article.setAttribute('id', el.id);
+    // add data: date, section && link
+    const month = el.date.getMonth() + 1;
+    const year = el.date.getFullYear();
+    article.setAttribute('data-date', month + '/' + year);
+    article.setAttribute('data-section', el.section);
+    const link_to_div = window.location.origin + '/index.html#' + el.id;
+    article.setAttribute('data-clipboard-text', link_to_div)
+    const image_url = el.img_list[0] || 'img/commoning_web.png'
+    article.style.backgroundImage = 'url(' + image_url + ')';
+    if(el.section === 'german') article.style.display = 'none';
+    const title = document.createElement('div');
+    title.innerText = el.title;
+    title.setAttribute('class', 'title-content');
+    article.appendChild(title);
+
+    const txt = document.createElement('div');
+    txt.setAttribute('class', 'text-content');
+    const p = document.createElement('p');
+    const MD_to_html = converter.makeHtml(el.content);
+    // console.log(MD_to_html);
+    p.innerHTML = MD_to_html;
+    txt.appendChild(p);
+    // article.appendChild(txt);
+
+    const media_content = document.createElement('div');
+    media_content.setAttribute('class', 'media-content');
+
+    for (const url of el.video_list) {
+      const my_iframe = document.createElement('iframe');
+      my_iframe.setAttribute('src', url);
+      my_iframe.setAttribute('frameborder', '0');
+      my_iframe.setAttribute('width', '100%');
+      my_iframe.setAttribute('height', 'auto');
+      media_content.appendChild(my_iframe);
+    }
+
+    for (const url of el.img_list) {
+      const my_img = document.createElement('img');
+      my_img.setAttribute('src', url);
+      media_content.appendChild(my_img);
+    }
+    // article.appendChild(media_content);
+    // set random width to div;
+    if (innerWidth > 899) {
+      const random_w = (2 + Math.floor(Math.random() * 3)) * 10;
+      article.style.width = random_w + '%';
+    }
+    const main = document.getElementById('articles');
+    main.appendChild(article);
+    $(article).click(enlargeDivs);
+    $(article).click((el) => {
+      console.log($(this));
+      const $media = $(media_content);
+      const $content = $(txt);
+      const container = article;
+      $(container).append($media);
+      $(container).append($content);
+    })
+  }
+}
+
+
+/**
+ * this function enlarges the divs by clicking on them
+*/
+let previous = null, prevH, prevW, prev;
+function enlargeDivs() {
+  console.log('fired');
+  let myDiv = this;
+  console.log(this)
+  if (previous == null) {
+    // continue;
+    //needs refactoring!!!!!!!
+  } else {
+    //reset the previous clicked div to its initial state
+    previous.style.height = prevH;
+    previous.style.width = prevW;
+    previous.style.overflowY = 'scroll';
+  }
+  //let's save the div so we can reset it later
+  previous = this;
+  prevH = '250px';
+  prevW = this.style.width;
+  //here we enlarge the div
+  myDiv.style.width = '85%';
+  myDiv.style.height = 'auto';
+  myDiv.style.maxHeight = '650px';
+  myDiv.setAttribute('class', 'enlarged copy');
+  myDiv.style.backgroundImage = 'none';
+  //here we get the height of the top menu (needs refactoring set it as gloal variable)
+  const main = document.querySelector('div.main')
+  const y = parseFloat(this.getBoundingClientRect().y) + main.scrollTop - 100; //this helps us to get the position of the div to scroll to
+  console.log(document.querySelector('div.main').scrollTop, y)
+  main.scrollTop = y;
+}
+
+
 /**
  * this function returns the bounds of the menu at any time
  */
 function BoundsById(id) {
-    return document.getElementById(id).getBoundingClientRect();
+  return document.getElementById(id).getBoundingClientRect();
 }
 
 
@@ -110,61 +203,27 @@ let icon2 = 'img/icons/icon_02.png';
 // let menuIsShow = true;
 let menuIsShow = true;
 function closeOpenMenu() {
-    menuIsShow = !menuIsShow;//every click we change the status of the boolean
-    let myTags = document.getElementsByTagName('menuelement');
-    let displayOption;
-    for (let i = 0; i < myTags.length; i++) {
-        menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'inherit';
-    }
-    let myMenu = document.getElementById('myMenu');
-    // menuIsShow == false ? myMenu.style.width = 'auto' : myMenu.style.width = 'auto';
-    let button = document.getElementById('openClose');
-    // menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
+  menuIsShow = !menuIsShow;//every click we change the status of the boolean
+  let myTags = document.getElementsByTagName('menuelement');
+  let displayOption;
+  for (let i = 0; i < myTags.length; i++) {
+    menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'inherit';
+  }
+  let myMenu = document.getElementById('myMenu');
+  // menuIsShow == false ? myMenu.style.width = 'auto' : myMenu.style.width = 'auto';
+  let button = document.getElementById('openClose');
+  // menuIsShow == true ? button.innerHTML = 'Close Menu' : button.innerHTML = 'Show Menu';
 
-    menuIsShow == true ? document.getElementById('menuIcon').src = icon1 : document.getElementById('menuIcon').src = icon2;
+  menuIsShow == true ? document.getElementById('menuIcon').src = icon1 : document.getElementById('menuIcon').src = icon2;
 }
-/**
- * this function enlarges the divs by clicking on them
-*/
-function enlargeDivs() {
-    let previous = null, prevH, prevW, prev;
-    // needs refactoring
-    $('.project, .process, .output, .german').click(function () {
-        let myDiv = this;
-        if (previous == null) {
-            // continue;
-            //needs refactoring!!!!!!!
-        } else {
-            //reset the previous clicked div to its initial state
-            setNumberOfColumns(previous, 'initial');
-            previous.style.height = prevH;
-            previous.style.width = prevW;
-            previous.style.overflowY = 'scroll';
-        }
-        //let's save the div so we can reset it later
-        previous = this;
-        prevH = this.style.height;
-        prevW = this.style.width;
-        //here we enlarge the div
-        myDiv.style.overflowY = 'hidden';
-        myDiv.style.width = '100%';
-        myDiv.style.height = 'auto';
-        //the insoiration div should be come as high as the page
-        if (myDiv.className.includes('inspiration')) myDiv.style.height = '100vh';
-        console.log(myDiv.className.includes('inspiration'));
-        //here we set the number of columns
-        if (screen.width > 899 && !myDiv.className.includes('inspiration')) setNumberOfColumns(myDiv, '2');
-        //here we get the height of the top menu (needs refactoring set it as gloal variable)
-        let y = parseFloat(this.getBoundingClientRect().y) + window.scrollY; //this helps us to get the position of the div to scroll to
-        window.scrollTo(0, y);
-        // goTo(0, y);
-    });
-}
+
+
+
 /**
  * this function returns the device orientation in angles
  */
 function getOrientation() {
-    return window.screen.orientation.angle;
+  return window.screen.orientation.angle;
 }
 /**
  * this function sets the number of columns of a div
@@ -172,9 +231,9 @@ function getOrientation() {
  * @param {String} num - number of columns to be set
  */
 function setNumberOfColumns(el, num) {
-    el.style.columnCount = num;
-    el.style.MozColumnCount = num;
-    el.style.WebkitColumnCount = num;
+  el.style.columnCount = num;
+  el.style.MozColumnCount = num;
+  el.style.WebkitColumnCount = num;
 }
 /**
  * function to set the rotation of divs     
@@ -182,9 +241,9 @@ function setNumberOfColumns(el, num) {
  * @param {Number} deg - degree of rotation
  */
 function setRotation(el, deg) {
-    el.style.transform = 'rotate(' + deg + 'deg)';
-    el.style.WebkitTransform = 'rotate(' + deg + 'deg)';
-    el.style.MozTransform = 'rotate(' + deg + 'deg)';
+  el.style.transform = 'rotate(' + deg + 'deg)';
+  el.style.WebkitTransform = 'rotate(' + deg + 'deg)';
+  el.style.MozTransform = 'rotate(' + deg + 'deg)';
 }
 /**
  * this function returns a random number between two numbers
@@ -193,12 +252,12 @@ function setRotation(el, deg) {
  * @returns {Number} random number between the input numbers
  */
 function Random(a, b) {
-    //if a is smaller than b we should swap them
-    if (b < a) {
-        let Swap = b;
-        b = a;
-        a = Swap;
-    }
-    let c = Math.abs(a - b);
-    return a + (Math.random() * c);
+  //if a is smaller than b we should swap them
+  if (b < a) {
+    let Swap = b;
+    b = a;
+    a = Swap;
+  }
+  let c = Math.abs(a - b);
+  return a + (Math.random() * c);
 }
