@@ -109,7 +109,7 @@ function render_content(data) {
     txt.setAttribute('class', 'text-content');
     const p = document.createElement('p');
     const MD_to_html = converter.makeHtml(el.content);
-    console.log(MD_to_html);
+    // console.log(MD_to_html);
     p.innerHTML = MD_to_html;
     txt.appendChild(p);
     // article.appendChild(txt);

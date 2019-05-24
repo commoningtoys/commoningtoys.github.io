@@ -338,10 +338,10 @@
         "video_list": [
             "https://player.vimeo.com/video/268622364"
         ]
-    }
+    },
   {
         "section": "process",
-        "title": "Mar 2019, Commoning and Tech Focus",
+        "title": "March 2019, Commoning and Tech Focus",
         "id": "NeNa1_Tech_Mar_2019",
         "date": "3/2019",
         "content": "As part of the workshop with the co-housing cooperative NeNa1 from Zurich, we dedicated some time and thoughts to the questions about possible roles and impact of technologies on commoning practices. Technology is rarely seen as a resource to be shared, and the philosophy of degrowth can make us unsympathetic towards (cutting-edge) technical solutions (e.g. automation, AI, etc). Commoning with technology refers to both using technology, like an instrument, but also the need to make common how it works. One way of using tech is what we have presented earlier - working on computational models (e.g. Agent-based modelling) that depict some concrete aspects or situations, such as organization of voluntary work contributions by the community members, in order to find patterns and tipping points in complex community behaviours. In a different gesture, we wanted to explore scenarios in which communities would benefit from sharing information using open source technical systems, or sharing knowledge and creating tools that enable distant communication, recording and processing of information. We worked in groups and tried to trace out trends and tendencies in specific technical solutions or commoning practices 10 years ago, today and in 10 years. The topics discussed touched upon personal communication (email -> wiki, chat platforms -> commons app), ubiquity and autonomy of infrastructure (telephone lines -> the internet -> self-determined autonomous networks) and cultural considerations (dialogue -> chat groups -> convergence of local and global discussion). We plan to explore how these topics could inform a future narrative and how they can be modeled using ABM.",
@@ -353,7 +353,7 @@
     },
     {
         "section": "process",
-        "title": "Mar 2019, Workshop with NeNa1",
+        "title": "March 2019, Workshop with NeNa1",
         "id": "NeNa1_Workshop_Mar_2019",
         "date": "3/2019",
         "content": "Our second workshop with the Zurich cooperative, NeNa1, took place in three parts. First, Viktor presented his work on a toolkit that invites participants to experience how it feels to carry out  the tasks, called by the Ämtli manager ABM model. Then, we presented the model in detail, explained how it operates in detail and discussed the implementation of mechanisms (e.g. swapping) and parameters (e.g. stress, time_coin) that we observe when we run the model. At the end, Selena introduced the topic of commoning and tech as a ‘10yearchallenge’ - discussing the way certain technologies were used by housing cooperatives and communities in general, and asking to imagine the way these or other technologies will play a role in commoners lives in 10 (or more) years.",
@@ -365,7 +365,7 @@
     },
     {
         "section": "process",
-        "title": "Mar 2019, Utopia Reshuffled: workshop at the OTHERWISE festival, Zurich",
+        "title": "March 2019, Utopia Reshuffled: workshop at the OTHERWISE festival, Zurich",
         "id": "Otherwise_Workshop",
         "date": "3/2019",
         "content": "What are Utopias about? How are new worlds described, new societies proposed? We identified some key elements in a selection of utopian classics like Thomas More's Utopia, Ursula K. le Guin's The Dispossessed or Hans Wiedmer's bolo'bolo and decided to take them as building blocks in a generative method for writing new stories about societies of the future. Using a deck of cards specially designed for this workshop, we confronted participants with a random configuration of pieces from different utopias and asked them to cross-breed contemporary thinking with historical utopism. They worked in groups to create five different narratives, inspired by their selection of cards. On the Wetopia island, people are organized by the ‘humarithm’ governing intelligence, and grouped around interests rather than blood relations. The Age of Mycelium addresses collapsed ecosystems with and artificial intelligence that engages an underground system of fungi into collaboration with women and men, a biodiverse intersectional network. The E-zero society is happy because it is emotion-free. The outer appearance is an indicator of one's inner state, and it is cared for by a ubiquitous social institution of Shamoons. Supercomputers control and decide in the society that Shkola is set out to change. A new kind of anthropocentrism arises from concerns with this artificial intelligence, as well as with the changing climate. Samadhi is an artificial state of supraconsciousness and a network of nodes-temples which Samadhian visit every 20 days to refresh their minds. The five beautifully crafted books were presented as a formal book launch at the end of the workshop.",
