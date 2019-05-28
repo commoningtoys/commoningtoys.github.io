@@ -61,7 +61,7 @@ function initialize_content() {
 
   $.getJSON('content.json', data => {
     console.log(data);
-    data = convert_data(data).sort((a, b) => a.date - b.date);
+    data = convert_data(data).sort((a, b) => b.date - a.date);
     console.log(data);
     render_content(data);
   });
