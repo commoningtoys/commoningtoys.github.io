@@ -183,6 +183,7 @@ lena {
     display: grid;
     grid-template-rows: repeat(6, minmax(auto, 50px));
     margin-top: 0.3rem;
+    padding: 0 0.5rem 0 0.5rem;
 }
 
 .header {
