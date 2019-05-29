@@ -40,6 +40,23 @@ function reveal(el) {
     i++
   }
   console.log(i);
+  hide_inspiration();
+}
+
+function reveal_inspiration(el){
+  if(el !== undefined)reveal(el);
+
+  const inspiration = document.getElementById('inspiration')
+  // if(inspiration.style.display === 'none'){
+    inspiration.style.display = 'block'
+  // }
+}
+
+function hide_inspiration(){
+  const inspiration = document.getElementById('inspiration')
+  if(inspiration.style.display === 'block'){
+    inspiration.style.display = 'none'
+  }
 }
 /**
  * function that shows all the posts of the wesite
@@ -48,6 +65,7 @@ function showAll() {
   document.querySelector('div.main').scrollTo(0, 0);
   const articles = document.getElementById('articles').children;
   for (const child of articles)child.style.display = 'grid';
+  reveal_inspiration();
 }
 
 let content;
