@@ -133,6 +133,7 @@ button:hover {
 
 .header {
     grid-area: hd;
+    text-align: center;
 }
 
 .container {
@@ -140,7 +141,7 @@ button:hover {
     /* grid-template-columns: 200px calc(100% - 200px); */
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 50px calc(100vh - 120px) 50px;
-    grid-template-areas: "mu mu mu mu mu mu mu mu hd" "mn mn mn mn mn mn mn mn mn" "ft ft ft ft ft ft ft ft ft";
+    grid-template-areas: "hd mu mu mu mu mu mu mu mu" "mn mn mn mn mn mn mn mn mn" "ft ft ft ft ft ft ft ft ft";
 }
 
 #footer1, #footer2 {
@@ -406,9 +407,11 @@ img.inspirationImage {
 }
 
 img#header {
+    display: block;
     height: 50px;
+    margin: 0px auto;
     /* width: auto; */
-    float: right;
+    /* float: left; */
     border: none;
 }
 
