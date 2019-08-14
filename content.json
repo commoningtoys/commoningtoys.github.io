@@ -374,5 +374,49 @@
             "img/workshop/otherwise-1101.jpg"
         ],
         "video_list": []
+    },
+    {
+        "section": "process",
+        "title": "May 2019, Micro Residency 2 with Sarah Grant",
+        "id": "Sarah_Grant_May_2019",
+        "date": "5/2019",
+        "content": "Sarah Grant, a Berlin-based media artist working with technical and organic manifestations of networks, spent a week at the lab. She worked with Selena to develop slime mould [Physarum polycephalum](https://en.wikipedia.org/wiki/Physarum_polycephalum) communication models that show how information travels through a self-organised entity - a plasmodium supercell, a model of a community. Physarum polycephalum is a many-headed slime organism, studied for the way it is able to move, find food, and produce efficient networks between food sources. Starting from three chance-based scenarios - selecting cards from the Reshuffle Utopia card deck ([developed for the Utopia Reshuffled workshop at OTHERWISE festival](http://commoning.rocks/index.html#Otherwise_Workshop)) - Sarah tested nine setups using oats and food colouring to control the growth of the slime mould organism and observe the way the networks develop and transmit information. At the end of the residency, Sarah gave [a talk on her work and slime mould modeling experiment](https://www.ixdm.ch/modeling-utopia-with-slime-mould/) at the Critical Media Lab. A longer report can be found in [this document](https://docs.google.com/document/d/1MtLm5x0vm5aTqxOPM73jIoOCuYBr3orWxfPzRcv2MtQ/edit). The experiment is ongoing.",
+        "img_list": [
+            "img/residency/modeling-utopia-slime-mould.jpg"
+        ],
+        "video_list": []
+    },
+    {
+        "section": "process",
+        "title": "April 2019, Ämtli Manager Observations",
+        "id": "April_2019_Aemtli_Manager",
+        "date": "4/2019",
+        "content": "During the month of April, in preparation for the last tweeks and updates to the Ämtli manager, we worked on developing a systematic way for observing the model states and documenting these in a consistent form. Driven by several simple questions, Selena tested different initial configurations, and then changed only certain parameters to see how, if at all, they affect the resulting macro-behaviour. Is there a setup where the community works harmoniously over long periods of time (several years)? Does the frequency and amount of swapping/brute forcing depend on commoner’s traits? All observations are noted in [file1](https://drive.google.com/open?id=101AxVMUiwd1Nb6RS6PYss0e5Iv_Nab5rc6wURT_EcpM) and [file2](https://docs.google.com/document/d/101AxVMUiwd1Nb6RS6PYss0e5Iv_Nab5rc6wURT_EcpM/edit?usp=sharing). Yann then programmed a batch-testing routine which enables comprehensive testing of all parameters in a semi-automated way. Notes on this way of exploring the model are following soon.",
+        "img_list": [
+            "img/amtli-manager-observations-april2019.jpg"
+        ],
+        "video_list": []
+    },
+    {
+        "section": "output",
+        "title": "Feb – Mar 2019, Ämtli Manager UPDATE",
+        "id": "Mar_2019_Aemtli_Manager_Update",
+        "date": "3/2019",
+        "content": "Following months of evaluation and debugging, we decided to implement some necessary changes to the way Ämtli Manager works. Through intensive discussions, the team reached a better understanding of the model’s inner mechanisms and connections between values, settings and states. We used remodelling as an opportunity to document and explain the model elements, mechanisms and interactions, for which we designed a set of diagrams. The document with diagrams can be [downloaded here (pdf)](https://drive.google.com/file/d/1axA-3k1oW5B50rP0NIgdj210VMTbpdsH/view).",
+        "img_list": [
+            "img/amtli-concept-map.jpg"
+        ],
+        "video_list": []
+    },
+    {
+        "section": "process",
+        "title": "June 2019, Unconference in Cyprus",
+        "id": "June_2019_Unconference_Cyprus",
+        "date": "6/2019",
+        "content": "Selena presented the project’s focus on commoning and tech at the [Free/Libre Technologies, Arts and the Commons](https://unrf-unconference.futureworldscenter.org/) unconference, in Nicosia, Cyprus. The event was partly a conference, with parallel panel presentations (day 1) and partly an unconference, with round discussions and clusters (day 2). We worked together on to identifying topics, interests and challenges related to commoning, software, infrastructures and society. Both the presentations and the discussions within clusters will be published as conference proceedings.",
+        "img_list": [
+            "img/unconference-circle.jpg"
+        ],
+        "video_list": []
     }
 ]
