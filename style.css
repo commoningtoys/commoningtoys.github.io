@@ -22,6 +22,7 @@
 
 * {
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 html {
@@ -214,13 +215,15 @@ button:hover {
     grid-template-columns: repeat(2, minmax(0, max-content));
     grid-template-rows: repeat(2, minmax(0, max-content));
     grid-template-areas: "ti ti" "tx md";
+    grid-column-gap: 0.5rem;
     overflow-y: scroll;
     font-size: 1rem;
     margin: 0.5rem;
     float: right;
     padding: 0.8em;
-    outline: solid 3px #0cf;
+    outline: solid 2px #000;
     word-break: break-word;
+    box-shadow: #00f 10px 10px;
 }
 
 .preview a:hover, .content a:hover, .enlarged a:hover {
@@ -247,10 +250,15 @@ to change design of single article divs change them down here
 }
 
 .media-content img, img.thumb-content {
-    width: 100%;
+    width: 85%;
     height: auto;
     max-width: 550px;
-    border: solid 3px #f50;
+    margin: 15px;
+    /* border: solid 3px #f50; */
+    box-shadow: #f00 5px 5px;
+}
+.media-content img:hover, img.thumb-content:hover{
+    box-shadow: #f00 10px 10px;
 }
 
 .media-content iframe {
@@ -262,8 +270,11 @@ to change design of single article divs change them down here
 .title-content {
     grid-area: ti;
     font-size: 1.5rem;
-    color: #fff;
-    background-color: #000a;
+    color: #000;
+    background-color: #fff;
+    border: solid 2px #000;
+    padding: 0.25rem;
+    box-shadow: #f00 3px 3px;
     /* margin-bottom: 0.3rem; */
 }
 

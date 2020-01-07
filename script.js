@@ -223,9 +223,6 @@ function enlargeDivs(el) {
     //needs refactoring!!!!!!!
   } else {
     //reset the previous clicked div to its initial state
-    // previous.style.height = prevH;
-    // previous.style.width = prevW;
-    // previous.style.overflowY = 'scroll';
     previous.setAttribute('class', 'preview copy');
     previous.querySelector('.media-content').style.display = 'none'
     previous.querySelector('.text-content').style.display = 'none'
