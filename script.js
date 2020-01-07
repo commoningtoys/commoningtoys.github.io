@@ -1,3 +1,4 @@
+
 /*************************************
  * constant of pixel ratio of device *
  *************************************/
@@ -35,7 +36,7 @@ function reveal(el) {
   const articles = document.getElementById('articles').children;
   let i = 0;
   for (const child of articles) {
-    if(child.dataset.section === section)child.style.display = 'grid';
+    if (child.dataset.section === section) child.style.display = 'grid';
     else child.style.display = 'none';
     i++
   }
@@ -43,18 +44,18 @@ function reveal(el) {
   hide_inspiration();
 }
 
-function reveal_inspiration(el){
-  if(el !== undefined)reveal(el);
+function reveal_inspiration(el) {
+  if (el !== undefined) reveal(el);
 
   const inspiration = document.getElementById('inspiration')
   // if(inspiration.style.display === 'none'){
-    inspiration.style.display = 'block'
+  inspiration.style.display = 'block'
   // }
 }
 
-function hide_inspiration(){
+function hide_inspiration() {
   const inspiration = document.getElementById('inspiration')
-  if(inspiration.style.display === 'block'){
+  if (inspiration.style.display === 'block') {
     inspiration.style.display = 'none'
   }
 }
@@ -64,7 +65,7 @@ function hide_inspiration(){
 function showAll() {
   document.querySelector('div.main').scrollTo(0, 0);
   const articles = document.getElementById('articles').children;
-  for (const child of articles)child.style.display = 'grid';
+  for (const child of articles) child.style.display = 'grid';
   reveal_inspiration();
 }
 
@@ -78,9 +79,9 @@ const content_range = 5;
 function initialize_content() {
 
   $.getJSON('content.json', data => {
-    console.log(data);
+    // console.log(data);
     data = convert_data(data).sort((a, b) => b.date - a.date);
-    console.log(data);
+    // console.log(data);
     render_content(data);
   });
 }
@@ -89,7 +90,7 @@ initialize_content();
 function convert_data(arr) {
   const result = arr;
   for (const el of result) {
-    console.log(el.date);
+    // console.log(el.date);
     const date = el.date.split('/');
     const month = parseInt(date[0]);
     const year = parseInt(date[1]);
@@ -99,8 +100,25 @@ function convert_data(arr) {
   return result;
 }
 
-
+let g_data;
 function render_content(data) {
+
+  // if the url is a link to a specific post we render it opened
+
+  // get referrer
+  // console.log(window.location);
+  let hash = window.location.hash
+  if (hash) {
+    console.log(hash);
+    hash = hash.replace('#', '');
+    console.log(hash);
+    // const div_to_enlarge = document.getElementById(hash);
+    // // we enlarge the div
+    // enlargeDivs(div_to_enlarge);
+    // const article = data.filter(result => result.id === hash);
+    // console.log(article[0]);
+  }
+
   for (const el of data) {
     // const el = content[i];
     // console.log(i);
@@ -117,7 +135,7 @@ function render_content(data) {
     article.setAttribute('data-clipboard-text', link_to_div)
     const image_url = el.img_list[0] || 'img/commoning_web.png'
     article.style.backgroundImage = 'url(' + image_url + ')';
-    if(el.section === 'german') article.style.display = 'none';
+    if (el.section === 'german') article.style.display = 'none';
     const title = document.createElement('div');
     title.innerText = el.title;
     title.setAttribute('class', 'title-content');
@@ -151,22 +169,38 @@ function render_content(data) {
     }
     // article.appendChild(media_content);
     // set random width to div;
-    if (innerWidth > 899) {
-      const random_w = (2 + Math.floor(Math.random() * 3)) * 10;
-      article.style.width = random_w + '%';
-    }
+    // if (innerWidth > 899) {
+    //   const random_w = (2 + Math.floor(Math.random() * 3)) * 10;
+    //   article.style.width = random_w + '%';
+    // }
     const main = document.getElementById('articles');
+
+
+    article.addEventListener('click', () => enlargeDivs(article))
+    article.appendChild(media_content)
+    article.appendChild(txt)
     main.appendChild(article);
-    $(article).click(enlargeDivs);
-    $(article).click((el) => {
-      console.log($(this));
-      const $media = $(media_content);
-      const $content = $(txt);
-      const container = article;
-      $(container).append($media);
-      $(container).append($content);
-    })
+    if (hash === el.id) {
+      // console.log(article);
+      enlargeDivs(article);
+      // const $media = $(media_content);
+      // const $content = $(txt);
+      // const container = article;
+      // $(container).append($media);
+      // $(container).append($content);
+    } else {
+      // $(article).click(enlargeDivs);
+      // $(article).click((el) => {
+      //   // console.log($(this));
+      //   const $media = $(media_content);
+      //   const $content = $(txt);
+      //   const container = article;
+      //   $(container).append($media);
+      //   $(container).append($content);
+      // })
+    }
   }
+
 }
 
 
@@ -174,35 +208,52 @@ function render_content(data) {
  * this function enlarges the divs by clicking on them
 */
 let previous = null, prevH, prevW, prev;
-function enlargeDivs() {
-  console.log('fired');
-  let myDiv = this;
-  console.log(this)
-  if (previous == null) {
+function enlargeDivs(el) {
+  let scroll_to = true;
+  let my_div = el;
+  // if (el) { // this is a work around to detect whether the el is a dom element or a jquery object
+  //   my_div = el.target;
+  // } else {
+  //   my_div = el;
+  //   scroll_to = true;
+  // }
+  // console.log(my_div);
+  if (previous === null) {
     // continue;
     //needs refactoring!!!!!!!
   } else {
     //reset the previous clicked div to its initial state
-    previous.style.height = prevH;
-    previous.style.width = prevW;
-    previous.style.overflowY = 'scroll';
+    // previous.style.height = prevH;
+    // previous.style.width = prevW;
+    // previous.style.overflowY = 'scroll';
+    previous.setAttribute('class', 'preview copy');
+    previous.querySelector('.media-content').style.display = 'none'
+    previous.querySelector('.text-content').style.display = 'none'
   }
   //let's save the div so we can reset it later
-  previous = this;
-  prevH = '250px';
-  prevW = this.style.width;
-  //here we enlarge the div
-  myDiv.style.width = '85%';
-  myDiv.style.height = 'auto';
-  myDiv.style.maxHeight = '650px';
-  myDiv.setAttribute('class', 'enlarged copy');
-  myDiv.style.backgroundImage = 'none';
-  //here we get the height of the top menu (needs refactoring set it as gloal variable)
+  previous = my_div;
+  my_div.setAttribute('class', 'enlarged copy');
+  console.log(my_div);
+  for (const child of my_div.children) {
+    child.style.display = 'block'
+  }
+  my_div.style.backgroundImage = 'none';
   const main = document.querySelector('div.main')
-  const y = parseFloat(this.getBoundingClientRect().y) + main.scrollTop - 100; //this helps us to get the position of the div to scroll to
-  console.log(document.querySelector('div.main').scrollTop, y)
-  main.scrollTop = y;
+  if (scroll_to) {//here we get the height of the top menu (needs refactoring set it as gloal variable)
+    const y = parseFloat(my_div.getBoundingClientRect().y) + main.scrollTop - 100; //this helps us to get the position of the div to scroll to
+    console.log(document.querySelector('div.main').scrollTop, y)
+    main.scrollTop = y;
+  } else {
+    // console.log(my_div.getBoundingClientRect());
+    // console.log(main.scrollTop);
+    // main.scrollTop = my_div.getBoundingClientRect().y - 600;
+    // const val = my_div.getBoundingClientRect().y - 600
+    // console.log(val);
+    // main.scrollTo(0, val);
+    // console.log(main.scrollTop);
+  }
 }
+
 
 
 /**
@@ -222,7 +273,7 @@ let icon2 = 'img/icons/icon_02.png';
 let menuIsShow = true;
 function closeOpenMenu() {
   menuIsShow = !menuIsShow;//every click we change the status of the boolean
-  let myTags = document.getElementsByTagName('menuelement');
+  let myTags = document.getElementsByClassName('menuelement');
   let displayOption;
   for (let i = 0; i < myTags.length; i++) {
     menuIsShow == false ? myTags[i].style.display = 'none' : myTags[i].style.display = 'inherit';

@@ -46,12 +46,12 @@
   <div id="myContainer" class="container">
     <div id="myMenu" class="menu">
       <img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
-      <menuelement onclick="reveal(this)" id="menuproject" data-section="project">PROJECT</menuelement>
-      <menuelement onclick="reveal(this)" id="menuprocess" data-section="process">PROCESS</menuelement>
-      <menuelement onclick="reveal(this)" id="menuoutput" data-section="output">OUTPUT</menuelement>
-      <menuelement id="menuinspiration" onclick="reveal_inspiration(this)" data-section="inspiration">INSPIRATION</menuelement>
-      <menuelement onclick="reveal(this)" id="menugerman" data-section="german">DEUTSCH</menuelement>
-      <menuelement onclick="showAll()" id="menushowAll">SHOW ALL!</menuelement>
+      <div class="menuelement" onclick="reveal(this)" id="menuproject" data-section="project"><p>PROJECT</p></div>
+      <div class="menuelement" onclick="reveal(this)" id="menuprocess" data-section="process"><p>PROCESS</p></div>
+      <div class="menuelement" onclick="reveal(this)" id="menuoutput" data-section="output"><p>OUTPUT</p></div>
+      <div class="menuelement" id="menuinspiration" onclick="reveal_inspiration(this)" data-section="inspiration"><p>INSPIRATION</p></div>
+      <div class="menuelement" onclick="reveal(this)" id="menugerman" data-section="german"><p>DEUTSCH</p></div>
+      <div class="menuelement" onclick="showAll()" id="menushowAll"><p>SHOW ALL!</p></div>
     </div>
     <div id="myHeader" class="header">
       <a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk" target="_blank">
@@ -64,10 +64,10 @@
           <div class="title-content">
             Thinking Toys (or Games) for Commoning
           </div>
-          <div class="media-content">
+          <div class="media-content" style="display: block;">
             <img src="img/diagram_overview.gif">
           </div>
-          <div class="text-content">
+          <div class="text-content" style="display: block;">
   
             <p>
               The sustainable use and the organisation of common resources is highly complex. With the focus
