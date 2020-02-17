@@ -418,5 +418,16 @@
             "img/unconference-circle.jpg"
         ],
         "video_list": []
+    },
+    {
+        "section": "process",
+        "title": "January 2020, Thinking Toys at Biennial of Design, Ljubljana, Slovenia",
+        "id": "Jan_2020_Ljubljana",
+        "date": "01/2020",
+        "content": "Selena travelled to Ljubljana to give a [Thinking Toys for Commoning workshop](https://bio.si/en/program/events/46/2020-01-25/15-00/thinking-toys-for-commoning/) on tech and commoning as part of the 26th Biennial of Design, addressing the theme Common Knowledge. Participants discussed speculative future services attuned at commoning, in that they are community oriented, sustainable in terms of production and maintenance and promoting community resilience and independence. We came up with three proposals: *Disco Phone* that contracts and opens according to its user’s mental availability; *Robot Pigeon* delivering digital messages by moving physically between two persons and allowing for messages to be refused; *Invisibility Cloak* provided by the city authorities to protect citizens’ privacy. The projects entries for the Future of Commoning and IoT catalogue can be found [here](https://drive.google.com/file/d/1eiYiiyEUeRimsQobNy8aj1xcSAcNx0Ra/view?usp=sharing).",
+        "img_list": [
+            "img/jan_2020_biennal_ljubljana.jpg"
+        ],
+        "video_list": []
     }
 ]
