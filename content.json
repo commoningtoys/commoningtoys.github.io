@@ -429,5 +429,43 @@
             "img/jan_2020_biennal_ljubljana.jpg"
         ],
         "video_list": []
+    },
+    {
+        "section": "german",
+        "title": "März 2019, Workshop mit NeNa1",
+        "id": "Maerz_2019_Nena1_Workshop_de",
+        "date": "3/2019",
+        "content": "Unser zweiter Workshop mit der Zürcher Genossenschaft, NeNa1, fand in drei Blöcken statt. Zuerst stellte Viktor seine Arbeit an einem Toolkit vor. Dieses lässt die Teilnehmenden erfahren, wie es sich anfühlt die Aufgaben, die sie vom Ämtli-Manager ABM-Modell erhalten, auszuführen. Dann stellten wir das Modell im Detail vor und diskutierten die Umsetzung von Mechanismen (z.B. Swapping) und Parametern (z.B. Stress, time_coin), die wir bei der Ausführung des Modells beobachten. Zum Schluss führte Selena das Thema Commoning und Technologie als eine '10yearchallenge' ein – und diskutierte die Art und Weise, wie bestimmte Technologien von Genossenschaften und Gemeinschaften im Allgemeinen verwendet wurden, und bat darum, sich vorzustellen, wie diese oder andere Technologien im Leben der Commoners in 10 (oder mehr) Jahren eine Rolle spielen werden.",
+        "img_list": [
+            "img/workshop/NeNa1_Mar2019_toolkit-game.jpg",
+            "img/workshop/NeNa1_Mar2019_workshop.jpg"
+        ],
+        "video_list": []
+    },
+    {
+        "section": "german",
+        "title": "Nov–Dez 2018, Ämtli-Manager Workshops",
+        "id": "Aemtli_Manager_Workshops_de",
+        "date": "11/2018",
+        "content": "Wir setzten unsere Zusammenarbeit mit den Genossenschaften fort und führten zwei Workshops durch, in denen wir die erste Version unseres Ämtli-Managers (Arbeitstitel) testeten und Rückmeldungen zum Thema Arbeitszeitorganisation sammelten.",
+        "img_list": [
+            "img/workshop/aemtli_manager_workshop_02.JPG",
+            "img/workshop/aemtli_manager_workshop_01.JPG",
+            "img/workshop/aemtli_manager_workshop_03.JPG"
+        ],
+
+        "video_list": []
+    },
+    {
+        "section": "german",
+        "title": "März 2019, Commoning und Technologie Workshop",
+        "id": "Maerz_2019_Commoning_und_Technologie_de",
+        "date": "3/2019",
+        "content": "Im Rahmen des Workshops mit der Bau- und Wohngenossenschaft NeNa1 aus Zürich beschäftigten wir uns mit Fragen nach der möglichen Rolle und Auswirkung von Technik auf die gemeinsame Praxis. Selten betrachten wir Technologie als eine Ressource die geteilt werden soll und die Philosophie der Wachstumskritik kann eine Abneigung gegen hochmoderne technische Lösungen (z.B. Automatisierung, KI) hervorrufen. Commoning in Bezug auf Technologie meint sowohl die Verwendung von Technik, wie ein Gerät, als auch auf die Notwendigkeit, dessen Funktionsweise gemeinsam zu gestalten. Eine Möglichkeit, Technik zu nutzen, ist das, was wir zuvor vorgestellt haben – die Arbeit an Rechenmodellen (z.B. agentenbasierte Modelle), die einige konkrete Aspekte oder Situationen abbilden. Dies kann z.B. die Organisation von Freiwilligenarbeit der Gemeinschaftsmitglieder sein. So können Muster und Kipppunkte in komplexen Verhaltensweisen der Gemeinschaft gefunden werden. \n\nZudem wollten wir Szenarien durchgehen, in denen die Gemeinschaften vom Teilen von Information profitieren können. Dies kann erreicht werden mit Hilfe von technischen Systemen mit offenem Quellcode (open source) oder auch durch die Erschaffung von Werkzeugen, die Fernkommunikation sowie die Aufzeichnung und Verarbeitung von Informationen ermöglichen. Wir arbeiteten in Gruppen und versuchten, Trends und Tendenzen in spezifischen technischen Lösungen oder gemeinsamen Praktiken vor 10 Jahren, heute und in 10 Jahren aufzuspüren.\n\nDie diskutierten Themen berührten die persönliche Kommunikation (E-Mail -> Wiki, Chat-Plattformen -> Commons App), die Allgegenwart und Autonomie der Infrastruktur (Telefonleitungen -> Internet -> selbstbestimmte autonome Netzwerke) sowie auch kulturelle Überlegungen (Dialog -> Gesprächsgruppen -> Zusammenführung von lokaler und globaler Diskussion). Wir planen zu untersuchen, wie diese Themen in ein zukünftiges Narrativ einfliessen und mit Hilfe von ABMs modelliert werden können.",
+        "img_list": [
+            "img/workshop/NeNa1_Mar2019_tech-commoning_01.jpg",
+            "img/workshop/NeNa1_Mar2019_tech-commoning_02.jpg"
+        ],
+        "video_list": []
     }
 ]
