@@ -467,5 +467,31 @@
             "img/workshop/NeNa1_Mar2019_tech-commoning_02.jpg"
         ],
         "video_list": []
+    },
+    {
+        "section": "output",
+        "title": "May 2019, Human Agent ABM Plugin",
+        "id": "May_2019_Human_Agent__ABM_Plugin",
+        "date": "5/2019",
+        "content": "The Human Agent ABM Plugin is a somewhat unwieldy immersive toy that turns human players into computer agents. The Plugin consists of a physical console with four mico-actions which connects to an agent-based computer model (running on a laptop) about sharing chores in a community. The micro-actions, in a very abstract manner, instantiate tasks like ‘child and elderly care’ or ‘food depot duty’. The player carries out the same chores and has the same choices than the computer agents, and as their actions are connected in real-time, the human player becomes one of many agents in the computer model. After sufficient playtime, the player develops a sense for how it would feel like to be part of the modelled system.\n\nThe Plugin is both single-player and massively multiplayer toy at the same time. The experience of playing is similar to attending to a very sophisticated Tamagotchi. The play is explorative and open-ended with no winning condition.\n\nThe Plugin is the result of a research through design process addressing the issues of complex toys, agent-based modelling, black boxes, scale critique, embodied vs formalised interaction, human and non-human play.",
+        "img_list": [
+            "img/games/abm_toolkit_1.jpg",
+            "img/games/abm_toolkit_2.jpg",
+            "img/games/abm_toolkit_3.jpg"
+        ],
+        "video_list": [
+            "https://player.vimeo.com/video/388285704"
+        ]
+    },
+    {
+        "section": "process",
+        "title": "November 2019, Workshop at CUCR, Goldsmiths, University of London",
+        "id": "Nov_2019_CUCR_London_Workshop",
+        "date": "11/2019",
+        "content": "On November 8th Viktor hosted a workshop at the Centre for Urban and Community Studies at Goldsmiths, University of London on commoning and convivial urban infrastructures. More specifically, workshop participants explored the social and technological preconditions of predictive technologies enabling commoning minded urban infrastructures.\n\nThe workshop followed a critical prototyping approach. First participants discussed references on commoning, infrastrucutre, scale and predictive technologies. Then they reflected on the key issues through creating a paper prototype of commoning-minded prediction driven infrastructure for the circulation of urban resources.",
+        "img_list": [
+            "img/external_activity/CUCR_goldsmiths_london_workshop.jpg"
+        ],
+        "video_list": []
     }
 ]
