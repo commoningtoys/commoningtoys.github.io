@@ -116,7 +116,6 @@ button:hover {
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -138,16 +137,18 @@ button:hover {
 }
 
 .menu {
-    grid-area: mu;
     z-index: 999999;
     display: flex;
+    flex-grow: 2;
     justify-content: space-around;
     background-color: #ccc;
-    border-bottom: solid 2px #000;
 }
 
 .header {
     grid-area: hd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
     background-color: #ccc;
     border-bottom: solid 2px #000;
@@ -156,9 +157,9 @@ button:hover {
 .container {
     display: grid;
     /* grid-template-columns: 200px calc(100% - 200px); */
-    grid-template-columns: repeat(9, 1fr);
+    /* grid-template-columns: repeat(9, 1fr); */
     grid-template-rows: 50px calc(100vh - 100px) 50px;
-    grid-template-areas: "hd mu mu mu mu mu mu mu mu" "mn mn mn mn mn mn mn mn mn" "ft ft ft ft ft ft ft ft ft";
+    grid-template-areas: "hd" "mn" "ft";
 }
 
 #footer1, #footer2 {
@@ -196,7 +197,6 @@ button:hover {
     /* overflow-y: scroll; */
     font-size: 1rem;
     margin: 0.5rem;
-
     /* float: right; */
     padding: 0.8em;
     outline: solid 2px #000;
@@ -257,7 +257,8 @@ to change design of single article divs change them down here
     /* border: solid 3px #f50; */
     box-shadow: #f00 5px 5px;
 }
-.media-content img:hover, img.thumb-content:hover{
+
+.media-content img:hover, img.thumb-content:hover {
     box-shadow: #f00 10px 10px;
 }
 
@@ -445,9 +446,9 @@ img.inspirationImage {
 }
 
 img#header {
-    display: block;
-    height: 50px;
-    margin: 0px auto;
+    /* display: flex;
+    height: 45px;
+    margin: 0px auto; */
     /* width: auto; */
     /* float: left; */
     border: none;
@@ -461,6 +462,10 @@ img#menuIcon {
     /* height: auto; */
     max-height: 40px;
     max-width: 40px;
+}
+
+.menu-2 {
+    display: none;
 }
 
 @media only screen and (max-width: 899px) {
@@ -506,7 +511,7 @@ img#menuIcon {
         text-align: center;
     }
     .menuelement {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
         padding: 0.75rem;
         margin: 10px 0px 0px 3px;
         text-align: center;
@@ -515,21 +520,34 @@ img#menuIcon {
         display: grid;
         grid-template-columns: 50px calc(100% - 50px);
         grid-template-rows: 40px calc(100vh - 80px) 40px;
-        grid-template-areas: "mu hd hd" "mn mn mn" "ft ft ft";
+        grid-template-areas: "hd hd hd" "mn mn mn" "ft ft ft";
     }
     img#menuIcon {
         display: block;
-        height: 40px;
-        width: auto;
+        margin: 4px;
+        height: 30px;
+        width: 30px;
     }
     img#header {
-        max-height: 40px;
+        margin-top: 4px;
+        height: 30px;
+        right: 4px;
     }
     .menu {
-        display: grid;
-        grid-template-columns: none;
-        grid-template-rows: repeat(6, minmax(auto, 200px));
-        justify-content: unset;
-        column-gap: 1rem;
+        display: none;
+    }
+
+    .header{
+        align-items: initial;
+        justify-content: space-around;
+    }
+    .logo{
+        flex-grow: 3;
+    }
+    .menu-2 {
+        z-index: 999999;
+        display: flex;
+        flex-direction: column;
+        width: 102px;
     }
 }

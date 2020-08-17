@@ -44,19 +44,36 @@
     <p>FOR COMMONING</p>
   </div>
   <div id="myContainer" class="container">
-    <div id="myMenu" class="menu">
-      <img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
-      <div class="menuelement" onclick="reveal(this)" id="menuproject" data-section="project"><p>PROJECT</p></div>
-      <div class="menuelement" onclick="reveal(this)" id="menuprocess" data-section="process"><p>PROCESS</p></div>
-      <div class="menuelement" onclick="reveal(this)" id="menuoutput" data-section="output"><p>OUTPUT</p></div>
-      <div class="menuelement" id="menuinspiration" onclick="reveal_inspiration(this)" data-section="inspiration"><p>INSPIRATION</p></div>
-      <div class="menuelement" onclick="reveal(this)" id="menugerman" data-section="german"><p>DEUTSCH</p></div>
-      <div class="menuelement" onclick="showAll()" id="menushowAll"><p>SHOW ALL!</p></div>
-    </div>
-    <div id="myHeader" class="header">
-      <a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk" target="_blank">
-        <img src="img/HGKLogo.png" id="header">
-      </a>
+    <div class="header">
+
+
+
+      <div id="menu-2" class="menu-2">
+        <img src="img/icons/icon_01.png" onclick="closeOpenMenu()" id="menuIcon">
+        <div class="menuelement" onclick="reveal(this)" id="menuproject" data-section="project"><p>PROJECT</p></div>
+        <div class="menuelement" onclick="reveal(this)" id="menuprocess" data-section="process"><p>PROCESS</p></div>
+        <div class="menuelement" onclick="reveal(this)" id="menuoutput" data-section="output"><p>OUTPUT</p></div>
+        <div class="menuelement" id="menuinspiration" onclick="reveal_inspiration(this)" data-section="inspiration"><p>INSPIRATION</p></div>
+        <div class="menuelement" onclick="reveal(this)" id="menugerman" data-section="german"><p>DEUTSCH</p></div>
+        <div class="menuelement" onclick="showAll()" id="menushowAll"><p>SHOW ALL!</p></div>
+      </div>
+
+      <div id="myHeader" class="logo">
+        <a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk" target="_blank">
+          <img src="img/icons/FHNW_HGK.svg" id="header">
+        </a>
+      </div>
+      <div id="myMenu" class="menu">
+        <div class="menuelement" onclick="reveal(this)" id="menuproject" data-section="project"><p>PROJECT</p></div>
+        <div class="menuelement" onclick="reveal(this)" id="menuprocess" data-section="process"><p>PROCESS</p></div>
+        <div class="menuelement" onclick="reveal(this)" id="menuoutput" data-section="output"><p>OUTPUT</p></div>
+        <div class="menuelement" id="menuinspiration" onclick="reveal_inspiration(this)" data-section="inspiration"><p>INSPIRATION</p></div>
+        <div class="menuelement" onclick="reveal(this)" id="menugerman" data-section="german"><p>DEUTSCH</p></div>
+        <div class="menuelement" onclick="showAll()" id="menushowAll"><p>SHOW ALL!</p></div>
+      </div>
+
+
+
     </div>
     <div class="main">
       <div class="article-container" id="articles">
@@ -172,8 +189,8 @@
         runtime 01/2018 – 12/2021
       </div>
       <div id="footer2">
-        🏫 <a href="https://www.ixdm.ch/" target="_blank" id="link2">IXDM / Critical Media Lab</a> at FHNW Academy of
-        Art and Design in Basel, Switzerland
+        🏫 <a href="https://www.fhnw.ch/de/die-fhnw/hochschulen/hgk/institute/institut-experimentelle-design-und-medienkulturen" target="_blank" id="link2">IXDM / Critical Media Lab</a> at <a href="https://www.fhnw.ch/" target="_blank" id="link3" rel="noopener noreferrer">FHNW Academy of
+          Art and Design in Basel, Switzerland</a>
       </div>
     </div>
   </div>
@@ -185,7 +202,7 @@
     //closes the menu on small devices
     if (innerWidth < 899) closeOpenMenu();
     //lettering functions
-    $("#link1, #link2").lettering('words');
+    $("#link1, #link2, #link3").lettering('words');
   </script>
 </body>
 
